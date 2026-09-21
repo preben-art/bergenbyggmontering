@@ -44,6 +44,9 @@ Design system — skarp oliven, high-end gradient, dybde og kontrast
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -100,11 +103,12 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   font-weight: 700;
   color: var(--text-main);
   text-wrap: balance;
+  text-rendering: geometricPrecision;
 }
 
 h1 {
@@ -112,6 +116,7 @@ h1 {
 }
 h2 {
   font-size: var(--fs-h2);
+  max-width: 16ch;
 }
 h3 {
   font-size: var(--fs-h3);
@@ -119,6 +124,11 @@ h3 {
 
 p {
   text-wrap: pretty;
+  font-weight: 400;
+}
+
+.font-light {
+  font-weight: 400 !important;
 }
 
 .section-dark {
@@ -465,18 +475,18 @@ header {
 /* Cinema HDR grade — photos feel denser and more alive */
 img[src*="/bilder/"]:not([src*="logo"]),
 img[src*="bilder/"]:not([src*="logo"]) {
-  filter: contrast(1.24) saturate(1.32) brightness(1.05);
+  filter: url(#hollywood-sharp) contrast(1.28) saturate(1.22) brightness(1.04);
   transition: filter 0.55s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 img[src*="/bilder/"]:not([src*="logo"]):hover,
 img[src*="bilder/"]:not([src*="logo"]):hover {
-  filter: contrast(1.34) saturate(1.42) brightness(1.08);
+  filter: url(#hollywood-sharp) contrast(1.38) saturate(1.32) brightness(1.07);
 }
 
 .bento-item:hover img,
 .group:hover img[src*="bilder"] {
-  filter: contrast(1.34) saturate(1.42) brightness(1.08);
+  filter: url(#hollywood-sharp) contrast(1.38) saturate(1.32) brightness(1.07);
 }
 
 img[src*="bergenbygg-logo"] {
@@ -508,4 +518,79 @@ img[src*="bergenbygg-logo"] {
   .text-transparent.bg-clip-text {
     animation: none !important;
   }
+}
+
+/* High-end industrial type: placement, size, sharpness */
+#hero .industrial-display > span {
+  font-size: clamp(2.55rem, 7.2vw, 6.1rem) !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.052em;
+}
+
+.hero-lead {
+  font-size: clamp(1.05rem, 1.55vw, 1.28rem);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f6f1e4;
+  letter-spacing: -0.012em;
+  max-width: 34rem;
+}
+
+.hero-note {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #d8d2c4;
+  max-width: 30rem;
+}
+
+.industrial-title {
+  font-size: clamp(2rem, 4.2vw, 3.4rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.04em;
+  max-width: 14ch;
+}
+
+span.text-brand-primary.uppercase,
+.font-display.uppercase.tracking-widest {
+  letter-spacing: 0.2em !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+}
+
+.bento-overlay h3 {
+  font-size: clamp(1.15rem, 1.8vw, 1.85rem) !important;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.bento-overlay p {
+  font-size: 0.92rem !important;
+  line-height: 1.45;
+  color: #e4dfd3 !important;
+  max-width: 28ch;
+}
+
+.section-white p,
+.section-white li {
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: var(--text-muted-inverse);
+  max-width: 42rem;
+}
+
+.section-white h2 {
+  color: var(--text-inverse);
+  max-width: 16ch;
+}
+
+.section-white h3 {
+  color: var(--text-inverse);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+nav a:not(.btn-primary):not(.btn-solid),
+nav button {
+  letter-spacing: 0.16em;
+  font-size: 0.7rem !important;
 }

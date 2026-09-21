@@ -3,7 +3,24 @@
 Main Logic (Vanilla JS, ESM)
 */
 
-
+(function injectHollywoodFilter() {
+  if (document.getElementById("hollywood-sharp")) return;
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("focusable", "false");
+  svg.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";
+  svg.innerHTML = `
+    <filter id="hollywood-sharp" color-interpolation-filters="sRGB">
+      <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="gamma" amplitude="1" exponent="0.9" offset="0"/>
+        <feFuncG type="gamma" amplitude="1" exponent="0.92" offset="0"/>
+        <feFuncB type="gamma" amplitude="1" exponent="0.86" offset="0"/>
+      </feComponentTransfer>
+    </filter>`;
+  document.documentElement.appendChild(svg);
+})();
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Bergen Byggmontering Site Initialized");
