@@ -8,30 +8,30 @@ Design system — skarp oliven, high-end gradient, dybde og kontrast
 @tailwind utilities;
 
 :root {
-  --bg-deep: #08090c;
-  --bg-elevated: #101218;
-  --bg-white: #f4f1ea;
-  --bg-light: #ebe6db;
+  --bg-deep: #030406;
+  --bg-elevated: #0b0d11;
+  --bg-white: #f7f3ea;
+  --bg-light: #ece6d6;
 
-  --text-main: #f6f4ee;
-  --text-inverse: #121410;
-  --text-muted: #c9c6bc;
-  --text-muted-inverse: #3d4338;
+  --text-main: #fbf8f0;
+  --text-inverse: #0e100c;
+  --text-muted: #ddd6c6;
+  --text-muted-inverse: #32362c;
 
-  --brand-primary: #b6e04a;
-  --brand-accent: #eaf6a8;
-  --brand-gold: #d4b45c;
-  --brand-hover: #8fbf2e;
+  --brand-primary: #c8f255;
+  --brand-accent: #fff3b0;
+  --brand-gold: #e8c56a;
+  --brand-hover: #9ed63a;
 
-  --border-light: rgba(246, 244, 238, 0.14);
-  --border-gold: rgba(212, 180, 92, 0.35);
-  --border-dark: rgba(18, 20, 16, 0.1);
+  --border-light: rgba(251, 248, 240, 0.16);
+  --border-gold: rgba(232, 197, 106, 0.45);
+  --border-dark: rgba(14, 16, 12, 0.12);
 
-  --glow-primary: rgba(182, 224, 74, 0.38);
-  --glow-gold: rgba(212, 180, 92, 0.28);
+  --glow-primary: rgba(200, 242, 85, 0.48);
+  --glow-gold: rgba(232, 197, 106, 0.36);
 
-  --shadow-deep: 0 24px 60px rgba(0, 0, 0, 0.45), 0 2px 0 rgba(255, 255, 255, 0.04) inset;
-  --shadow-lift: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(182, 224, 74, 0.12);
+  --shadow-deep: 0 28px 70px rgba(0, 0, 0, 0.62), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  --shadow-lift: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(200, 242, 85, 0.22);
 
   --fs-h1: clamp(2.65rem, 6.4vw, 5.35rem);
   --fs-h2: clamp(2.05rem, 4.6vw, 3.85rem);
@@ -64,10 +64,10 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 70% 50% at 8% -8%, rgba(182, 224, 74, 0.2), transparent 55%),
-    radial-gradient(ellipse 55% 40% at 100% 0%, rgba(212, 180, 92, 0.16), transparent 50%),
-    radial-gradient(ellipse 45% 35% at 85% 100%, rgba(143, 191, 46, 0.1), transparent 55%),
-    linear-gradient(180deg, #08090c 0%, #0c0e12 50%, #08090c 100%);
+    radial-gradient(ellipse 75% 55% at 6% -12%, rgba(200, 242, 85, 0.28), transparent 52%),
+    radial-gradient(ellipse 60% 45% at 108% 4%, rgba(232, 197, 106, 0.22), transparent 48%),
+    radial-gradient(ellipse 50% 40% at 80% 110%, rgba(158, 214, 58, 0.14), transparent 52%),
+    linear-gradient(180deg, #030406 0%, #07090d 48%, #030406 100%);
   animation: mesh-drift 26s ease-in-out infinite alternate;
 }
 
@@ -77,7 +77,7 @@ body::after {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.07;
+  opacity: 0.11;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
@@ -156,13 +156,29 @@ p {
   z-index: 11;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 18% 78%, rgba(182, 224, 74, 0.22), transparent 42%),
-    radial-gradient(ellipse at 88% 20%, rgba(212, 180, 92, 0.16), transparent 38%),
-    linear-gradient(180deg, rgba(8, 9, 12, 0.45) 0%, rgba(8, 9, 12, 0.2) 38%, rgba(8, 9, 12, 0.82) 100%);
+    radial-gradient(ellipse at 16% 82%, rgba(200, 242, 85, 0.32), transparent 44%),
+    radial-gradient(ellipse at 90% 12%, rgba(232, 197, 106, 0.22), transparent 40%),
+    linear-gradient(180deg, rgba(3, 4, 6, 0.55) 0%, rgba(3, 4, 6, 0.18) 40%, rgba(3, 4, 6, 0.88) 100%);
 }
 
 #hero .overflow-hidden.z-0 > .absolute.inset-0.z-10 {
-  background-color: rgba(8, 9, 12, 0.32) !important;
+  background-color: rgba(3, 4, 6, 0.28) !important;
+}
+
+#hero video {
+  filter: contrast(1.22) saturate(1.2) brightness(0.9);
+  transform: scale(1.1);
+  animation: cinema-drift 36s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes cinema-drift {
+  from {
+    transform: scale(1.1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.18) translate3d(-1.6%, 1.2%, 0);
+  }
 }
 
 .hero-glow {
@@ -191,11 +207,26 @@ p {
   box-shadow: var(--shadow-deep);
 }
 
+.bento-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: soft-light;
+  background: linear-gradient(
+    160deg,
+    rgba(232, 197, 106, 0.28) 0%,
+    transparent 42%,
+    rgba(20, 48, 8, 0.35) 100%
+  );
+}
+
 .bento-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
 }
 
 .bento-item:hover {
@@ -210,6 +241,7 @@ p {
 .bento-overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(
     to top,
     rgba(8, 9, 12, 0.94) 0%,
@@ -427,5 +459,53 @@ header {
 
 ::selection {
   background: var(--brand-primary);
-  color: #121410;
+  color: #0e100c;
+}
+
+/* Cinema HDR grade — photos feel denser and more alive */
+img[src*="/bilder/"]:not([src*="logo"]),
+img[src*="bilder/"]:not([src*="logo"]) {
+  filter: contrast(1.24) saturate(1.32) brightness(1.05);
+  transition: filter 0.55s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+img[src*="/bilder/"]:not([src*="logo"]):hover,
+img[src*="bilder/"]:not([src*="logo"]):hover {
+  filter: contrast(1.34) saturate(1.42) brightness(1.08);
+}
+
+.bento-item:hover img,
+.group:hover img[src*="bilder"] {
+  filter: contrast(1.34) saturate(1.42) brightness(1.08);
+}
+
+img[src*="bergenbygg-logo"] {
+  filter: contrast(1.28) saturate(1.4) brightness(1.12)
+    drop-shadow(0 0 14px rgba(200, 242, 85, 0.55))
+    drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
+  animation: logo-live 5.5s ease-in-out infinite;
+}
+
+@keyframes logo-live {
+  0%,
+  100% {
+    filter: contrast(1.28) saturate(1.4) brightness(1.1)
+      drop-shadow(0 0 12px rgba(200, 242, 85, 0.42))
+      drop-shadow(0 8px 18px rgba(0, 0, 0, 0.5));
+  }
+  50% {
+    filter: contrast(1.34) saturate(1.55) brightness(1.18)
+      drop-shadow(0 0 22px rgba(232, 197, 106, 0.7))
+      drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  #hero video,
+  img[src*="bergenbygg-logo"],
+  .btn-solid,
+  .text-transparent.bg-clip-text {
+    animation: none !important;
+  }
 }
