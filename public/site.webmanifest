@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Bergen Byggmontering AS",
+  "short_name": "Bergen Bygg",
+  "description": "Totalrenovering, bad, tak, fasade og innvendig rehabilitering i Bergen og omegn. Vi tar ansvar for helheten – med ryddig prosess og dokumentasjon.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "orientation": "portrait",
+  "lang": "nb-NO",
+  "dir": "ltr",
+  "categories": ["business", "construction", "home", "services"],
+  "icons": [
+    {
+      "src": "favicons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicons/favicon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+    
+  ],
+  "screenshots": [
+    {
+      "src": "bilder/IMG_1042.webp",
+      "sizes": "1280x800",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Bergen Byggmontering – tjenester og faginnsikt (desktop)"
+    },
+    {
+      "src": "bilder/IMG_1581.webp",
+      "sizes": "390x844",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Bergen Byggmontering – mobilvisning av tjenester"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Totalrenovering",
+      "short_name": "Total",
+      "url": "/tjeneste-totalrenovering.html?source=pwa",
+      "description": "Les om totalrenovering",
+      "icons": [
+        {
+          "src": "bilder/IMG_3770.webp",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Nytt bad",
+      "short_name": "Bad",
+      "url": "/tjeneste-bad.html?source=pwa",
+      "description": "Bad og våtrom (våtromsnorm)",
+      "icons": [
+        {
+          "src": "bilder/473766295_1161206616013469_8198062879953587315_n.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Taktekking",
+      "short_name": "Tak",
+      "url": "/tjeneste-tak.html?source=pwa",
+      "description": "Taktekking og rehabilitering",
+      "icons": [
+        {
+          "src": "/bilder/IMG_1042.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Tømrer",
+      "short_name": "Tømrer",
+      "url": "/tjeneste-tømrer.html?source=pwa",
+      "description": "Tømrer og innvendig rehabilitering",
+      "icons": [
+        {
+          "src": "/bilder/bygger_nytt_bad-rehab.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Fasade, vinduer og etterisolering",
+      "short_name": "Fasade",
+      "url": "/tjeneste-fasade.html?source=pwa",
+      "description": "Utvendig oppgradering handler om tetthet, lufting og varme.",
+      "icons": [
+        {
+          "src": "/bilder/IMG_4678.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Rørlegger",
+      "short_name": "Rør",
+      "url": "/tjeneste-ror.html?source=pwa",
+      "description": "Rørleggertjenester",
+      "icons": [
+        {
+          "src": "bilder/skap_med_rør.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Borettslag og sameier",
+      "short_name": "BRL",
+      "url": "/tjeneste-brl.html?source=pwa",
+      "description": "Boligrettet rehabilitering og oppgradering i BRL/sameier – både i boenheter og på bygningsdeler.",
+      "icons": [
+        {
+          "src": "/bilder/IMG_1745.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    },
+    {
+      "name": "Bestill befaring",
+      "short_name": "Kontakt",
+      "url": "/#kontakt",
+      "description": "Kontakt oss for befaring",
+      "icons": [
+        {
+          "src": "bilder/sjefen.webp",
+          "sizes": "96x96",
+          "type": "image/webp"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
