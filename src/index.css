@@ -1492,61 +1492,52 @@ footer .geo-places span {
   color: #f3f5ef !important;
 }
 
+/* Cinematic 2027 hero: full cinema frame, display type that leaves the picture. */
 #hero {
-  min-height: 0 !important;
-  padding-top: 7rem !important;
-  padding-bottom: 3.25rem !important;
-}
-
-#hero .max-w-4xl {
-  max-width: 40rem !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+  padding-top: clamp(7.5rem, 18vh, 11rem) !important;
+  padding-bottom: clamp(3.25rem, 7vh, 5.25rem) !important;
+  justify-content: flex-end !important;
 }
 
 #hero h1 {
-  max-width: 14em !important;
-}
-
-#hero h1 span,
-#hero h1 span:first-child,
-#hero h1 span:last-child {
-  width: auto !important;
-  max-width: 14em !important;
-  white-space: normal !important;
+  max-width: none !important;
 }
 
 #hero h1 span:first-child {
-  font-size: clamp(2rem, 3.4vw, 3.15rem) !important;
-  letter-spacing: -0.04em !important;
-  line-height: 1.05 !important;
+  font-size: clamp(2.45rem, 4.05vw, 4.15rem) !important;
+  letter-spacing: -0.035em !important;
+  line-height: 0.98 !important;
 }
 
 #hero h1 span:last-child {
-  margin-top: 0.35rem;
-  font-size: clamp(1.15rem, 1.7vw, 1.5rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.02em !important;
-  line-height: 1.25 !important;
+  font-size: clamp(2.1rem, 3.45vw, 3.55rem) !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.02 !important;
+}
+
+#hero h1 + p {
+  margin-top: clamp(1.15rem, 2.2vh, 1.7rem) !important;
+  margin-bottom: 0.8rem !important;
+}
+
+#hero h1 + p + p {
+  margin-bottom: 1.45rem !important;
 }
 
 @media (max-width: 767px) {
   #hero {
-    min-height: 0 !important;
-    padding-top: 6.25rem !important;
-    padding-bottom: 2.5rem !important;
+    min-height: 100vh !important;
+    min-height: 100svh !important;
+    padding-top: 6.5rem !important;
+    padding-bottom: 2.4rem !important;
+    justify-content: flex-end !important;
   }
 
-  #hero h1 {
-    max-width: 12em !important;
-  }
-
-  #hero h1 span,
   #hero h1 span:first-child,
   #hero h1 span:last-child {
-    max-width: 12em !important;
-    font-size: clamp(1.85rem, 8vw, 2.35rem) !important;
-  }
-
-  #hero h1 span:last-child {
-    font-size: clamp(1.05rem, 4.2vw, 1.25rem) !important;
+    font-size: clamp(1.9rem, 7.5vw, 2.4rem) !important;
+    line-height: 1.02 !important;
   }
 }
