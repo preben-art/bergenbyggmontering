@@ -585,11 +585,6 @@ footer a:hover {
   color: #141a12 !important;
 }
 
-#kontakt .bg-black,
-#kontakt .inline-block.bg-black {
-  color: #f3f7ee !important;
-}
-
 #kontakt .inline-block.bg-black {
   color: #f3f7ee !important;
 }
@@ -639,7 +634,11 @@ footer a:hover {
   font-size: 0.95rem;
   border-width: 0;
   background: #10160e;
-  color: #f3f7ee;
+  color: #f3f7ee !important;
+}
+
+#kontakt button[type="submit"] span {
+  color: #f3f7ee !important;
 }
 
 #kontakt button[type="submit"]:hover {
