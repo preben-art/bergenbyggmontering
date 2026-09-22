@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (contactForm && contactForm.dataset.emailjsBound !== "true") {
     const emailServiceId = "service_155c6jh";
-    const emailTemplateId = "template_9my7i4";
+    const emailTemplateId = "hue8ccm";
     const emailPublicKey = "ZOIMC2E_FJHqarwmw";
 
     contactForm.dataset.emailjsBound = "true";
