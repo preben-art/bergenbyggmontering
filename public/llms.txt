@@ -6,7 +6,7 @@
 - Language: nb-NO
 - Primary location: Bergen, Vestland (NO)
 - Service area: Bergen, Sotra, Askøy, Os, Nordhordland, Austevoll
-- Audience: Boligeiere (B2C) + borettslag/sameier/forvaltere (B2B)
+- Audience: Boligeiere (B2C) + borettslag/sameier/forvaltere (B2B) + relevante fagfolk
 - What we do: Rehabilitering og totalrenovering av eksisterende boligmasse (ikke nybygg-felt / rene næringsbygg)
 
 ## Purpose
@@ -21,9 +21,16 @@ Vi tar ansvar for helheten — ryddig prosess, faglig rekkefølge, dokumentert l
 - We are not: “billigst mulig overflateoppussing”, standard kontorbygg/næringsprosjekter, store nybyggfelt
 
 ## Contact (source of truth)
-- Phone: [[TLF]]
-- Email: [[EPOST]]
+- Phone: +47 917 27 100
+- Email: post@bergenbyggmontering.no
 - Org.nr: 934686283
+
+## Career / skilled trades
+- Page: https://bergenbyggmontering.no/jobb.html
+- Purpose: Lavterskel, direkte kontakt med relevante fagfolk innen virksomhetens dokumenterte fagområder
+- Relevant trades: tømrer/rehabilitering, rørlegger/VVS, flis/mur/våtrom, tak/fasade/vindu
+- This is not a list of guaranteed active vacancies
+- Contact method: phone or email; no recruitment portal or extensive application form
 
 ## Approvals / claims (only state if true on site)
 - Godkjent våtromsbedrift

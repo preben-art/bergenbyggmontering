@@ -38,6 +38,21 @@
     </image:image>
   </url>
 
+  <!-- CAREER / SKILLED TRADES -->
+  <url>
+    <loc>https://bergenbyggmontering.no/jobb.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/jobb.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bergenbyggmontering.no/jobb.html"/>
+    <image:image>
+      <image:loc>https://bergenbyggmontering.no/bilder/fikser_på_bad-maling.webp</image:loc>
+      <image:title>Jobb hos Bergen Byggmontering</image:title>
+      <image:caption>Karriere og direkte kontakt for fagfolk innen bygg og rehabilitering</image:caption>
+    </image:image>
+  </url>
+
   <!-- SERVICES -->
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-totalrenovering.html</loc>

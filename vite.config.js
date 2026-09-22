@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 const pages = {
   main: resolve(__dirname, "index.html"),
   faginnsikt: resolve(__dirname, "faginnsikt.html"),
+  jobb: resolve(__dirname, "jobb.html"),
   personvern: resolve(__dirname, "personvern.html"),
   "tjeneste-totalrenovering": resolve(
     __dirname,
