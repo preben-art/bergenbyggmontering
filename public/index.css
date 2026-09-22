@@ -8,30 +8,31 @@ Design system — skarp oliven, high-end gradient, dybde og kontrast
 @tailwind utilities;
 
 :root {
-  --bg-deep: #030406;
-  --bg-elevated: #0b0d11;
-  --bg-white: #f7f3ea;
-  --bg-light: #ece6d6;
+  --bg-deep: #06100a;
+  --bg-elevated: #0c1a12;
+  --bg-white: #f3f6ee;
+  --bg-light: #e6eee0;
 
-  --text-main: #fbf8f0;
-  --text-inverse: #0e100c;
-  --text-muted: #ddd6c6;
-  --text-muted-inverse: #32362c;
+  --text-main: #f3f7ee;
+  --text-inverse: #0e140c;
+  --text-muted: #c5d0bc;
+  --text-muted-inverse: #2c3828;
 
-  --brand-primary: #c8f255;
-  --brand-accent: #fff3b0;
-  --brand-gold: #e8c56a;
-  --brand-hover: #9ed63a;
+  --brand-primary: #8cc040;
+  --brand-accent: #b8dc78;
+  --brand-gold: #5a8c2a;
+  --brand-hover: #6b9a2e;
+  --brand-forest: #14321c;
 
-  --border-light: rgba(251, 248, 240, 0.16);
-  --border-gold: rgba(232, 197, 106, 0.45);
-  --border-dark: rgba(14, 16, 12, 0.12);
+  --border-light: rgba(243, 247, 238, 0.14);
+  --border-gold: rgba(140, 192, 64, 0.4);
+  --border-dark: rgba(14, 20, 12, 0.12);
 
-  --glow-primary: rgba(200, 242, 85, 0.48);
-  --glow-gold: rgba(232, 197, 106, 0.36);
+  --glow-primary: rgba(140, 192, 64, 0.42);
+  --glow-gold: rgba(20, 50, 28, 0.45);
 
-  --shadow-deep: 0 28px 70px rgba(0, 0, 0, 0.62), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
-  --shadow-lift: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(200, 242, 85, 0.22);
+  --shadow-deep: 0 28px 70px rgba(0, 0, 0, 0.62), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  --shadow-lift: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(140, 192, 64, 0.28);
 
   --fs-h1: clamp(2.65rem, 6.4vw, 5.35rem);
   --fs-h2: clamp(2.05rem, 4.6vw, 3.85rem);
@@ -67,10 +68,10 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 75% 55% at 6% -12%, rgba(200, 242, 85, 0.28), transparent 52%),
-    radial-gradient(ellipse 60% 45% at 108% 4%, rgba(232, 197, 106, 0.22), transparent 48%),
-    radial-gradient(ellipse 50% 40% at 80% 110%, rgba(158, 214, 58, 0.14), transparent 52%),
-    linear-gradient(180deg, #030406 0%, #07090d 48%, #030406 100%);
+    radial-gradient(ellipse 75% 55% at 6% -12%, rgba(140, 192, 64, 0.22), transparent 52%),
+    radial-gradient(ellipse 60% 45% at 108% 4%, rgba(20, 50, 28, 0.55), transparent 48%),
+    radial-gradient(ellipse 50% 40% at 80% 110%, rgba(90, 140, 42, 0.16), transparent 52%),
+    linear-gradient(180deg, #06100a 0%, #0a1810 48%, #06100a 100%);
   animation: mesh-drift 26s ease-in-out infinite alternate;
 }
 
@@ -92,7 +93,7 @@ body::after {
   }
   to {
     transform: translate3d(-2%, 1.5%, 0) scale(1.06);
-    filter: hue-rotate(12deg);
+    filter: hue-rotate(4deg);
   }
 }
 
@@ -139,7 +140,7 @@ p {
 
 .section-white {
   background:
-    linear-gradient(180deg, #f7f3ea 0%, #efe8d8 55%, #f4f1ea 100%);
+    linear-gradient(180deg, #f3f6ee 0%, #e6eee0 55%, #f3f6ee 100%);
   color: var(--text-inverse);
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -166,13 +167,13 @@ p {
   z-index: 11;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 16% 82%, rgba(200, 242, 85, 0.32), transparent 44%),
-    radial-gradient(ellipse at 90% 12%, rgba(232, 197, 106, 0.22), transparent 40%),
-    linear-gradient(180deg, rgba(3, 4, 6, 0.55) 0%, rgba(3, 4, 6, 0.18) 40%, rgba(3, 4, 6, 0.88) 100%);
+    radial-gradient(ellipse at 16% 82%, rgba(140, 192, 64, 0.28), transparent 44%),
+    radial-gradient(ellipse at 90% 12%, rgba(20, 50, 28, 0.45), transparent 40%),
+    linear-gradient(180deg, rgba(6, 16, 10, 0.62) 0%, rgba(6, 16, 10, 0.22) 40%, rgba(6, 16, 10, 0.9) 100%);
 }
 
 #hero .overflow-hidden.z-0 > .absolute.inset-0.z-10 {
-  background-color: rgba(3, 4, 6, 0.28) !important;
+  background-color: rgba(6, 16, 10, 0.38) !important;
 }
 
 #hero video {
@@ -226,9 +227,9 @@ p {
   mix-blend-mode: soft-light;
   background: linear-gradient(
     160deg,
-    rgba(232, 197, 106, 0.28) 0%,
+    rgba(140, 192, 64, 0.22) 0%,
     transparent 42%,
-    rgba(20, 48, 8, 0.35) 100%
+    rgba(20, 50, 28, 0.4) 100%
   );
 }
 
@@ -363,7 +364,7 @@ p {
 }
 
 .btn-solid {
-  background: linear-gradient(135deg, var(--brand-primary) 0%, #d4ef6a 48%, var(--brand-gold) 100%);
+  background: linear-gradient(135deg, #14321c 0%, #8cc040 52%, #b8dc78 100%);
   background-size: 180% 180%;
   animation: btn-sheen 8s ease-in-out infinite;
   border: 1px solid transparent;
@@ -490,8 +491,8 @@ img[src*="bilder/"]:not([src*="logo"]):hover {
 }
 
 img[src*="bergenbygg-logo"] {
-  filter: contrast(1.28) saturate(1.4) brightness(1.12)
-    drop-shadow(0 0 14px rgba(200, 242, 85, 0.55))
+  filter: contrast(1.18) saturate(1.15) brightness(1.04)
+    drop-shadow(0 0 14px rgba(140, 192, 64, 0.5))
     drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
   animation: logo-live 5.5s ease-in-out infinite;
 }
@@ -499,13 +500,13 @@ img[src*="bergenbygg-logo"] {
 @keyframes logo-live {
   0%,
   100% {
-    filter: contrast(1.28) saturate(1.4) brightness(1.1)
-      drop-shadow(0 0 12px rgba(200, 242, 85, 0.42))
+    filter: contrast(1.18) saturate(1.15) brightness(1.04)
+      drop-shadow(0 0 12px rgba(140, 192, 64, 0.4))
       drop-shadow(0 8px 18px rgba(0, 0, 0, 0.5));
   }
   50% {
-    filter: contrast(1.34) saturate(1.55) brightness(1.18)
-      drop-shadow(0 0 22px rgba(232, 197, 106, 0.7))
+    filter: contrast(1.22) saturate(1.22) brightness(1.08)
+      drop-shadow(0 0 20px rgba(90, 140, 42, 0.55))
       drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
   }
 }
@@ -531,7 +532,7 @@ img[src*="bergenbygg-logo"] {
   font-size: clamp(1.05rem, 1.55vw, 1.28rem);
   line-height: 1.5;
   font-weight: 400;
-  color: #f6f1e4;
+  color: #e8f0dc;
   letter-spacing: -0.012em;
   max-width: 34rem;
 }
@@ -539,7 +540,7 @@ img[src*="bergenbygg-logo"] {
 .hero-note {
   font-size: 0.98rem;
   line-height: 1.55;
-  color: #d8d2c4;
+  color: #c5d0bc;
   max-width: 30rem;
 }
 
