@@ -759,7 +759,7 @@ span.text-\[\#66FF00\],
   --ui-radius: 0.28rem;
 }
 
-header {
+header.fixed {
   border-bottom: 1px solid rgba(140, 192, 64, 0.22) !important;
   backdrop-filter: blur(14px) saturate(1.15);
 }
@@ -918,18 +918,18 @@ nav button {
 }
 
 /* Composition pass: header + hero + content should read as one page. */
-header {
+header.fixed {
   background:
     linear-gradient(180deg, rgba(3, 5, 3, 0.94) 0%, rgba(3, 5, 3, 0.76) 72%, rgba(3, 5, 3, 0.3) 100%) !important;
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: none !important;
 }
 
-header > div:first-child > .flex {
+header.fixed > div:first-child > .flex {
   height: 5.35rem !important;
 }
 
-header img[src*="bergenbygg-logo"] {
+header.fixed img[src*="bergenbygg-logo"] {
   height: 2.65rem !important;
 }
 
@@ -1134,7 +1134,7 @@ header img[src*="bergenbygg-logo"] {
 }
 
 @media (max-width: 767px) {
-  header > div:first-child > .flex {
+  header.fixed > div:first-child > .flex {
     height: 4.75rem !important;
   }
 
@@ -1221,7 +1221,7 @@ header img[src*="bergenbygg-logo"] {
 }
 
 /* Transparent over hero, solid only after the hero. */
-header {
+header.fixed {
   padding-block: 0 !important;
   transition:
     background-color 220ms ease,
@@ -1229,14 +1229,14 @@ header {
     backdrop-filter 220ms ease !important;
 }
 
-header.bg-transparent {
+header.fixed.bg-transparent {
   background: transparent !important;
   border-bottom-color: transparent !important;
   box-shadow: none !important;
   backdrop-filter: none;
 }
 
-header.bg-\[\#050505\] {
+header.fixed.bg-\[\#050505\] {
   background: rgba(5, 7, 5, 0.94) !important;
   border-bottom-color: rgba(140, 192, 64, 0.18) !important;
   backdrop-filter: blur(16px) saturate(1.15);
@@ -1300,11 +1300,11 @@ header.bg-\[\#050505\] {
 }
 
 @media (max-width: 767px) {
-  header > div:first-child > .flex {
+  header.fixed > div:first-child > .flex {
     height: 4.5rem !important;
   }
 
-  header img[src*="bergenbygg-logo"] {
+  header.fixed img[src*="bergenbygg-logo"] {
     height: 2.25rem !important;
   }
 
