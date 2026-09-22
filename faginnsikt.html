@@ -126,15 +126,15 @@ https://vctra.no/#org
         default-src 'self';
         base-uri 'self';
         object-src 'none';
-        form-action 'self';
+        form-action 'self' https://api.emailjs.com;
         upgrade-insecure-requests;
         block-all-mixed-content;
 
-        script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com;
+        script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net;
         style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
         font-src   'self' https://fonts.gstatic.com;
         img-src    'self' data: https:;
-        connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+        connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com;
         frame-src  https://www.googletagmanager.com https://www.google.com;
       "
     />
@@ -1295,6 +1295,6 @@ https://vctra.no/#org
         });
       });
     </script>
-    <script src="/index.js?v=emailjs1" defer></script>
+    <script src="/index.js?v=gisle2" defer></script>
   </body>
 </html>
