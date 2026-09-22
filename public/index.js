@@ -43,42 +43,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- Contact Form Handling ---
+  // --- Contact Form Handling (EmailJS) ---
   const contactForm = document.getElementById("contactForm");
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+  if (contactForm && contactForm.dataset.emailjsBound !== "true") {
+    const emailServiceId = "service_155c6jh";
+    const emailTemplateId = "template_9my7i4";
+    const emailPublicKey = "ZOIMC2E_FJHqarwmw";
+
+    contactForm.dataset.emailjsBound = "true";
+
+    if (window.emailjs) {
+      window.emailjs.init(emailPublicKey);
+    }
+
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       // Honeypot check (Antispam)
-      const honeypot = contactForm.querySelector('[name="honeypot_field"]');
+      const honeypot = contactForm.querySelector(
+        '[name="honeypot"], [name="honeypot_field"]'
+      );
       if (honeypot && honeypot.value) {
         console.warn("Spam detected via honeypot");
         return;
       }
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = (submitBtn && submitBtn.textContent) ? submitBtn.textContent : "Send";
+      const originalContent = submitBtn ? submitBtn.innerHTML : "Send";
 
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = "Sender...";
       }
 
-      // Simulate API call / Email dispatch
-      setTimeout(() => {
-        alert(
-          "Takk! Vi har mottatt din henvendelse. Vi tar kontakt for å avtale befaring/prat innen kort tid."
-        );
-        contactForm.reset();
-
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
+      try {
+        if (!window.emailjs) {
+          throw new Error("EmailJS er ikke lastet.");
         }
 
+        await window.emailjs.sendForm(
+          emailServiceId,
+          emailTemplateId,
+          contactForm
+        );
+
+        alert(
+          "Takk! Vi har mottatt henvendelsen din og tar kontakt så snart vi kan."
+        );
+        contactForm.reset();
         trackEvent("conversion", "form_submit_success", "contact_main");
-      }, 800);
+      } catch (error) {
+        console.error("EmailJS-feil:", error);
+        alert(
+          "Beklager, meldingen kunne ikke sendes. Ring oss på +47 917 27 100 eller send e-post til post@bergenbyggmontering.no."
+        );
+        trackEvent("conversion", "form_submit_error", "contact_main");
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalContent;
+        }
+      }
     });
   }
 

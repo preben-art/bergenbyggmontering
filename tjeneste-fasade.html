@@ -541,11 +541,6 @@
 }
 </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("wsBZ20QQULUt2nWeq"); 
-   })();
-</script>
 </head>
   <body
     class="antialiased selection:bg-brand-primary selection:text-black overflow-x-hidden bg-slate-50 subpage"
@@ -1338,37 +1333,6 @@
       header.classList.remove('bg-[#050505]');
     }
   });
-</script>
-    <script>
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Endre teksten på knappen mens vi sender
-    const btn = this.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
-    btn.innerText = 'Sender...';
-    btn.disabled = true;
-
-    // Disse ID-ene må stemme med det du har satt opp i EmailJS Dashboard
-    const serviceID = 'service_u1iw9wr';
-    const templateID = 'template_q7x7mtg';
-
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            btn.innerText = 'Sendt!';
-            alert('Takk! Vi har mottatt din forespørsel og kontakter deg snart.');
-            this.reset(); // Tømmer skjemaet
-        }, (err) => {
-            btn.innerText = 'Feilet';
-            alert('Beklager, noe gikk galt: ' + JSON.stringify(err));
-        })
-        .finally(() => {
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 3000);
-        });
-});
 </script>
   </body>
 </html>
