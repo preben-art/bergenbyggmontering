@@ -331,5 +331,55 @@
       "containedIn": "Vestland"
     }
   ],
-  "source": "Steder og målgrupper som allerede er navngitt på bergenbyggmontering.no. Ingen nye kommuner er lagt til."
+  "source": "Steder og målgrupper som allerede er navngitt på bergenbyggmontering.no. Ingen nye kommuner er lagt til.",
+  "pages": [
+    {
+      "name": "Forside",
+      "url": "https://bergenbyggmontering.no/"
+    },
+    {
+      "name": "Totalrenovering",
+      "url": "https://bergenbyggmontering.no/tjeneste-totalrenovering.html"
+    },
+    {
+      "name": "Nytt bad og oppussing av bad",
+      "url": "https://bergenbyggmontering.no/tjeneste-bad.html"
+    },
+    {
+      "name": "Taktekking",
+      "url": "https://bergenbyggmontering.no/tjeneste-tak.html"
+    },
+    {
+      "name": "Rørlegger",
+      "url": "https://bergenbyggmontering.no/tjeneste-ror.html"
+    },
+    {
+      "name": "Fasade og etterisolering",
+      "url": "https://bergenbyggmontering.no/tjeneste-fasade.html"
+    },
+    {
+      "name": "Tømrer og innvendig rehabilitering",
+      "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html"
+    },
+    {
+      "name": "Tilbygg",
+      "url": "https://bergenbyggmontering.no/tjeneste-tilbygg.html"
+    },
+    {
+      "name": "Borettslag og sameier",
+      "url": "https://bergenbyggmontering.no/tjeneste-brl.html"
+    },
+    {
+      "name": "Faginnsikt",
+      "url": "https://bergenbyggmontering.no/faginnsikt.html"
+    },
+    {
+      "name": "Jobb",
+      "url": "https://bergenbyggmontering.no/jobb.html"
+    },
+    {
+      "name": "Personvern",
+      "url": "https://bergenbyggmontering.no/personvern.html"
+    }
+  ]
 }

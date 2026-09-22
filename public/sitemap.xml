@@ -11,7 +11,7 @@
   <!-- HOME -->
   <url>
     <loc>https://bergenbyggmontering.no/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/"/>
@@ -56,7 +56,7 @@
   <!-- SERVICES -->
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-totalrenovering.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-totalrenovering.html"/>
@@ -89,7 +89,7 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-tak.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-tak.html"/>
@@ -103,7 +103,7 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-ror.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-ror.html"/>
@@ -117,7 +117,7 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-fasade.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-fasade.html"/>
@@ -131,7 +131,7 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-tomrer.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-tomrer.html"/>
@@ -145,7 +145,7 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-tilbygg.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-tilbygg.html"/>
@@ -159,16 +159,46 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-brl.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.88</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-brl.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bergenbyggmontering.no/tjeneste-brl.html"/>
     <image:image>
       <image:loc>https://bergenbyggmontering.no/bilder/DJI_0030.webp</image:loc>
       <image:title>Borettslag og sameier</image:title>
-      <image:caption>Rehabilitering og vedlikehold for borettslag/sameier i Bergen</image:caption>
+      <image:caption>Rehabilitering og vedlikehold for borettslag og sameier i Bergen</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://bergenbyggmontering.no/personvern.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/personvern.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bergenbyggmontering.no/personvern.html"/>
+  </url>
+
+  <url>
+    <loc>https://bergenbyggmontering.no/knowledgehub.json</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://bergenbyggmontering.no/llms.txt</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://bergenbyggmontering.no/ai.txt</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.40</priority>
   </url>
 
 </urlset>

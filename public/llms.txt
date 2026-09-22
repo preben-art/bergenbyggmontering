@@ -107,3 +107,32 @@ Vi tar ansvar for helheten — ryddig prosess, faglig rekkefølge, dokumentert l
 - Price: “Avhenger av størrelse, tilkomst, teknisk tilstand, materialvalg. Befaring gir realistisk ramme.”
 - Timeline: “Styres av omfang og tørketider; flere uker er vanlig ved full rehab av bad.”
 - Scope boundaries: “Vi tar ansvar for helheten; elektro leveres via partner der det kreves.”
+
+## Visit address
+- Torget 1, 5014 Bergen, Vestland, Norway
+
+## Full page index
+- https://bergenbyggmontering.no/
+- https://bergenbyggmontering.no/tjeneste-totalrenovering.html
+- https://bergenbyggmontering.no/tjeneste-bad.html
+- https://bergenbyggmontering.no/tjeneste-tak.html
+- https://bergenbyggmontering.no/tjeneste-ror.html
+- https://bergenbyggmontering.no/tjeneste-fasade.html
+- https://bergenbyggmontering.no/tjeneste-tomrer.html
+- https://bergenbyggmontering.no/tjeneste-tilbygg.html
+- https://bergenbyggmontering.no/tjeneste-brl.html
+- https://bergenbyggmontering.no/faginnsikt.html
+- https://bergenbyggmontering.no/jobb.html
+- https://bergenbyggmontering.no/personvern.html
+- https://bergenbyggmontering.no/knowledgehub.json
+- https://bergenbyggmontering.no/ai.txt
+- https://bergenbyggmontering.no/sitemap.xml
+
+## Borettslag og sameier, konkret
+- Page: https://bergenbyggmontering.no/tjeneste-brl.html
+- Scope: boligrettet rehabilitering i bebodd bygg. Bad i flere enheter, rør og stammer, tak, fasade og vinduer.
+- Board start: samle rapporter, skadehistorikk, tegninger og antall enheter; befaring og prioritering; beslutningsgrunnlag til generalforsamling; kontrollpunkter for HMS, adkomst, støy, vannstenging og fellesareal; sluttkontroll og dokumentasjon.
+- Price: avhenger av tilstand, tilgang og funn. Fastpris bare der det er mulig. Ingen fast kvm-pris.
+- Not this job: rene næringsbygg og kontorer uten boligformål.
+
+Last updated: 2026-09-22
