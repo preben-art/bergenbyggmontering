@@ -31,8 +31,8 @@ Design system — rå industri, tømrer, verksted
   --glow-primary: rgba(140, 192, 64, 0.22);
   --glow-gold: rgba(20, 50, 28, 0.35);
 
-  --radius: 0.4rem;
-  --radius-card: 0.5rem;
+  --radius: 0.16rem;
+  --radius-card: 0.2rem;
 
   --shadow-deep: 10px 14px 0 rgba(8, 12, 8, 0.55);
   --shadow-lift: 6px 8px 0 rgba(20, 50, 28, 0.35);
@@ -72,11 +72,11 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 75% 55% at 6% -12%, rgba(140, 192, 64, 0.22), transparent 52%),
-    radial-gradient(ellipse 60% 45% at 108% 4%, rgba(20, 50, 28, 0.55), transparent 48%),
-    radial-gradient(ellipse 50% 40% at 80% 110%, rgba(90, 140, 42, 0.16), transparent 52%),
+    radial-gradient(ellipse 80% 55% at 8% -8%, rgba(140, 192, 64, 0.38), transparent 50%),
+    radial-gradient(ellipse 55% 45% at 108% 8%, rgba(140, 192, 64, 0.18), transparent 46%),
+    radial-gradient(ellipse 50% 40% at 70% 110%, rgba(90, 140, 42, 0.22), transparent 50%),
     linear-gradient(180deg, #06100a 0%, #0a1810 48%, #06100a 100%);
-  animation: mesh-drift 26s ease-in-out infinite alternate;
+  animation: mesh-drift 18s ease-in-out infinite alternate;
 }
 
 body::after {
@@ -156,24 +156,25 @@ p {
 .section-dark + .section-white,
 .dark-section + .section-white {
   background:
-    linear-gradient(180deg, rgba(6, 16, 10, 0) 0%, #e8efe2 11%, #e6e2d4 24%) !important;
-  padding-top: 8rem;
+    linear-gradient(180deg, rgba(6, 16, 10, 0) 0%, rgba(140, 192, 64, 0.12) 8%, #e6e2d4 28%) !important;
+  padding-top: 10rem;
+  margin-top: -3.5rem;
 }
 
 .section-white + .section-white {
-  padding-top: 4.25rem;
-  margin-top: 0;
+  padding-top: 3.25rem;
+  margin-top: -0.75rem;
 }
 
 .section-white::before {
   content: "";
   position: absolute;
-  top: -5.5rem;
+  top: -7rem;
   left: 0;
   right: 0;
-  height: 11rem;
+  height: 14rem;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), #e6e2d4);
+  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), rgba(140, 192, 64, 0.1), #e6e2d4);
   z-index: 0;
 }
 
@@ -452,7 +453,7 @@ footer .btn-primary {
   width: 100%;
   height: 100%;
   min-height: 400px;
-  border-radius: 1.5rem;
+  border-radius: 0.45rem;
   overflow: hidden;
   filter: grayscale(100%) invert(92%) contrast(1.05);
   box-shadow: var(--shadow-deep);
@@ -525,7 +526,7 @@ footer a:hover {
 }
 
 .section-white .border-2 {
-  border-radius: 1.15rem;
+  border-radius: 0.4rem;
   overflow: hidden;
 }
 
@@ -536,7 +537,7 @@ footer a:hover {
 
 .section-white .rounded-xl,
 .section-white .rounded-2xl {
-  border-radius: 1.15rem;
+  border-radius: 0.5rem;
 }
 
 .section-white .border-b.border-gray-100,
@@ -686,12 +687,10 @@ footer a:hover {
   box-shadow: 0 18px 40px rgba(6, 16, 10, 0.08);
 }
 
-.section-dark .rounded-2xl,
-.dark-section .rounded-2xl,
-#prosess .rounded-2xl,
 #prosess .rounded-\[2rem\],
-.bento-item {
-  box-shadow: var(--shadow-deep);
+#prosess .rounded-2xl {
+  border-radius: 0.5rem !important;
+  box-shadow: 8px 10px 0 rgba(8, 12, 8, 0.45);
 }
 
 header {
@@ -871,11 +870,42 @@ nav button {
 /* CTA-bokser: lys tekst, godkjente knapper */
 .cta-panel,
 .section-white [class*="bg-black"] {
-  background: #141a14 !important;
-  border: 1px solid rgba(140, 192, 64, 0.4) !important;
-  border-radius: 0.5rem !important;
+  background: #10160f !important;
+  border: 1px solid rgba(140, 192, 64, 0.55) !important;
+  border-radius: 0.18rem !important;
   padding: 1.25rem 1.35rem !important;
-  box-shadow: 8px 10px 0 rgba(18, 20, 15, 0.28) !important;
+  box-shadow: 10px 12px 0 #14321c !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.cta-panel::after,
+.section-white [class*="bg-black"]::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 140%;
+  top: -30%;
+  left: -20%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(140, 192, 64, 0.42) 0%, transparent 62%);
+  animation: green-lamp 7.5s ease-in-out infinite;
+}
+
+@keyframes green-lamp {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(55%, 18%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
 }
 
 .cta-panel h3,
@@ -958,10 +988,10 @@ nav button {
 /* Accordion: én rad, ikke tom boks */
 .magnetic-btn {
   border: 1.5px solid rgba(18, 20, 15, 0.22) !important;
-  border-radius: 0.45rem !important;
+  border-radius: 0.16rem !important;
   background: #efe9d8;
   overflow: hidden;
-  box-shadow: 4px 4px 0 rgba(18, 20, 15, 0.12);
+  box-shadow: 5px 5px 0 rgba(18, 20, 15, 0.16);
 }
 
 .magnetic-btn > .absolute.inset-0 {
@@ -1030,28 +1060,40 @@ nav button {
   letter-spacing: -0.022em !important;
 }
 
-/* Jobbfoto: liggende på benken, uten ramme */
+/* Jobbfoto: firkantet 3D-plate */
 .photo-3d,
 .section-white .aspect-\[4\/5\] {
   border: none !important;
-  border-radius: 0.35rem;
+  border-radius: 0.16rem !important;
   overflow: hidden;
   background: #12140f;
   isolation: isolate;
-  box-shadow: 10px 14px 0 rgba(18, 20, 15, 0.28);
-  transform: none;
+  transform: perspective(1100px) rotateY(-9deg) rotateX(4deg);
+  transform-origin: left center;
+  box-shadow:
+    22px 26px 0 #14321c,
+    0 28px 50px rgba(0, 0, 0, 0.4),
+    0 0 48px rgba(140, 192, 64, 0.22);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s ease;
 }
 
 .section-white:nth-of-type(even) .photo-3d,
 .section-white:nth-of-type(even) .aspect-\[4\/5\] {
-  transform: none;
-  box-shadow: -10px 14px 0 rgba(18, 20, 15, 0.28);
+  transform: perspective(1100px) rotateY(9deg) rotateX(4deg);
+  transform-origin: right center;
+  box-shadow:
+    -22px 26px 0 #14321c,
+    0 28px 50px rgba(0, 0, 0, 0.4),
+    0 0 48px rgba(140, 192, 64, 0.22);
 }
 
 .photo-3d:hover,
 .section-white .aspect-\[4\/5\]:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 13px 17px 0 rgba(18, 20, 15, 0.32);
+  transform: perspective(1100px) rotateY(-2deg) rotateX(1deg) translateY(-10px);
+  box-shadow:
+    16px 32px 0 #8cc040,
+    0 36px 60px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(140, 192, 64, 0.35);
 }
 
 .photo-3d img,
@@ -1072,9 +1114,9 @@ nav button {
 /* Skjema: avrundet firekant, konvertering */
 .form-card {
   background: #efe9d8;
-  border: 1.5px solid rgba(18, 20, 15, 0.18);
-  border-radius: 0.5rem;
-  box-shadow: 8px 10px 0 rgba(18, 20, 15, 0.16);
+  border: 1.5px solid rgba(18, 20, 15, 0.22);
+  border-radius: 0.18rem;
+  box-shadow: 10px 12px 0 #14321c;
 }
 
 #kontakt label,
@@ -1175,6 +1217,78 @@ nav button {
   min-width: 10.5rem;
   font-size: 0.95rem !important;
   box-shadow: 4px 4px 0 #0b100c !important;
+  border-radius: 0.16rem !important;
+}
+
+.cta-panel .btn-primary,
+.cta-panel .btn-solid,
+.btn-primary,
+.btn-solid,
+#kontakt button[type="submit"],
+#kontakt input,
+#kontakt textarea {
+  border-radius: 0.16rem !important;
+}
+
+.bento-item {
+  border-radius: 0.18rem !important;
+}
+
+.aeo-list details {
+  border-radius: 0.16rem !important;
+}
+
+#hero::after {
+  background:
+    radial-gradient(ellipse at 18% 78%, rgba(140, 192, 64, 0.42), transparent 42%),
+    radial-gradient(ellipse at 88% 18%, rgba(140, 192, 64, 0.22), transparent 38%),
+    linear-gradient(180deg, rgba(6, 16, 10, 0.58) 0%, rgba(6, 16, 10, 0.2) 40%, rgba(6, 16, 10, 0.9) 100%) !important;
+  animation: hero-green 9s ease-in-out infinite alternate;
+}
+
+@keyframes hero-green {
+  from {
+    filter: saturate(1) brightness(1);
+  }
+  to {
+    filter: saturate(1.25) brightness(1.12);
+  }
+}
+
+#prosess,
+#faginnsikt,
+#profil,
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+#prosess::after,
+#faginnsikt::after,
+footer::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 80%;
+  top: -10%;
+  right: -10%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(140, 192, 64, 0.28) 0%, transparent 65%);
+  animation: green-lamp 11s ease-in-out infinite;
+}
+
+#prosess > *,
+#faginnsikt > *,
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+#prosess::before {
+  height: 14rem !important;
+  top: -7rem !important;
+  background: linear-gradient(to bottom, #e6e2d4, rgba(140, 192, 64, 0.12), rgba(6, 16, 10, 0)) !important;
 }
 
 @media (max-width: 767px) {
@@ -1182,7 +1296,7 @@ nav button {
   .section-white .aspect-\[4\/5\],
   .section-white:nth-of-type(even) .photo-3d,
   .section-white:nth-of-type(even) .aspect-\[4\/5\] {
-    transform: none;
-    box-shadow: 6px 8px 0 rgba(18, 20, 15, 0.24);
+    transform: perspective(900px) rotateY(-4deg) rotateX(2deg);
+    box-shadow: 12px 16px 0 #14321c, 0 0 28px rgba(140, 192, 64, 0.2);
   }
 }
