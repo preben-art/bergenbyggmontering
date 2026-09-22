@@ -144,7 +144,12 @@ function gisleReply(text, memory) {
   if (place) memory.place = place;
 
   if (/hvem er du|hva heter du|er du gisle/.test(q)) {
-    return "Jeg er Gisle Bjotveit, avdelingsleder for våtrom og rør i Bergen Byggmontering. Spør om det du ser på siden, eller fyll inn navn, telefon og e-post og trykk Send, så går det i kontaktskjemaet.";
+    return "Gisle Bjotveit. Jeg leder våtrom og rør hos oss. Spør hva vi gjør, og hva vi kan bistå deg med. Når du vil ha befaring, legger du igjen navn og telefon og trykker Send.";
+  }
+
+  if (/befaring|book|bestill|kom og se|ta en titt/.test(q)) {
+    const job = memory.topic ? " det du nevnte" : " jobben";
+    return `Det tar vi på befaring. Skriv kort hva${job} gjelder, navn og telefon, og trykk Send. Så ringer vi og avtaler tid.`;
   }
 
   if (/adresse|hvor holder|torget|org|åpningstid|apningstid/.test(q)) {
@@ -189,8 +194,24 @@ function gisleReply(text, memory) {
     }
   }
 
-  parts.push("Fyll inn navn, telefon og e-post under, skriv kort hva det gjelder, og trykk Send. Da går det i samme kontaktskjema.");
+  parts.push("Vil du ha befaring, legger du igjen navn og telefon og trykker Send.");
   return parts.join(" ");
+}
+
+function gisleWelcome(page) {
+  const here = {
+    bad: "Ser du på bad, kan vi starte der.",
+    tak: "Ser du på tak, kan vi starte der.",
+    ror: "Ser du på rør, kan vi starte der.",
+    fasade: "Ser du på fasade, kan vi starte der.",
+    tomrer: "Ser du på tømrerarbeid, kan vi starte der.",
+    tilbygg: "Ser du på tilbygg, kan vi starte der.",
+    brl: "Ser du på borettslag og sameier, kan vi starte der.",
+    total: "Ser du på totalrenovering, kan vi starte der.",
+    fag: "Her kan du spørre om faget, og hva vi kan bistå deg med.",
+    hjem: "Her kan du spørre om hva vi i Bergen Byggmontering gjør, og hva vi kan bistå deg med.",
+  };
+  return `Velkommen. Jeg er Gisle. ${here[page.id] || here.hjem} Bad, rør, tak eller hele boligen. Si ifra hva som står på.`;
 }
 
 function gisleValidEmail(value) {
@@ -427,11 +448,29 @@ function mountGisle(trackEvent) {
   root.append(panel, launcher);
   document.body.appendChild(root);
 
-  addBubble(
-    messages,
-    `Hei, jeg er Gisle. Du er på ${page.name}. Spør om bad, tak, rør eller det som står på siden. Når du trykker Send, går navn, telefon og e-post i samme kontaktskjema som resten av siden.`,
-    "gisle"
-  );
+  addBubble(messages, gisleWelcome(page), "gisle");
+
+  const starters = document.createElement("div");
+  starters.style.cssText = "display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 8px;background:#f6f7f4;";
+  [
+    ["Nytt bad", "Vi skal ha nytt bad. Hva gjør dere, og kan dere bistå?"],
+    ["Tak som lekker", "Taket lekker. Hva ser dere etter?"],
+    ["Hva koster det?", "Hva koster en sånn jobb?"],
+    ["Borettslag", "Vi er et borettslag som skal ta bad og rør."],
+    ["Book befaring", "Jeg vil booke befaring."],
+  ].forEach(([label, text]) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.textContent = label;
+    chip.style.cssText =
+      "border:1px solid #d5d8d0;background:#fff;color:#1c1f18;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:650;cursor:pointer;";
+    chip.addEventListener("click", () => {
+      messageInput.value = text;
+      form.requestSubmit();
+    });
+    starters.appendChild(chip);
+  });
+  panel.insertBefore(starters, form);
 
   const setOpen = (open) => {
     panel.hidden = !open;
