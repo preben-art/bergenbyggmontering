@@ -242,9 +242,11 @@ p {
 .bento-item {
   position: relative;
   overflow: hidden;
-  border-radius: 1.5rem;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-deep);
+  border-radius: 1.2rem;
+  border: none;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.32),
+    0 28px 56px rgba(0, 0, 0, 0.38);
 }
 
 .bento-item::after {
@@ -532,13 +534,13 @@ footer a:hover {
 }
 
 .section-white .border-2 {
-  border-radius: 1.25rem;
+  border-radius: 1.15rem;
   overflow: hidden;
 }
 
-.section-white .border-2.border-\[\#8cc040\] {
-  border-width: 1px !important;
-  border-color: rgba(140, 192, 64, 0.55) !important;
+.section-white .border-2.border-\[\#8cc040\],
+.section-white .aspect-\[4\/5\] {
+  border: none !important;
 }
 
 .section-white .rounded-xl,
@@ -566,9 +568,10 @@ footer a:hover {
 
 .section-white h4 {
   font-family: var(--font-display);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: -0.022em;
+  font-weight: 650;
+  text-transform: none;
 }
 
 #rekruttering,
@@ -826,17 +829,21 @@ span.text-brand-primary.uppercase,
 }
 
 .bento-overlay h3 {
-  font-size: clamp(1.15rem, 1.8vw, 1.85rem) !important;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.4rem;
+  font-size: clamp(1.28rem, 2.1vw, 2.05rem) !important;
+  line-height: 1.08;
+  letter-spacing: -0.038em;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  color: #f4f8ee !important;
 }
 
 .bento-overlay p {
-  font-size: 0.92rem !important;
-  line-height: 1.45;
-  color: #e4dfd3 !important;
-  max-width: 28ch;
+  font-size: 0.98rem !important;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #dce6d2 !important;
+  max-width: 34ch;
+  letter-spacing: -0.011em;
 }
 
 .section-white p,
@@ -975,6 +982,10 @@ nav button {
   gap: 1rem;
 }
 
+.magnetic-btn .rounded-full {
+  border-radius: 0.7rem !important;
+}
+
 .magnetic-btn > button > span {
   font-family: var(--font-display) !important;
   font-size: 0.92rem !important;
@@ -988,22 +999,206 @@ nav button {
 .dropdown-inner {
   overflow: hidden;
   min-height: 0;
+  padding: 0.25rem 0.35rem 1.1rem;
 }
 
 .dropdown-inner .bg-white,
 .dropdown-inner [class*="rounded-xl"] {
   background: transparent !important;
   box-shadow: none !important;
+  border: none !important;
+  padding: 0.35rem 0.15rem !important;
 }
 
 .dropdown-inner h4,
 .dropdown-inner h4[class] {
   color: #10160e !important;
-  font-size: 0.8rem !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.02rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.022em !important;
+  text-transform: none !important;
+  line-height: 1.3;
+  margin-bottom: 0.65rem;
 }
 
 .dropdown-inner p,
 .dropdown-inner li,
 .dropdown-inner li span {
   color: #1c2418 !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.97rem !important;
+  line-height: 1.62 !important;
+  letter-spacing: -0.011em;
+}
+
+.dropdown-inner .font-bold.text-black.uppercase,
+.dropdown-inner h4.uppercase {
+  text-transform: none !important;
+  letter-spacing: -0.022em !important;
+}
+
+/* Naturlig 3D-foto uten ramme */
+.photo-3d,
+.section-white .aspect-\[4\/5\] {
+  border: none !important;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  background: #0c1810;
+  isolation: isolate;
+  box-shadow:
+    0 2px 4px rgba(6, 16, 10, 0.14),
+    0 14px 28px rgba(6, 16, 10, 0.16),
+    0 36px 68px rgba(6, 16, 10, 0.22);
+  transform: perspective(1600px) rotateY(-3deg) rotateX(1.25deg);
+  transform-origin: center center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s ease;
+}
+
+.section-white:nth-of-type(even) .photo-3d,
+.section-white:nth-of-type(even) .aspect-\[4\/5\] {
+  transform: perspective(1600px) rotateY(3deg) rotateX(1.25deg);
+}
+
+.photo-3d:hover,
+.section-white .aspect-\[4\/5\]:hover {
+  transform: perspective(1600px) rotateY(0deg) rotateX(0deg) translateY(-8px);
+  box-shadow:
+    0 8px 16px rgba(6, 16, 10, 0.16),
+    0 28px 56px rgba(6, 16, 10, 0.28);
+}
+
+.photo-3d img,
+.section-white .aspect-\[4\/5\] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.relative.z-10.overflow-hidden.shadow-2xl,
+.relative.z-10.w-full.overflow-hidden.shadow-2xl {
+  border: none !important;
+  border-radius: 1.15rem !important;
+  box-shadow:
+    0 12px 28px rgba(6, 16, 10, 0.2),
+    0 32px 64px rgba(6, 16, 10, 0.28) !important;
+}
+
+/* Skjema: avrundet firekant, konvertering */
+.form-card {
+  background: #f7faf3;
+  border: none;
+  border-radius: 1.15rem;
+  box-shadow:
+    0 2px 6px rgba(6, 16, 10, 0.06),
+    0 22px 48px rgba(6, 16, 10, 0.1);
+}
+
+#kontakt label,
+#kontakt label[class] {
+  color: #10160e !important;
+  font-family: var(--font-display) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+}
+
+#kontakt input[type="text"],
+#kontakt input[type="tel"],
+#kontakt input[type="email"],
+#kontakt textarea {
+  width: 100%;
+  border: 1px solid rgba(16, 22, 14, 0.12) !important;
+  border-radius: 0.78rem !important;
+  background: #fff !important;
+  color: #10160e !important;
+  font-family: var(--font-body) !important;
+  font-size: 1.02rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.015em;
+  padding: 0.9rem 1.05rem !important;
+}
+
+#kontakt input:focus,
+#kontakt textarea:focus {
+  border-color: #8cc040 !important;
+  box-shadow: 0 0 0 3px rgba(140, 192, 64, 0.22);
+  outline: none;
+}
+
+#kontakt button[type="submit"] {
+  border-radius: 0.78rem !important;
+  background: #8cc040 !important;
+  color: #10160e !important;
+  font-family: var(--font-display) !important;
+  font-size: 1rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.018em !important;
+  text-transform: none !important;
+  min-height: 3.15rem;
+  box-shadow: 0 10px 24px rgba(140, 192, 64, 0.28);
+}
+
+#kontakt button[type="submit"] span {
+  color: #10160e !important;
+  font-family: var(--font-display) !important;
+  text-transform: none !important;
+  letter-spacing: -0.018em !important;
+}
+
+#kontakt button[type="submit"]:hover {
+  background: #b8dc78 !important;
+  color: #10160e !important;
+}
+
+/* FAQ og prosess: lesbar type i kort */
+.aeo-list details {
+  background: #f7faf3;
+  border: 1px solid rgba(16, 22, 14, 0.08) !important;
+  border-radius: 0.9rem !important;
+  padding: 0.15rem 1.15rem 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.aeo-list details > summary {
+  font-size: 1.05rem !important;
+  letter-spacing: -0.025em;
+  font-weight: 650;
+  padding: 1.05rem 0;
+}
+
+.aeo-list .content,
+.aeo-list .content p {
+  font-size: 0.98rem !important;
+  line-height: 1.65;
+  color: #1c2418 !important;
+}
+
+#prosess h3 {
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem) !important;
+  letter-spacing: -0.035em;
+  color: #f4f8ee !important;
+}
+
+#prosess p {
+  font-size: 1.02rem !important;
+  line-height: 1.55;
+  color: #dce6d2 !important;
+}
+
+.cta-panel .btn-solid {
+  min-width: 10.5rem;
+  font-size: 0.95rem !important;
+  box-shadow: 0 8px 20px rgba(140, 192, 64, 0.28) !important;
+}
+
+@media (max-width: 767px) {
+  .photo-3d,
+  .section-white .aspect-\[4\/5\],
+  .section-white:nth-of-type(even) .photo-3d,
+  .section-white:nth-of-type(even) .aspect-\[4\/5\] {
+    transform: none;
+  }
 }
