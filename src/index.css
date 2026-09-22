@@ -1219,3 +1219,125 @@ header img[src*="bergenbygg-logo"] {
     white-space: normal;
   }
 }
+
+/* Transparent over hero, solid only after the hero. */
+header {
+  padding-block: 0 !important;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    backdrop-filter 220ms ease !important;
+}
+
+header.bg-transparent {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none;
+}
+
+header.bg-\[\#050505\] {
+  background: rgba(5, 7, 5, 0.94) !important;
+  border-bottom-color: rgba(140, 192, 64, 0.18) !important;
+  backdrop-filter: blur(16px) saturate(1.15);
+}
+
+/* Hero spacing and scaling by device class. */
+#hero {
+  min-height: clamp(620px, 92svh, 940px) !important;
+  padding-top: clamp(8.5rem, 14vh, 10rem) !important;
+  padding-bottom: clamp(5rem, 10vh, 7rem) !important;
+}
+
+#hero > .relative.w-full {
+  display: flex;
+  align-items: center;
+}
+
+#hero .max-w-4xl {
+  width: 100%;
+}
+
+#hero .inline-flex.items-center.space-x-2 {
+  margin-bottom: clamp(1.5rem, 3vh, 2.2rem) !important;
+}
+
+#hero h1 + p {
+  margin-top: clamp(1.75rem, 3.5vh, 2.6rem) !important;
+}
+
+#hero .flex.flex-col.sm\:flex-row {
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #hero {
+    min-height: clamp(620px, 92svh, 820px) !important;
+    padding-inline: 0;
+  }
+
+  #hero h1 span:first-child {
+    font-size: clamp(2.8rem, 4.75vw, 4rem) !important;
+  }
+
+  #hero h1 span:last-child {
+    font-size: clamp(2.55rem, 4.35vw, 3.65rem) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #hero .max-w-4xl {
+    max-width: 78rem !important;
+  }
+
+  #hero h1 span:first-child {
+    font-size: clamp(4rem, 5.1vw, 5.65rem) !important;
+  }
+
+  #hero h1 span:last-child {
+    font-size: clamp(3.65rem, 4.65vw, 5.15rem) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  header > div:first-child > .flex {
+    height: 4.5rem !important;
+  }
+
+  header img[src*="bergenbygg-logo"] {
+    height: 2.25rem !important;
+  }
+
+  #hero {
+    min-height: clamp(650px, 90svh, 840px) !important;
+    padding-top: 6.75rem !important;
+    padding-bottom: 4.25rem !important;
+  }
+
+  #hero .inline-flex.items-center.space-x-2 {
+    margin-bottom: 1.35rem !important;
+  }
+
+  #hero h1 span:first-child,
+  #hero h1 span:last-child {
+    font-size: clamp(2.25rem, 10.5vw, 3.25rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  #hero h1 + p {
+    margin-top: 1.5rem !important;
+    font-size: 1rem !important;
+    line-height: 1.52;
+  }
+
+  #hero h1 + p + p {
+    margin-bottom: 1.4rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  #hero .btn-primary,
+  #hero .btn-solid {
+    width: 100%;
+    min-height: 3rem;
+  }
+}
