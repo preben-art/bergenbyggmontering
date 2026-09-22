@@ -36,6 +36,7 @@
     <meta name="publisher" content="VCTRA" />
     <meta name="generator" content="VCTRA" />
     <meta name="vctra:owner" content="VCTRA" />
+    <meta name="vctra:owner_url" content="https://vctra.no/" />
 
     <meta name="ai:page_purpose" content="Recruitment / career / skilled trades" />
     <meta name="ai:primary_entity" content="Bergen Byggmontering AS" />
@@ -445,6 +446,12 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://vctra.no/#org",
+            "name": "VCTRA",
+            "url": "https://vctra.no/"
+          },
+          {
             "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
             "@id": "https://bergenbyggmontering.no/#org",
             "name": "Bergen Byggmontering AS",
@@ -459,6 +466,9 @@
             "name": "Bergen Byggmontering AS",
             "publisher": {
               "@id": "https://bergenbyggmontering.no/#org"
+            },
+            "creator": {
+              "@id": "https://vctra.no/#org"
             },
             "inLanguage": "nb-NO"
           },
@@ -476,6 +486,9 @@
             },
             "mainEntity": {
               "@id": "https://bergenbyggmontering.no/#org"
+            },
+            "creator": {
+              "@id": "https://vctra.no/#org"
             },
             "audience": [
               {
@@ -862,7 +875,7 @@
 
         <div class="mt-16 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-gray-400 md:flex-row md:items-center md:justify-between">
           <p>Bergen Byggmontering AS.</p>
-          <p>© 2026 VCTRA. Alle rettigheter reservert.</p>
+          <p>© 2026 <a href="https://vctra.no/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-primary transition-colors">VCTRA</a>. Alle rettigheter reservert.</p>
         </div>
       </div>
     </footer>
