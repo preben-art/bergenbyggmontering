@@ -1,6 +1,6 @@
 /*
 © 2026 Bergen Byggmontering AS
-Design system — skarp oliven, high-end gradient, dybde og kontrast
+Design system — rå industri, tømrer, verksted
 */
 
 @tailwind base;
@@ -8,15 +8,15 @@ Design system — skarp oliven, high-end gradient, dybde og kontrast
 @tailwind utilities;
 
 :root {
-  --bg-deep: #06100a;
-  --bg-elevated: #0c1a12;
-  --bg-white: #f3f6ee;
-  --bg-light: #e6eee0;
+  --bg-deep: #0b100c;
+  --bg-elevated: #141a14;
+  --bg-white: #e6e2d4;
+  --bg-light: #dcd6c4;
 
-  --text-main: #f3f7ee;
-  --text-inverse: #0e140c;
-  --text-muted: #c5d0bc;
-  --text-muted-inverse: #2c3828;
+  --text-main: #f1eee4;
+  --text-inverse: #12140f;
+  --text-muted: #c4c0b2;
+  --text-muted-inverse: #2a2c24;
 
   --brand-primary: #8cc040;
   --brand-accent: #b8dc78;
@@ -24,19 +24,23 @@ Design system — skarp oliven, high-end gradient, dybde og kontrast
   --brand-hover: #6b9a2e;
   --brand-forest: #14321c;
 
-  --border-light: rgba(243, 247, 238, 0.14);
-  --border-gold: rgba(140, 192, 64, 0.4);
-  --border-dark: rgba(14, 20, 12, 0.12);
+  --border-light: rgba(241, 238, 228, 0.16);
+  --border-gold: rgba(140, 192, 64, 0.45);
+  --border-dark: rgba(18, 20, 15, 0.16);
 
-  --glow-primary: rgba(140, 192, 64, 0.42);
-  --glow-gold: rgba(20, 50, 28, 0.45);
+  --glow-primary: rgba(140, 192, 64, 0.22);
+  --glow-gold: rgba(20, 50, 28, 0.35);
 
-  --shadow-deep: 0 28px 70px rgba(0, 0, 0, 0.62), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
-  --shadow-lift: 0 22px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(140, 192, 64, 0.28);
+  --radius: 0.4rem;
+  --radius-card: 0.5rem;
 
-  --fs-h1: clamp(2.65rem, 6.4vw, 5.35rem);
-  --fs-h2: clamp(2.05rem, 4.6vw, 3.85rem);
-  --fs-h3: clamp(1.45rem, 2.6vw, 2.35rem);
+  --shadow-deep: 10px 14px 0 rgba(8, 12, 8, 0.55);
+  --shadow-lift: 6px 8px 0 rgba(20, 50, 28, 0.35);
+  --shadow-plate: 8px 10px 0 rgba(18, 20, 15, 0.18);
+
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);
+  --fs-h2: clamp(1.95rem, 4.2vw, 3.4rem);
+  --fs-h3: clamp(1.35rem, 2.3vw, 2.05rem);
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -104,8 +108,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  line-height: 1.04;
+  letter-spacing: -0.032em;
   font-weight: 700;
   color: var(--text-main);
   text-wrap: balance;
@@ -139,10 +143,10 @@ p {
 }
 
 .section-white {
-  background: #f3f6ee !important;
-  color: #10160e;
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
+  background: #e6e2d4 !important;
+  color: #12140f;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
   position: relative;
   box-shadow: none;
   border: none !important;
@@ -152,7 +156,7 @@ p {
 .section-dark + .section-white,
 .dark-section + .section-white {
   background:
-    linear-gradient(180deg, rgba(6, 16, 10, 0) 0%, #e8efe2 11%, #f3f6ee 24%) !important;
+    linear-gradient(180deg, rgba(6, 16, 10, 0) 0%, #e8efe2 11%, #e6e2d4 24%) !important;
   padding-top: 8rem;
 }
 
@@ -169,7 +173,7 @@ p {
   right: 0;
   height: 11rem;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), #f3f6ee);
+  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), #e6e2d4);
   z-index: 0;
 }
 
@@ -242,11 +246,9 @@ p {
 .bento-item {
   position: relative;
   overflow: hidden;
-  border-radius: 1.2rem;
+  border-radius: var(--radius-card);
   border: none;
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.32),
-    0 28px 56px rgba(0, 0, 0, 0.38);
+  box-shadow: 8px 10px 0 rgba(8, 12, 8, 0.55);
 }
 
 .bento-item::after {
@@ -377,41 +379,41 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  border-radius: 0.78rem;
-  padding: 0.88rem 1.45rem;
+  border-radius: var(--radius);
+  padding: 0.82rem 1.25rem;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.92rem;
+  font-weight: 650;
+  font-size: 0.9rem;
   line-height: 1.15;
-  letter-spacing: -0.018em;
+  letter-spacing: -0.012em;
   text-transform: none;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .btn-primary {
   background: transparent;
-  border: 1px solid rgba(243, 247, 238, 0.55);
-  color: #f3f7ee;
+  border: 1.5px solid rgba(241, 238, 228, 0.7);
+  color: #f1eee4;
 }
 
 .btn-primary:hover {
   background: var(--brand-primary);
   border-color: var(--brand-primary);
-  color: #10160e;
-  box-shadow: 0 0 28px var(--glow-primary);
+  color: #12140f;
+  box-shadow: 4px 4px 0 #14321c;
 }
 
 .section-white .btn-primary {
-  border-color: rgba(16, 22, 14, 0.7);
-  color: #10160e;
+  border-color: #12140f;
+  color: #12140f;
 }
 
 .section-white .btn-primary:hover {
-  background: #10160e;
-  color: #f3f7ee;
-  border-color: #10160e;
+  background: #12140f;
+  color: #f1eee4;
+  border-color: #12140f;
 }
 
 .section-white [class*="bg-black"] .btn-primary,
@@ -420,41 +422,30 @@ p {
 .dark-section .btn-primary,
 header .btn-primary,
 footer .btn-primary {
-  border-color: rgba(243, 247, 238, 0.55);
-  color: #f3f7ee;
+  border-color: rgba(241, 238, 228, 0.7);
+  color: #f1eee4;
 }
 
 .section-white [class*="bg-black"] .btn-primary:hover,
 [class*="bg-black"] .btn-primary:hover {
   background: var(--brand-primary);
   border-color: var(--brand-primary);
-  color: #10160e;
+  color: #12140f;
 }
 
 .btn-solid {
-  background: linear-gradient(135deg, #14321c 0%, #8cc040 58%, #b8dc78 100%);
-  background-size: 180% 180%;
-  animation: btn-sheen 8s ease-in-out infinite;
-  border: 1px solid transparent;
-  color: #10160e;
-  box-shadow: 0 10px 28px var(--glow-primary);
-}
-
-@keyframes btn-sheen {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  background: #8cc040;
+  border: 1.5px solid #8cc040;
+  color: #12140f;
+  box-shadow: 4px 4px 0 #14321c;
+  animation: none;
 }
 
 .btn-solid:hover {
-  background: #8cc040;
-  color: #10160e;
-  filter: brightness(1.06);
-  box-shadow: 0 12px 32px rgba(140, 192, 64, 0.35);
+  background: #b8dc78;
+  color: #12140f;
+  filter: none;
+  box-shadow: 5px 5px 0 #14321c;
 }
 
 .map-container {
@@ -530,7 +521,7 @@ footer a:hover {
 /* Flyt: mykere rammer, mindre kutt */
 .section-white.bg-slate-50,
 .section-white[class*="bg-slate"] {
-  background: #f3f6ee !important;
+  background: #e6e2d4 !important;
 }
 
 .section-white .border-2 {
@@ -577,7 +568,7 @@ footer a:hover {
 #rekruttering,
 #faq,
 #kontakt {
-  background: #f3f6ee !important;
+  background: #e6e2d4 !important;
   border: none !important;
   color: #141a12 !important;
 }
@@ -602,7 +593,7 @@ footer a:hover {
   right: 0;
   height: 9rem;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), #f3f6ee);
+  background: linear-gradient(to bottom, rgba(6, 16, 10, 0), #e6e2d4);
   z-index: 0;
 }
 
@@ -715,7 +706,7 @@ header {
   right: 0;
   height: 10rem;
   pointer-events: none;
-  background: linear-gradient(to bottom, #f3f6ee, rgba(6, 16, 10, 0));
+  background: linear-gradient(to bottom, #e6e2d4, rgba(6, 16, 10, 0));
   z-index: 2;
 }
 
@@ -746,8 +737,8 @@ footer::before {
 /* Cinema HDR grade — photos feel denser and more alive */
 img[src*="/bilder/"]:not([src*="logo"]),
 img[src*="bilder/"]:not([src*="logo"]) {
-  filter: url(#hollywood-sharp) contrast(1.28) saturate(1.22) brightness(1.04);
-  transition: filter 0.55s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  filter: url(#hollywood-sharp) contrast(1.14) saturate(1.04) brightness(0.98);
+  transition: filter 0.4s ease, transform 0.6s ease;
 }
 
 img[src*="/bilder/"]:not([src*="logo"]):hover,
@@ -880,11 +871,11 @@ nav button {
 /* CTA-bokser: lys tekst, godkjente knapper */
 .cta-panel,
 .section-white [class*="bg-black"] {
-  background: #0c1810 !important;
-  border: 1px solid rgba(140, 192, 64, 0.34) !important;
-  border-radius: 1.1rem !important;
-  padding: 1.4rem 1.5rem !important;
-  box-shadow: 0 16px 36px rgba(6, 16, 10, 0.16) !important;
+  background: #141a14 !important;
+  border: 1px solid rgba(140, 192, 64, 0.4) !important;
+  border-radius: 0.5rem !important;
+  padding: 1.25rem 1.35rem !important;
+  box-shadow: 8px 10px 0 rgba(18, 20, 15, 0.28) !important;
 }
 
 .cta-panel h3,
@@ -922,14 +913,13 @@ nav button {
 .section-white [class*="bg-black"] .btn-primary,
 .section-white [class*="bg-black"] .btn-solid {
   text-transform: none !important;
-  letter-spacing: -0.015em !important;
-  font-size: 0.88rem !important;
-  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  font-size: 0.9rem !important;
+  font-weight: 650 !important;
   line-height: 1.15 !important;
-  padding: 0.7rem 1.15rem !important;
-  min-height: 2.75rem;
-  border-radius: 0.7rem !important;
-  box-shadow: none !important;
+  padding: 0.72rem 1.1rem !important;
+  min-height: 2.7rem;
+  border-radius: 0.4rem !important;
   animation: none !important;
   filter: none !important;
   white-space: nowrap;
@@ -954,7 +944,8 @@ nav button {
   background: #8cc040 !important;
   background-image: none !important;
   border: 1.5px solid #8cc040 !important;
-  color: #10160e !important;
+  color: #12140f !important;
+  box-shadow: 4px 4px 0 #0b100c !important;
 }
 
 .cta-panel .btn-solid:hover,
@@ -966,10 +957,11 @@ nav button {
 
 /* Accordion: én rad, ikke tom boks */
 .magnetic-btn {
-  border: 1px solid rgba(16, 22, 14, 0.12) !important;
-  border-radius: 0.9rem !important;
-  background: #f7faf3;
+  border: 1.5px solid rgba(18, 20, 15, 0.22) !important;
+  border-radius: 0.45rem !important;
+  background: #efe9d8;
   overflow: hidden;
+  box-shadow: 4px 4px 0 rgba(18, 20, 15, 0.12);
 }
 
 .magnetic-btn > .absolute.inset-0 {
@@ -987,12 +979,12 @@ nav button {
 }
 
 .magnetic-btn > button > span {
-  font-family: var(--font-display) !important;
-  font-size: 0.92rem !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.014em !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
   text-transform: none !important;
-  color: #10160e !important;
+  color: #12140f !important;
   padding-right: 0 !important;
 }
 
@@ -1038,34 +1030,28 @@ nav button {
   letter-spacing: -0.022em !important;
 }
 
-/* Naturlig 3D-foto uten ramme */
+/* Jobbfoto: liggende på benken, uten ramme */
 .photo-3d,
 .section-white .aspect-\[4\/5\] {
   border: none !important;
-  border-radius: 1.15rem;
+  border-radius: 0.35rem;
   overflow: hidden;
-  background: #0c1810;
+  background: #12140f;
   isolation: isolate;
-  box-shadow:
-    0 2px 4px rgba(6, 16, 10, 0.14),
-    0 14px 28px rgba(6, 16, 10, 0.16),
-    0 36px 68px rgba(6, 16, 10, 0.22);
-  transform: perspective(1600px) rotateY(-3deg) rotateX(1.25deg);
-  transform-origin: center center;
-  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s ease;
+  box-shadow: 10px 14px 0 rgba(18, 20, 15, 0.28);
+  transform: none;
 }
 
 .section-white:nth-of-type(even) .photo-3d,
 .section-white:nth-of-type(even) .aspect-\[4\/5\] {
-  transform: perspective(1600px) rotateY(3deg) rotateX(1.25deg);
+  transform: none;
+  box-shadow: -10px 14px 0 rgba(18, 20, 15, 0.28);
 }
 
 .photo-3d:hover,
 .section-white .aspect-\[4\/5\]:hover {
-  transform: perspective(1600px) rotateY(0deg) rotateX(0deg) translateY(-8px);
-  box-shadow:
-    0 8px 16px rgba(6, 16, 10, 0.16),
-    0 28px 56px rgba(6, 16, 10, 0.28);
+  transform: translate(-3px, -3px);
+  box-shadow: 13px 17px 0 rgba(18, 20, 15, 0.32);
 }
 
 .photo-3d img,
@@ -1079,29 +1065,25 @@ nav button {
 .relative.z-10.overflow-hidden.shadow-2xl,
 .relative.z-10.w-full.overflow-hidden.shadow-2xl {
   border: none !important;
-  border-radius: 1.15rem !important;
-  box-shadow:
-    0 12px 28px rgba(6, 16, 10, 0.2),
-    0 32px 64px rgba(6, 16, 10, 0.28) !important;
+  border-radius: 0.35rem !important;
+  box-shadow: 10px 14px 0 rgba(18, 20, 15, 0.28) !important;
 }
 
 /* Skjema: avrundet firekant, konvertering */
 .form-card {
-  background: #f7faf3;
-  border: none;
-  border-radius: 1.15rem;
-  box-shadow:
-    0 2px 6px rgba(6, 16, 10, 0.06),
-    0 22px 48px rgba(6, 16, 10, 0.1);
+  background: #efe9d8;
+  border: 1.5px solid rgba(18, 20, 15, 0.18);
+  border-radius: 0.5rem;
+  box-shadow: 8px 10px 0 rgba(18, 20, 15, 0.16);
 }
 
 #kontakt label,
 #kontakt label[class] {
-  color: #10160e !important;
-  font-family: var(--font-display) !important;
-  font-size: 0.82rem !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.01em !important;
+  color: #12140f !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
   text-transform: none !important;
 }
 
@@ -1110,15 +1092,15 @@ nav button {
 #kontakt input[type="email"],
 #kontakt textarea {
   width: 100%;
-  border: 1px solid rgba(16, 22, 14, 0.12) !important;
-  border-radius: 0.78rem !important;
-  background: #fff !important;
-  color: #10160e !important;
+  border: 1.5px solid rgba(18, 20, 15, 0.2) !important;
+  border-radius: 0.4rem !important;
+  background: #f3efe3 !important;
+  color: #12140f !important;
   font-family: var(--font-body) !important;
   font-size: 1.02rem !important;
   font-weight: 500 !important;
-  letter-spacing: -0.015em;
-  padding: 0.9rem 1.05rem !important;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 1rem !important;
 }
 
 #kontakt input:focus,
@@ -1129,16 +1111,16 @@ nav button {
 }
 
 #kontakt button[type="submit"] {
-  border-radius: 0.78rem !important;
+  border-radius: 0.4rem !important;
   background: #8cc040 !important;
-  color: #10160e !important;
+  color: #12140f !important;
   font-family: var(--font-display) !important;
   font-size: 1rem !important;
-  font-weight: 650 !important;
-  letter-spacing: -0.018em !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.012em !important;
   text-transform: none !important;
-  min-height: 3.15rem;
-  box-shadow: 0 10px 24px rgba(140, 192, 64, 0.28);
+  min-height: 3.1rem;
+  box-shadow: 4px 4px 0 #14321c;
 }
 
 #kontakt button[type="submit"] span {
@@ -1155,11 +1137,12 @@ nav button {
 
 /* FAQ og prosess: lesbar type i kort */
 .aeo-list details {
-  background: #f7faf3;
-  border: 1px solid rgba(16, 22, 14, 0.08) !important;
-  border-radius: 0.9rem !important;
-  padding: 0.15rem 1.15rem 0.35rem;
-  margin-bottom: 0.65rem;
+  background: #efe9d8;
+  border: 1.5px solid rgba(18, 20, 15, 0.16) !important;
+  border-radius: 0.45rem !important;
+  padding: 0.1rem 1rem 0.3rem;
+  margin-bottom: 0.55rem;
+  box-shadow: 3px 3px 0 rgba(18, 20, 15, 0.1);
 }
 
 .aeo-list details > summary {
@@ -1191,7 +1174,7 @@ nav button {
 .cta-panel .btn-solid {
   min-width: 10.5rem;
   font-size: 0.95rem !important;
-  box-shadow: 0 8px 20px rgba(140, 192, 64, 0.28) !important;
+  box-shadow: 4px 4px 0 #0b100c !important;
 }
 
 @media (max-width: 767px) {
@@ -1200,5 +1183,6 @@ nav button {
   .section-white:nth-of-type(even) .photo-3d,
   .section-white:nth-of-type(even) .aspect-\[4\/5\] {
     transform: none;
+    box-shadow: 6px 8px 0 rgba(18, 20, 15, 0.24);
   }
 }
