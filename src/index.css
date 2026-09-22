@@ -18,9 +18,9 @@ Design System - "Flexis" Inspired (Hybrid Dark/Light)
   --text-muted: #a1a1aa;
   --text-muted-inverse: #475569;
 
-  --brand-primary: #719248; /* Olive green */
-  --brand-accent: #7BA522;  /* Lighter olive accent */
-  --brand-hover: #5E7A3B;   /* Darker hover */
+  --brand-primary: #8cc040;
+  --brand-accent: #b8dc78;
+  --brand-hover: #6b9a2e;
 
   --border-light: rgba(255, 255, 255, 0.1);
   --border-dark: rgba(15, 23, 42, 0.08);
@@ -267,4 +267,66 @@ h3 { font-size: var(--fs-h3); }
 /* Smooth transitions (allerede i HTML, men kan også defineres her) */
 .transition-all {
   transition: all 0.5s ease-in-out;
+}
+
+/* Rolig løft: kontrast, type, logo-grønn — uten effekter */
+.section-white {
+  background: #f4f1ea !important;
+  border: none !important;
+}
+
+.section-white :is(.text-gray-500, .text-gray-600, .text-gray-400) {
+  color: #1a1f16 !important;
+}
+
+.section-white :is(h2, h3, h4, p, li) {
+  color: #1a1f16;
+}
+
+.section-white .text-brand-primary {
+  color: #3d6b16 !important;
+}
+
+[class*="bg-black"] :is(h3, p, .text-gray-600, .text-gray-500) {
+  color: #f0ece3 !important;
+}
+
+.btn-primary,
+.btn-solid {
+  border-radius: 0.5rem !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.btn-solid {
+  background: #8cc040 !important;
+  color: #12140f !important;
+}
+
+.btn-primary {
+  border-color: currentColor !important;
+}
+
+.section-white [class*="bg-black"] .btn-primary {
+  color: #f0ece3 !important;
+  border-color: #f0ece3 !important;
+}
+
+.section-white [class*="border-[#8cc040]"],
+.section-white .border-2 {
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 14px 28px rgba(15, 20, 12, 0.12);
+}
+
+.section-white [class*="bg-black"] {
+  border-radius: 0.75rem !important;
+}
+
+.section-white .border-b.border-gray-100,
+.section-white .border-b.border-gray-200 {
+  border-color: transparent !important;
 }
