@@ -1171,3 +1171,51 @@ header img[src*="bergenbygg-logo"] {
     grid-auto-rows: minmax(330px, 380px) !important;
   }
 }
+
+/* Critical hero fix: never break the headline inside words. */
+#hero h1 {
+  width: 100%;
+  max-width: none !important;
+  overflow: visible;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+#hero h1 span {
+  width: max-content;
+  max-width: 100%;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+@media (min-width: 768px) {
+  #hero .max-w-4xl {
+    max-width: 76rem !important;
+  }
+
+  #hero h1 span {
+    white-space: nowrap;
+  }
+
+  #hero h1 span:first-child {
+    font-size: clamp(2.8rem, 5vw, 5.4rem) !important;
+  }
+
+  #hero h1 span:last-child {
+    font-size: clamp(2.55rem, 4.55vw, 4.9rem) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero h1 {
+    max-width: 18ch !important;
+  }
+
+  #hero h1 span {
+    width: auto;
+    max-width: 18ch;
+    white-space: normal;
+  }
+}
