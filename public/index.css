@@ -449,3 +449,306 @@ span.text-\[\#66FF00\],
 .magnetic-btn .rounded-full {
   border-radius: 0.45rem !important;
 }
+
+/* --- Editorial craft system: restrained, readable, conversion-led --- */
+:root {
+  --brand-primary: #8cc040;
+  --brand-accent: #b8dc78;
+  --brand-hover: #6b9a2e;
+  --ink: #10140f;
+  --paper: #ffffff;
+  --night: #050705;
+  --forest: #102416;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  letter-spacing: -0.012em;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.section-white,
+.section-white.bg-slate-50 {
+  background: var(--paper) !important;
+  border: 0 !important;
+  padding-block: clamp(5.5rem, 9vw, 9rem);
+}
+
+.section-white + .section-white {
+  padding-top: clamp(3rem, 5vw, 5rem);
+}
+
+.section-white > .max-w-\[100rem\] > .grid {
+  align-items: start;
+}
+
+.section-white > .max-w-\[100rem\] > .grid > div:nth-child(2) > div:first-child {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.section-white h2 {
+  max-width: 13ch;
+  font-size: clamp(2.4rem, 4.8vw, 4.5rem) !important;
+  line-height: 0.98 !important;
+  color: var(--ink) !important;
+}
+
+.section-white h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2rem) !important;
+  line-height: 1.12;
+  color: var(--ink) !important;
+}
+
+.section-white p,
+.section-white li {
+  max-width: 68ch;
+  color: #293128 !important;
+  font-size: clamp(1rem, 1.25vw, 1.1rem);
+  line-height: 1.72;
+}
+
+.section-white > .max-w-\[100rem\] > .grid > div:first-child > div:first-child > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #47751c !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+}
+
+.section-white > .max-w-\[100rem\] > .grid > div:first-child > div:first-child > span::before {
+  content: "";
+  width: 1.8rem;
+  height: 2px;
+  background: var(--brand-primary);
+}
+
+/* Unframed project photography: image first, decoration second. */
+.photo-frame,
+.section-white .aspect-\[4\/5\] {
+  border: 0 !important;
+  border-radius: 0.55rem;
+  overflow: hidden;
+  background: #edf0e9;
+  box-shadow: 0 20px 48px rgba(8, 16, 8, 0.13);
+}
+
+.photo-frame::after {
+  display: none !important;
+}
+
+.photo-frame img,
+.section-white .aspect-\[4\/5\] img {
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Alternate the editorial rhythm instead of repeating one template. */
+@media (min-width: 1024px) {
+  #fag-tomrer > div > .grid > div:first-child,
+  #fag-ror > div > .grid > div:first-child,
+  #fag-fasade > div > .grid > div:first-child,
+  #fag-brl > div > .grid > div:first-child {
+    order: 2;
+  }
+
+  #fag-tomrer > div > .grid > div:nth-child(2),
+  #fag-ror > div > .grid > div:nth-child(2),
+  #fag-fasade > div > .grid > div:nth-child(2),
+  #fag-brl > div > .grid > div:nth-child(2) {
+    order: 1;
+  }
+}
+
+/* Accordion reads like editorial detail, not a card collection. */
+.magnetic-btn,
+.interactive-container {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(16, 20, 15, 0.16) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.magnetic-btn > .absolute.inset-0 {
+  display: none !important;
+}
+
+.magnetic-btn > button {
+  min-height: 4.25rem;
+  padding: 0.9rem 0 !important;
+}
+
+.magnetic-btn > button > span {
+  padding-right: 1rem !important;
+  color: var(--ink) !important;
+  font-size: 1rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: none !important;
+}
+
+.magnetic-btn .rounded-full {
+  width: 2.45rem !important;
+  height: 2.45rem !important;
+  border-color: var(--brand-primary) !important;
+  border-radius: 0.45rem !important;
+  color: #47751c !important;
+}
+
+.dropdown-inner {
+  padding: 0.5rem 0 1.5rem;
+}
+
+.dropdown-inner .bg-white,
+.dropdown-inner [class*="rounded-xl"] {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.dropdown-inner h4,
+.dropdown-inner h4[class] {
+  color: var(--ink) !important;
+  font-size: 1rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.025em !important;
+  text-transform: none !important;
+}
+
+.dropdown-inner p,
+.dropdown-inner li,
+.dropdown-inner li span {
+  color: #293128 !important;
+  font-size: 0.96rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Dark panels are the stage; green is an accent, not a wash. */
+.section-dark,
+.dark-section,
+#hero,
+#prosess,
+#faginnsikt,
+#profil,
+footer {
+  background-color: var(--night);
+  background-image:
+    radial-gradient(ellipse 54% 46% at 94% 4%, rgba(140, 192, 64, 0.11), transparent 58%),
+    linear-gradient(145deg, var(--night) 0%, #071009 52%, #050705 100%);
+}
+
+.section-white [class*="bg-black"] {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(140, 192, 64, 0.12), transparent 42%),
+    #070a07 !important;
+  border: 1px solid rgba(140, 192, 64, 0.22) !important;
+  border-radius: 0.7rem !important;
+  box-shadow: none !important;
+}
+
+.section-white [class*="bg-black"] :is(h3, p, li, span) {
+  color: #f3f5ef !important;
+}
+
+.section-white [class*="bg-black"] p {
+  max-width: 38rem;
+  font-size: 0.95rem !important;
+  line-height: 1.55 !important;
+}
+
+/* One primary action. Secondary actions stay quiet. */
+.btn-primary,
+.btn-solid {
+  min-height: 3rem;
+  padding: 0.82rem 1.3rem !important;
+  border-radius: 0.48rem !important;
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 0.92rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.015em !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-solid {
+  background: var(--brand-primary) !important;
+  border: 1px solid var(--brand-primary) !important;
+  color: var(--ink) !important;
+}
+
+.btn-solid:hover {
+  background: var(--brand-accent) !important;
+  border-color: var(--brand-accent) !important;
+  color: var(--ink) !important;
+}
+
+.section-white [class*="bg-black"] .btn-primary {
+  background: transparent !important;
+  border: 1px solid rgba(243, 245, 239, 0.55) !important;
+  color: #f3f5ef !important;
+}
+
+.section-white [class*="bg-black"] .btn-primary:hover {
+  background: #f3f5ef !important;
+  border-color: #f3f5ef !important;
+  color: var(--ink) !important;
+}
+
+/* All legacy cyan/neon marks become the single brand green. */
+span.text-\[\#00B7B5\],
+span.text-\[\#66FF00\],
+.text-\[\#00B7B5\],
+.text-\[\#66FF00\] {
+  background: transparent !important;
+  color: var(--brand-primary) !important;
+}
+
+.bg-\[\#00B7B5\],
+.bg-\[\#66FF00\] {
+  background-color: var(--brand-primary) !important;
+}
+
+@media (max-width: 767px) {
+  .section-white {
+    padding-block: 4.5rem;
+  }
+
+  .section-white h2 {
+    font-size: clamp(2.25rem, 11vw, 3.4rem) !important;
+  }
+
+  .section-white > .max-w-\[100rem\] > .grid {
+    gap: 2.5rem !important;
+  }
+
+  .section-white [class*="bg-black"] .relative.z-10 {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .section-white [class*="bg-black"] .flex.gap-4 {
+    width: 100%;
+  }
+
+  .section-white [class*="bg-black"] .btn-primary,
+  .section-white [class*="bg-black"] .btn-solid {
+    width: 100%;
+  }
+}
