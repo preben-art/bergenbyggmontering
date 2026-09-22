@@ -380,18 +380,19 @@ function mountGisle(trackEvent) {
     style.id = "gisle-style";
     style.textContent = `
       #gisle-panel {
-        width: min(400px, calc(100vw - 24px));
-        height: min(860px, calc(100dvh - 24px));
+        width: min(400px, calc(100vw - 32px));
+        height: min(520px, calc(100dvh - 128px));
       }
       @media (max-width: 720px) {
-        #gisle-root.gisle-open { inset: 0; right: 0; bottom: 0; }
         #gisle-panel {
-          position: fixed;
-          inset: 0;
-          width: 100vw;
-          height: 100dvh;
-          max-height: none;
-          border-radius: 0;
+          width: calc(100vw - 20px);
+          height: min(480px, calc(100dvh - 112px));
+          border-radius: 18px;
+        }
+      }
+      @media (max-height: 640px) {
+        #gisle-panel {
+          height: calc(100dvh - 96px);
         }
       }
     `;
@@ -429,11 +430,11 @@ function mountGisle(trackEvent) {
   panel.id = "gisle-panel";
   panel.hidden = true;
   panel.style.cssText =
-    "display:none;flex-direction:column;background:#fff;color:#161616;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.28);border:1px solid #e6e6e6;";
+    "display:none;flex-direction:column;background:#fff;color:#161616;border-radius:20px;overflow:hidden;box-shadow:0 18px 50px rgba(16,20,12,.18);border:1px solid rgba(17,17,17,.08);";
 
   const header = document.createElement("div");
   header.style.cssText =
-    "display:flex;align-items:center;gap:12px;padding:14px 16px;background:#111;color:#fff;flex:none;";
+    "display:flex;align-items:center;gap:10px;padding:12px 14px;background:#111;color:#fff;flex:none;";
   const headerPhoto = launcherPhoto.cloneNode();
   headerPhoto.style.width = "48px";
   headerPhoto.style.height = "48px";
@@ -460,10 +461,10 @@ function mountGisle(trackEvent) {
   header.append(headerPhoto, headerText, closeBtn);
 
   const messages = document.createElement("div");
-  messages.style.cssText = "flex:1;min-height:0;overflow:auto;padding:16px 14px 8px;background:#efeae2;";
+  messages.style.cssText = "flex:1;min-height:0;overflow:auto;padding:14px 12px 8px;background:#f3f4f1;";
 
   const form = document.createElement("form");
-  form.style.cssText = "display:grid;gap:8px;padding:8px 10px calc(10px + env(safe-area-inset-bottom));border-top:1px solid #e4e0d8;background:#f7f4ee;flex:none;";
+  form.style.cssText = "display:grid;gap:8px;padding:10px 12px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #eceee9;background:#fff;flex:none;";
 
   const contact = document.createElement("div");
   contact.hidden = true;
@@ -508,7 +509,7 @@ function mountGisle(trackEvent) {
   messageInput.rows = 1;
   messageInput.placeholder = "Skriv en melding";
   messageInput.style.cssText =
-    "flex:1;min-height:44px;max-height:120px;box-sizing:border-box;border:1px solid #ddd;border-radius:22px;padding:11px 14px;resize:none;font:inherit;font-size:16px;background:#fff;";
+    "flex:1;min-height:42px;max-height:96px;box-sizing:border-box;border:1px solid #e2e4de;border-radius:14px;padding:10px 12px;resize:none;font:inherit;font-size:15px;background:#f7f8f5;";
 
   const sendBtn = document.createElement("button");
   sendBtn.type = "submit";
@@ -539,7 +540,7 @@ function mountGisle(trackEvent) {
     panel.style.display = open ? "flex" : "none";
     launcher.style.display = open ? "none" : "flex";
     root.classList.toggle("gisle-open", open);
-    document.body.style.overflow = open && window.matchMedia("(max-width: 720px)").matches ? "hidden" : "";
+    document.body.style.overflow = "";
     if (open) {
       trackEvent("engagement", "open_chat", "gisle");
       messageInput.focus();
@@ -636,8 +637,8 @@ function addBubble(container, text, role) {
   const bubble = document.createElement("div");
   bubble.style.cssText =
     role === "user"
-      ? "max-width:86%;background:#719248;color:#111;border-radius:18px 18px 4px 18px;padding:10px 14px;font-size:15.5px;line-height:1.4;white-space:pre-wrap;"
-      : "max-width:86%;background:#fff;color:#222;border-radius:18px 18px 18px 4px;padding:10px 14px;font-size:15.5px;line-height:1.4;white-space:pre-wrap;";
+      ? "max-width:84%;background:#719248;color:#111;border-radius:16px 16px 4px 16px;padding:9px 12px;font-size:14.5px;line-height:1.4;white-space:pre-wrap;"
+      : "max-width:84%;background:#fff;color:#1a1a1a;border-radius:16px 16px 16px 4px;padding:9px 12px;font-size:14.5px;line-height:1.4;white-space:pre-wrap;box-shadow:0 1px 2px rgba(16,20,12,.06);";
   bubble.textContent = text;
   row.appendChild(bubble);
   container.appendChild(row);
