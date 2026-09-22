@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nb" dir="ltr">
   <head>
-    <!-- © 2026 AltiBedrift – Levert av Haut Forvalting AS. Lisens: Kunden har kun bruksrett. Eierskap til mal, struktur og decision-modeller: AltiBedrift / Haut Forvalting AS https://www.altibedrift.no -->
+    <!-- © 2026 VCTRA. Lisens: Kunden har kun bruksrett. Eierskap til mal, struktur og decision-modeller: VCTRA https://bergenbyggmontering.no/#vctra -->
     <!--  -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,14 +16,14 @@
     <!-- -->
     <meta
       name="license"
-      content="Licensed for client use only. Owned by AltiBedrift / Haut Forvalting AS. https://www.altibedrift.no"
+      content="Licensed for client use only. Owned by VCTRA. https://bergenbyggmontering.no/#vctra"
     />
-    <meta name="author" content="AltiBedrift" />
-    <meta name="publisher" content="Haut Forvalting AS" />
-    <meta name="generator" content="AltiBedrift (AEO / SGE Core)" />
+    <meta name="author" content="VCTRA" />
+    <meta name="publisher" content="VCTRA" />
+    <meta name="generator" content="VCTRA (AEO / SGE Core)" />
     <meta
       name="copyright"
-      content="© 2026 AltiBedrift – Levert av Haut Forvalting AS. Lisens: Kunden har kun bruksrett. https://www.altibedrift.no"
+      content="© 2026 VCTRA. Lisens: Kunden har kun bruksrett. https://bergenbyggmontering.no/#vctra"
     />
 
 <!-- -->
@@ -66,17 +66,17 @@
 <!---->
 <meta
   name="license"
-  content="Licensed for client use only. Owned by AltiBedrift / Haut Forvalting AS. https://www.altibedrift.no"
+  content="Licensed for client use only. Owned by VCTRA. https://bergenbyggmontering.no/#vctra"
 />
-<meta name="author" content="AltiBedrift" />
-<meta name="publisher" content="Haut Forvalting AS" />
-<meta name="generator" content="AltiBedrift (AEO / SGE Core)" />
+<meta name="author" content="VCTRA" />
+<meta name="publisher" content="VCTRA" />
+<meta name="generator" content="VCTRA (AEO / SGE Core)" />
 <meta
   name="copyright"
-  content="© 2026 AltiBedrift – Levert av Haut Forvalting AS. Lisens: Kunden har kun bruksrett. https://www.altibedrift.no"
+  content="© 2026 VCTRA. Lisens: Kunden har kun bruksrett. https://bergenbyggmontering.no/#vctra"
 />
-<meta name="alti:owner" content="AltiBedrift / Haut Forvalting AS" />
-<meta name="alti:owner_url" content="https://www.altibedrift.no/" />
+<meta name="vctra:owner" content="VCTRA" />
+<meta name="vctra:owner_url" content="https://bergenbyggmontering.no/#vctra" />
 
 <!-- -->
 <meta property="og:locale" content="nb_NO" />
@@ -237,16 +237,11 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.altibedrift.no/#org",
-      "name": "AltiBedrift",
-      "url": "https://www.altibedrift.no/",
-      "legalName": "Haut Forvalting AS",
-      "description": "Rammeverk og publiseringssystem levert av Haut Forvalting AS (AltiBedrift). Kunden har bruksrett.",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "OrgNr",
-        "value": "[[ALTIBEDRIFT_ORGNR]]"
-      }
+      "@id": "https://bergenbyggmontering.no/#vctra",
+      "name": "VCTRA",
+      "url": "https://bergenbyggmontering.no/#vctra",
+      "legalName": "VCTRA",
+      "description": "Rammeverk og publiseringssystem levert av VCTRA. Kunden har bruksrett."
     },
 
     {
@@ -275,7 +270,7 @@
           "areaServed": "NO"
         }
       ],
-      "creator": { "@id": "https://www.altibedrift.no/#org" }
+      "creator": { "@id": "https://bergenbyggmontering.no/#vctra" }
     },
 
     {
@@ -285,7 +280,7 @@
       "name": "Bergen Byggmontering AS",
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "inLanguage": "nb-NO",
-      "creator": { "@id": "https://www.altibedrift.no/#org" },
+      "creator": { "@id": "https://bergenbyggmontering.no/#vctra" },
       "potentialAction": [
         {
           "@type": "SearchAction",
@@ -308,7 +303,7 @@
       "isPartOf": { "@id": "https://bergenbyggmontering.no/#website" },
       "inLanguage": "nb-NO",
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "creator": { "@id": "https://www.altibedrift.no/#org" },
+      "creator": { "@id": "https://bergenbyggmontering.no/#vctra" },
       "datePublished": "[[DATE_PUBLISHED_ISO]]",
       "dateModified": "[[DATE_MODIFIED_ISO]]",
       "primaryImageOfPage": {
@@ -325,7 +320,7 @@
         { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience" }
       ],
       "mainEntity": { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#service" },
-      "license": "Licensed for client use only. Owned by AltiBedrift / Haut Forvalting AS. https://www.altibedrift.no",
+      "license": "Licensed for client use only. Owned by VCTRA. https://bergenbyggmontering.no/#vctra",
       "potentialAction": [
         {
           "@type": "ContactAction",
@@ -574,9 +569,9 @@
         wait_for_update: 500,
       });
 
-      function __altiLoadGTM() {
-        if (window.__ALTI_GTM_LOADED__) return;
-        window.__ALTI_GTM_LOADED__ = true;
+      function __vctraLoadGTM() {
+        if (window.__VCTRA_GTM_LOADED__) return;
+        window.__VCTRA_GTM_LOADED__ = true;
 
         var s = document.createElement("script");
         s.async = true;
@@ -593,8 +588,8 @@
         };
       }
 
-      window.addEventListener("alti-consent-granted", function () {
-        __altiLoadGTM();
+      window.addEventListener("vctra-consent-granted", function () {
+        __vctraLoadGTM();
       });
     </script>
 
@@ -629,7 +624,7 @@
   </p>
 
   <p data-ai="owner">
-    IP/rammeverk eies av AltiBedrift / Haut Forvalting AS (https://www.altibedrift.no).
+    IP/rammeverk eies av VCTRA (https://bergenbyggmontering.no/#vctra).
     Kunden har kun bruksrett.
   </p>
 
@@ -1328,7 +1323,7 @@ I praksis handler det om tre ting:
         >
           <p>Bergen Byggmontering AS.</p>
           <p>
-            © 2026 AltiBedrift – Levert av Haut Forvalting AS. Alle rettigheter
+            © 2026 VCTRA. Alle rettigheter
             reservert.
           </p>
         </div>

@@ -1,5 +1,5 @@
-/* 
-© 2026 Bergen Byggmontering AS – Levert av Haut Forvalting AS.
+/*
+© 2026 Bergen Byggmontering AS – Levert av VCTRA.
 Main Logic (Vanilla JS, ESM)
 */
 
