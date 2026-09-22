@@ -1341,3 +1341,147 @@ header.bg-\[\#050505\] {
     min-height: 3rem;
   }
 }
+
+/* Secondary pages: solid in-flow header, stronger type and reliable contrast. */
+body.subpage {
+  background: #fff;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #10140f;
+}
+
+.subpage #main-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 50;
+  padding-block: 0 !important;
+  background: #050705 !important;
+  border-bottom: 1px solid rgba(140, 192, 64, 0.2) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(16px) saturate(1.1) !important;
+}
+
+.subpage #main-header > div:first-child > .flex {
+  height: 5.25rem !important;
+}
+
+.subpage #main-header img[src*="bergenbygg-logo"] {
+  height: 2.6rem !important;
+}
+
+.subpage #main-header nav.hidden > :not([hidden]) ~ :not([hidden]) {
+  margin-left: clamp(0.75rem, 1.5vw, 2rem) !important;
+}
+
+.subpage #main-header + section,
+.subpage #main-header + main > section:first-child,
+.subpage #main-header + #main-content > section:first-child,
+.subpage #main-header + div#main-content > section:first-child {
+  padding-top: clamp(4.75rem, 7vw, 7rem) !important;
+}
+
+.subpage .font-display,
+.subpage main h1,
+.subpage main h2,
+.subpage main h3,
+.subpage main h4 {
+  font-family: "Space Grotesk", "Inter", sans-serif !important;
+}
+
+.subpage main h1 {
+  font-weight: 700 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.052em !important;
+  text-wrap: balance;
+}
+
+.subpage main h2 {
+  font-weight: 700 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.043em !important;
+  text-wrap: balance;
+}
+
+.subpage main h3 {
+  font-weight: 650 !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.032em !important;
+}
+
+.subpage main h4 {
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.subpage main p,
+.subpage #main-content p {
+  line-height: 1.68;
+  text-wrap: pretty;
+}
+
+.subpage main :is(.bg-white, .bg-gray-50, .bg-gray-100, .bg-slate-50)
+  :is(.text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700),
+.subpage #main-content :is(.bg-white, .bg-gray-50, .bg-gray-100, .bg-slate-50)
+  :is(.text-gray-400, .text-gray-500, .text-gray-600, .text-gray-700) {
+  color: #344033 !important;
+}
+
+.subpage main :is(.bg-white, .bg-gray-50, .bg-gray-100, .bg-slate-50)
+  :is(h1, h2, h3, h4, .text-black, .text-slate-900),
+.subpage #main-content :is(.bg-white, .bg-gray-50, .bg-gray-100, .bg-slate-50)
+  :is(h1, h2, h3, h4, .text-black, .text-slate-900) {
+  color: #10140f !important;
+}
+
+.subpage main :is(.bg-black, .bg-\[\#050505\], .career-dark)
+  :is(h1, h2, h3, h4, p, li, span, .text-gray-300, .text-gray-400),
+.subpage #main-content :is(.bg-black, .bg-\[\#050505\])
+  :is(h1, h2, h3, h4, p, li, span, .text-gray-300, .text-gray-400) {
+  color: #f1f5ed !important;
+}
+
+.subpage main .aeo-list details {
+  border-color: rgba(16, 20, 15, 0.14) !important;
+  background: #fff !important;
+}
+
+.subpage main .aeo-list details > summary {
+  color: #10140f !important;
+  font-size: 1.05rem !important;
+  font-weight: 650 !important;
+}
+
+.subpage main .aeo-list .content,
+.subpage main .aeo-list .content p {
+  color: #344033 !important;
+  font-size: 0.98rem !important;
+}
+
+.subpage main :is(input, textarea, select) {
+  color: #10140f !important;
+}
+
+@media (max-width: 767px) {
+  .subpage #main-header > div:first-child > .flex {
+    height: 4.5rem !important;
+  }
+
+  .subpage #main-header img[src*="bergenbygg-logo"] {
+    height: 2.25rem !important;
+  }
+
+  .subpage #main-header + section,
+  .subpage #main-header + main > section:first-child,
+  .subpage #main-header + #main-content > section:first-child,
+  .subpage #main-header + div#main-content > section:first-child {
+    padding-top: 4rem !important;
+  }
+
+  .subpage main h1 {
+    font-size: clamp(2.35rem, 11vw, 3.6rem) !important;
+  }
+
+  .subpage main h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+}
