@@ -2,14 +2,14 @@
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "Bergen Byggmontering AS",
   "short_name": "Bergen Bygg",
-  "description": "Totalrenovering, bad, tak, fasade og innvendig rehabilitering i Bergen og omegn. Vi tar ansvar for helheten – med ryddig prosess og dokumentasjon.",
+  "description": "Bergen Byggmontering leverer totalrenovering, nytt bad og oppussing av bad, VVS, tak, fasade og innvendig rehabilitering i Bergen og omegn.",
   "id": "/",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui", "browser"],
   "background_color": "#ffffff",
-  "theme_color": "#10b981",
+  "theme_color": "#8cc040",
   "orientation": "portrait",
   "lang": "nb-NO",
   "dir": "ltr",
@@ -78,10 +78,10 @@
       ]
     },
     {
-      "name": "Nytt bad",
-      "short_name": "Bad",
+      "name": "Nytt bad i Bergen",
+      "short_name": "Nytt bad",
       "url": "/tjeneste-bad.html?source=pwa",
-      "description": "Bad og våtrom (våtromsnorm)",
+      "description": "Oppussing og totalrenovering av bad i Bergen",
       "icons": [
         {
           "src": "bilder/473766295_1161206616013469_8198062879953587315_n.webp",
@@ -106,7 +106,7 @@
     {
       "name": "Tømrer",
       "short_name": "Tømrer",
-      "url": "/tjeneste-tømrer.html?source=pwa",
+      "url": "/tjeneste-tomrer.html?source=pwa",
       "description": "Tømrer og innvendig rehabilitering",
       "icons": [
         {

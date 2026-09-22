@@ -47,7 +47,7 @@
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/jobb.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bergenbyggmontering.no/jobb.html"/>
     <image:image>
-      <image:loc>https://bergenbyggmontering.no/bilder/fikser_på_bad-maling.webp</image:loc>
+      <image:loc>https://bergenbyggmontering.no/bilder/bergenbygg-arbeid-bad-logo.jpg</image:loc>
       <image:title>Jobb hos Bergen Byggmontering</image:title>
       <image:caption>Karriere og direkte kontakt for fagfolk innen bygg og rehabilitering</image:caption>
     </image:image>
@@ -70,15 +70,20 @@
 
   <url>
     <loc>https://bergenbyggmontering.no/tjeneste-bad.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="nb" href="https://bergenbyggmontering.no/tjeneste-bad.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bergenbyggmontering.no/tjeneste-bad.html"/>
     <image:image>
-      <image:loc>https://bergenbyggmontering.no/assets/og/tjeneste-bad-1200x630.webp</image:loc>
-      <image:title>Bad og våtrom</image:title>
-      <image:caption>Nytt bad i Bergen – totalrenovering av bad</image:caption>
+      <image:loc>https://bergenbyggmontering.no/bilder/473766295_1161206616013469_8198062879953587315_n.webp</image:loc>
+      <image:title>Nytt bad i Bergen</image:title>
+      <image:caption>Oppussing og totalrenovering av bad i Bergen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bergenbyggmontering.no/bilder/480270933_1184925906974873_8363683997218172687_n.webp</image:loc>
+      <image:title>Ferdig oppusset bad i Bergen</image:title>
+      <image:caption>Komplett baderomsrenovering med overflater, innredning og montering</image:caption>
     </image:image>
   </url>
 

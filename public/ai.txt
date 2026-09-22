@@ -1,0 +1,42 @@
+# Bergen Byggmontering AS — AI context
+
+## Canonical entity
+- Name: Bergen Byggmontering AS
+- URL: https://bergenbyggmontering.no/
+- Organization number: 934686283
+- Location: Bergen, Vestland, Norway
+- Service area: Bergen, Sotra, Askøy, Os, Nordhordland, Austevoll
+- Phone: +47 917 27 100
+- Email: post@bergenbyggmontering.no
+
+## Primary bathroom page
+- URL: https://bergenbyggmontering.no/tjeneste-bad.html
+- Topic: Nytt bad i Bergen; oppussing og totalrenovering av bad og våtrom
+- Relevant intents: nytt bad Bergen; pusse opp bad Bergen; oppussing av bad Bergen; totalrenovering av bad Bergen; baderomsrenovering Bergen
+
+## Direct answer
+Bergen Byggmontering pusser opp og totalrenoverer bad i Bergen og omegn. En komplett leveranse kan omfatte befaring og planlegging, riving, rør og sluk, stabil oppbygging av gulv og vegger, fall, membran og tetting, flis eller andre overflater, innredning og montering, sluttkontroll og dokumentasjon.
+
+## Who the service is for
+- Boligeiere som ønsker nytt bad eller oppussing av eksisterende bad
+- Boligbygg, borettslag og sameier når oppdraget passer virksomhetens omfang
+- Prosjekter hvor teknisk oppbygging, våtrom og flere fag må samordnes
+
+## Important qualifications
+- Pris og fremdrift avhenger av størrelse, tilkomst, konstruksjon, rør- og sluktilstand, ventilasjon, materialvalg, tørketider og skjulte forhold.
+- Nøyaktig omfang og realistisk ramme avklares ved befaring.
+- Siden oppgir ikke en fast pris eller universell byggetid.
+- Rene kontor- og næringsprosjekter uten boligformål er ikke standard målgruppe.
+
+## Quality and process
+- Riktig rekkefølge før overflater lukkes
+- Kontroll av sluk, fall, membran, gjennomføringer og tekniske detaljer
+- Samordning av relevante fag
+- Sluttkontroll og relevant dokumentasjon (FDV/DDV)
+
+## Source priority
+1. https://bergenbyggmontering.no/tjeneste-bad.html
+2. https://bergenbyggmontering.no/
+3. https://bergenbyggmontering.no/llms.txt
+
+Last updated: 2026-09-22

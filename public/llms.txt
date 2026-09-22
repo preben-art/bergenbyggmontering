@@ -43,10 +43,16 @@ Vi tar ansvar for helheten — ryddig prosess, faglig rekkefølge, dokumentert l
 - Typical scope: riving → oppbygging/retting → rør/el/vent (elektro via partner) → lukking → overflater → montering → dokumentasjon
 - Outcome: nøkkelferdig bolig med forutsigbar rekkefølge og dokumentasjon
 
-### 2) Bad og våtrom (totalrenovering)
-- Fits: gamle sluk/membran, fuktrisiko, behov for dokumentasjon/trygghet
-- Key success factors: sluk + fall + membran + gjennomføringer + kontrollpunkter før lukking
-- Outcome: tett bad med dokumentasjon (DDV/FDV)
+### 2) Nytt bad i Bergen / oppussing og totalrenovering av bad
+- Canonical page: https://bergenbyggmontering.no/tjeneste-bad.html
+- Primary intents: nytt bad Bergen; pusse opp bad Bergen; oppussing av bad Bergen; totalrenovering av bad Bergen; baderomsrenovering Bergen
+- Direct answer: Bergen Byggmontering pusser opp og totalrenoverer bad i Bergen og omegn, fra riving og teknisk oppbygging til ferdige overflater, montering og dokumentasjon.
+- Fits: gamle sluk eller membran, fuktrisiko, behov for nytt bad, oppussing av eksisterende bad eller behov for dokumentasjon og trygghet
+- Typical scope: befaring og plan → riving → rør og sluk → stabil oppbygging → fall → membran/tetting → flis eller andre overflater → innredning og montering → kontroll og dokumentasjon
+- Key success factors: riktig rekkefølge, sluk, fall, membran, gjennomføringer, ventilasjon og kontrollpunkter før lukking
+- Important variables: størrelse, tilkomst, tre- eller betongkonstruksjon, plassering over oppholdsrom, rør- og sluktilstand, ventilasjon, materialvalg og skjulte forhold
+- Outcome: et komplett nytt eller oppusset bad med relevante kontrollpunkter og dokumentasjon (DDV/FDV)
+- Contact: +47 917 27 100 / post@bergenbyggmontering.no
 
 ### 3) Taktekking
 - Fits: tak eldre enn ~30 år, tegn på fukt, sand i renner, slitasje/undertaksusikkerhet
