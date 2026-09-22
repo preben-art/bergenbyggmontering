@@ -56,12 +56,12 @@ https://vctra.no/#org
   content="Praktiske guider om oppussing: rekkefølge, vanlige feil, tekniske krav og økonomi – skrevet for Bergen og vestlandsk klima."
 />
 <meta property="og:url" content="https://bergenbyggmontering.no/faginnsikt.html" />
-<meta property="og:image" content="https://bergenbyggmontering.no/assets/og/faginnsikt-1200x630.webp" />
+<meta property="og:image" content="https://bergenbyggmontering.no/bilder/IMG_1042.webp" />
 <meta property="og:image:alt" content="Faginnsikt og råd – guider og sjekklister for oppussing" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:image:width" content="2621" />
+<meta property="og:image:height" content="1966" />
 <meta property="og:image:type" content="image/webp" />
-<meta property="og:updated_time" content="[[DATE_MODIFIED_ISO]]" />
+<meta property="og:updated_time" content="2026-09-22" />
 
 <!--  -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +70,7 @@ https://vctra.no/#org
   name="twitter:description"
   content="Guider og sjekklister om oppussing i Bergen: bad, tak, fasade, rør, rekkefølge og økonomi."
 />
-<meta name="twitter:image" content="https://bergenbyggmontering.no/assets/og/faginnsikt-1200x630.webp" />
+<meta name="twitter:image" content="https://bergenbyggmontering.no/bilder/IMG_1042.webp" />
 <meta name="twitter:image:alt" content="Faginnsikt og råd – Bergen Byggmontering" />
 
     <!-- Standard Favicons -->
@@ -214,6 +214,205 @@ https://vctra.no/#org
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
+
+      .news-tabs {
+        top: 5.25rem;
+      }
+
+      .news-feed {
+        background: #fff;
+      }
+
+      .news-list {
+        display: grid;
+        gap: clamp(5rem, 10vw, 9rem);
+      }
+
+      .news-article {
+        position: relative;
+        scroll-margin-top: 10rem;
+        padding-top: clamp(2rem, 4vw, 3.5rem);
+        border-top: 1px solid rgba(16, 20, 15, 0.16);
+        background: #fff;
+      }
+
+      .news-header {
+        position: relative;
+        z-index: 2;
+        max-width: 58rem;
+        margin-bottom: 2rem;
+        padding: 0;
+        border: 0;
+        background: #fff;
+      }
+
+      .news-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem 1.5rem;
+        margin-bottom: 1.25rem;
+        color: #52604f;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .news-meta .news-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        color: #527d27;
+      }
+
+      .news-meta .news-category::before {
+        content: "";
+        width: 1.8rem;
+        height: 2px;
+        background: #8cc040;
+      }
+
+      .news-title {
+        max-width: 17ch;
+        margin: 0;
+        color: #10140f !important;
+        font-size: clamp(2.4rem, 5vw, 5rem) !important;
+        font-weight: 700;
+        line-height: 0.98 !important;
+        letter-spacing: -0.055em !important;
+      }
+
+      .news-deck {
+        max-width: 46rem;
+        margin-top: 1.25rem;
+        color: #435040 !important;
+        font-size: clamp(1.05rem, 1.6vw, 1.3rem) !important;
+        font-weight: 450;
+        line-height: 1.6 !important;
+      }
+
+      .news-media {
+        position: relative;
+        width: 100%;
+        margin: 2rem 0 2.5rem;
+        overflow: hidden;
+        border-radius: 0.3rem;
+        background: #eef1eb;
+        aspect-ratio: 16 / 7;
+      }
+
+      .news-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .news-media figcaption {
+        position: absolute;
+        right: 1rem;
+        bottom: 0.8rem;
+        padding: 0.4rem 0.55rem;
+        background: rgba(5, 7, 5, 0.78);
+        color: #eef3e8;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .news-body {
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: clamp(0rem, 6vw, 7rem);
+      }
+
+      .news-body > p:first-child {
+        color: #20281f;
+        font-size: 1.14rem;
+        line-height: 1.72;
+      }
+
+      .news-body h3 {
+        color: #10140f !important;
+        font-family: "Space Grotesk", "Inter", sans-serif !important;
+        font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+      }
+
+      .news-body p,
+      .news-body li {
+        color: #384436 !important;
+        font-size: 1.02rem;
+        line-height: 1.75;
+      }
+
+      .news-checklist {
+        display: grid;
+        gap: 0;
+        margin-top: 1rem;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid rgba(16, 20, 15, 0.14);
+      }
+
+      .news-checklist li {
+        display: flex;
+        gap: 0.8rem;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid rgba(16, 20, 15, 0.14);
+      }
+
+      .news-checklist li::before {
+        content: "✓";
+        color: #527d27;
+        font-weight: 700;
+      }
+
+      .news-read-more {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(16, 20, 15, 0.14);
+      }
+
+      .news-read-more a {
+        color: #47751c;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 650;
+      }
+
+      @media (max-width: 767px) {
+        .news-tabs {
+          top: 4.5rem;
+        }
+
+        .news-feed {
+          padding-top: 4rem !important;
+          padding-bottom: 5rem !important;
+        }
+
+        .news-list {
+          gap: 5rem;
+        }
+
+        .news-title {
+          font-size: clamp(2.25rem, 11vw, 3.5rem) !important;
+        }
+
+        .news-media {
+          aspect-ratio: 4 / 3;
+          margin-block: 1.5rem 2rem;
+        }
+
+        .news-body {
+          margin-right: 0;
+        }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -293,13 +492,12 @@ https://vctra.no/#org
       "description": "Kunnskapsbase med guider, sjekklister og beslutningsstøtte om oppussing og rehabilitering i Bergen og omegn.",
       "isPartOf": { "@id": "https://bergenbyggmontering.no/#website" },
       "inLanguage": "nb-NO",
-      "datePublished": "[[DATE_PUBLISHED_ISO]]",
-      "dateModified": "[[DATE_MODIFIED_ISO]]",
+      "dateModified": "2026-09-22",
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://bergenbyggmontering.no/assets/og/faginnsikt-1200x630.webp",
-        "width": 1200,
-        "height": 630
+        "url": "https://bergenbyggmontering.no/bilder/IMG_1042.webp",
+        "width": 2621,
+        "height": 1966
       },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "creator": { "@id": "https://vctra.no/#org" },
@@ -334,6 +532,8 @@ https://vctra.no/#org
       "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "dateModified": "2026-09-22",
+      "image": "https://bergenbyggmontering.no/bilder/IMG_3770.webp",
       "keywords": ["planlegging", "rekkefølge", "koordinering", "rehabilitering"]
     },
     {
@@ -346,6 +546,8 @@ https://vctra.no/#org
       "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "dateModified": "2026-09-22",
+      "image": "https://bergenbyggmontering.no/bilder/473766295_1161206616013469_8198062879953587315_n.webp",
       "keywords": ["bad", "våtrom", "membran", "sluk", "fall", "rør-i-rør"]
     },
     {
@@ -358,6 +560,8 @@ https://vctra.no/#org
       "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "dateModified": "2026-09-22",
+      "image": "https://bergenbyggmontering.no/bilder/IMG_1042.webp",
       "keywords": ["tak", "undertak", "lufting", "klima", "lekasje"]
     },
     {
@@ -370,6 +574,8 @@ https://vctra.no/#org
       "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "dateModified": "2026-09-22",
+      "image": "https://bergenbyggmontering.no/bilder/DJI_0038.webp",
       "keywords": ["boligverdi", "økonomi", "dokumentasjon", "tilstandsgrad"]
     },
     {
@@ -382,6 +588,8 @@ https://vctra.no/#org
       "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
       "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
       "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "dateModified": "2026-09-22",
+      "image": "https://bergenbyggmontering.no/bilder/bygger_nytt_bad-rehab.webp",
       "keywords": ["metodikk", "rekkefølge", "rehabilitering", "prosjektstyring"]
     },
 
@@ -518,7 +726,29 @@ https://vctra.no/#org
               >Be om befaring</a
             >
           </nav>
+          <button
+            id="mobile-menu-button"
+            class="p-2 text-white md:hidden"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Åpne meny"
+          >
+            <svg id="menu-icon" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="hidden h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-b border-white/10 bg-[#050705] md:hidden">
+        <nav class="flex flex-col px-6 py-5">
+          <a href="/#oversikt" class="border-b border-white/10 py-3 text-sm text-gray-200">Fagområder</a>
+          <a href="/jobb.html" class="border-b border-white/10 py-3 text-sm text-gray-200">Jobb</a>
+          <a href="/#kontakt" class="mt-4 bg-brand-primary px-5 py-4 text-center text-sm font-bold text-black">Be om befaring</a>
+        </nav>
       </div>
     </header>
 
@@ -537,24 +767,26 @@ https://vctra.no/#org
       <div class="max-w-4xl mx-auto px-6 relative z-10">
         <span
           class="text-brand-primary font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-          >Tips og råd om totalrenovering</span
+          >Faginnsikt fra prosjektene</span
         >
         <h1
           class="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight"
         >
-          Slik lykkes du med prosjektet
+          Faginnsikt & råd
         </h1>
         <p
           class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light"
         >
-         Vi tror på å dele kunnskap. Her har Bergen Bygg Montering samlet råd om prosess, fallgruver og tekniske løsninger for deg som skal renovere i Bergen – skrevet slik vi jobber ute på prosjektene: først avdekke fakta, så bygge tett, og til slutt levere finish med dokumentasjon.
+          Guider, sjekklister og faglige vurderinger for deg som skal pusse opp
+          eller rehabilitere i Bergen. Skrevet slik vi jobber ute på
+          prosjektene: avdekk fakta, bygg riktig og dokumenter det som er gjort.
         </p>
       </div>
     </section>
 
     <!--  -->
     <div
-      class="sticky top-24 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm overflow-x-auto"
+      class="news-tabs sticky z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm overflow-x-auto"
     >
       <div
         class="max-w-7xl mx-auto px-6 flex space-x-8 py-4 whitespace-nowrap overflow-x-auto scrollbar-hide"
@@ -588,32 +820,36 @@ https://vctra.no/#org
     </div>
 
     <!-- Main Content Area -->
-    <section class="py-24 bg-slate-50">
-      <div class="max-w-4xl mx-auto px-6 space-y-32">
+    <section class="news-feed py-24">
+      <div class="news-list max-w-[100rem] mx-auto px-6 lg:px-12">
         <!-- ARTIKKEL 1: PLANLEGGING -->
         <article
           id="art-planlegging"
-          class="article-card bg-white p-8 md:p-16 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+          class="news-article"
         >
-          <div
-            class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -mr-32 -mt-32"
-          ></div>
-          
-          <header class="mb-10 border-b border-gray-100 pb-10 relative z-10">
-              
-            <span
-              class="text-brand-primary font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-              >Planlegging</span
-            >
-            <h2
-              class="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-6"
-            >
+          <header class="news-header">
+            <div class="news-meta">
+              <span class="news-category">Planlegging</span>
+              <time datetime="2026-09-22">Oppdatert 22. september 2026</time>
+            </div>
+            <h2 class="news-title">
               5 tips som redder oppussingen fra kaos
             </h2>
-            
+            <p class="news-deck">
+              Riktig rekkefølge gir færre stopp, mindre dobbeltarbeid og bedre
+              kontroll på fag og leveranser.
+            </p>
           </header>
 
-          <div class="prose max-w-none relative z-10">
+          <figure class="news-media">
+            <img
+              src="/bilder/IMG_3770.webp"
+              alt="Rehabiliteringsprosjekt under planlegging og gjennomføring"
+            />
+            <figcaption>Planlegging før overflater</figcaption>
+          </figure>
+
+          <div class="news-body prose max-w-none">
             <p>
               Totalrenovering er som et puslespill der brikkene må legges i
               riktig rekkefølge. Mange huseiere starter med overflatene fordi
@@ -637,9 +873,9 @@ https://vctra.no/#org
               På bad er det membran og sluk. På tak er det undertak og lufting. På fasade er det vindsperre og luftespalte. Dette er stedene feil blir dyrest.
             </p>
             <h3>5. Avklar leveranser som styrer fremdriften</h3>
-            '<p>
+            <p>
               Kjøkken, vinduer og enkelte materialer kan ha leveringstid. Det som tar lengst tid å få tak i, bør bestemmes tidlig – uten å låse deg før rivingen har gitt svar.
-            </p>'
+            </p>
             <div
               class="bg-slate-50 p-6 rounded-xl border-l-4 border-brand-primary mt-8"
             >
@@ -649,7 +885,7 @@ https://vctra.no/#org
               </p>
             </div>
           </div>
-          <div class="mt-12 pt-8 border-t border-gray-100 flex justify-end">
+          <div class="news-read-more">
             <a
               href="/tjeneste-totalrenovering.html"
               class="text-brand-primary font-bold hover:underline"
@@ -661,27 +897,30 @@ https://vctra.no/#org
         <!-- ARTIKKEL 2: BAD -->
         <article
           id="art-bad"
-          class="article-card bg-white p-8 md:p-16 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+          class="news-article"
         >
-          <div
-            class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl -mr-32 -mt-32"
-          ></div>
-          <header class="mb-10 border-b border-gray-100 pb-10 relative z-10">
-            <span
-              class="text-blue-500 font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-              >Bad & Våtrom</span
-            >
-            <h2
-              class="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-6"
-            >
+          <header class="news-header">
+            <div class="news-meta">
+              <span class="news-category">Bad & våtrom</span>
+              <time datetime="2026-09-22">Oppdatert 22. september 2026</time>
+            </div>
+            <h2 class="news-title">
               Hva skjuler seg bak flisene?
             </h2>
-            <p class="text-xl text-gray-500 font-light">
+            <p class="news-deck">
               Et bad er bare så bra som det du ikke ser. Lekkasjer skjer sjelden “i flisa” – de skjer i overgangene og i lagene bak.
             </p>
           </header>
-          <div class="prose max-w-none relative z-10">
-            
+
+          <figure class="news-media">
+            <img
+              src="/bilder/473766295_1161206616013469_8198062879953587315_n.webp"
+              alt="Ferdig bad etter oppussing i Bergen"
+            />
+            <figcaption>Bad og våtrom</figcaption>
+          </figure>
+
+          <div class="news-body prose max-w-none">
             <h3>Membranen – badets regnfrakk</h3>
             <p>
               Fliser og fuger er ikke vanntette. Det er membranen bak som stopper vannet. Det viktige er ikke “type flis”, men at membranen er tett i hjørner, gjennomføringer – og spesielt rundt sluk med riktig mansjett/overgang.
@@ -695,25 +934,17 @@ https://vctra.no/#org
               Moderne bad bygges med rør-i-rør. Da ligger vannrøret inne i et varerør. Hvis det indre røret svikter, ledes vannet til et kontrollpunkt i stedet for å bli liggende skjult i veggen.
             </p>
             <h3>Kort sjekkliste før du bestemmer finish</h3>
-            <p>
-              Riktig fall til sluk og korrekt plassering er helt avgjørende. Ved full rehabilitering er sluk ofte naturlig å bytte, fordi overgangen mellom sluk og membran er et klassisk lekkasjepunkt.
-            </p>
-           <h3>Kort sjekkliste før du bestemmer finish: </h3>
-           <p>Hvor skal sluk stå, og hvordan får du riktig fall?<br>
-
-
-Hvilke gjennomføringer skal gjennom membranen (dusj, servant, wc, vaskemaskin)?<br>
-
-
-Er veggene stive nok for flis (ingen bevegelse)?<br>
-
-
-Hvilken dokumentasjon skal leveres ved overlevering?</p>
+            <ul class="news-checklist">
+              <li>Hvor skal sluket stå, og hvordan får du riktig fall?</li>
+              <li>Hvilke gjennomføringer skal gjennom membranen?</li>
+              <li>Er veggene stive nok for flis uten bevegelse?</li>
+              <li>Hvilken dokumentasjon skal leveres ved overlevering?</li>
+            </ul>
           </div>
-          <div class="mt-12 pt-8 border-t border-gray-100 flex justify-end">
+          <div class="news-read-more">
             <a
               href="/tjeneste-bad.html"
-              class="text-blue-500 font-bold hover:underline"
+              class="font-bold hover:underline"
               >Les om bad →</a
             >
           </div>
@@ -722,20 +953,28 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
         <!-- ARTIKKEL 3: TAK -->
         <article
           id="art-tak"
-          class="article-card bg-white p-8 md:p-16 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+          class="news-article"
         >
-          <header class="mb-10 border-b border-gray-100 pb-10 relative z-10">
-            <span
-              class="text-brand-primary font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-              >Tak & Klima</span
-            >
-            <h2
-              class="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-6"
-            >
+          <header class="news-header">
+            <div class="news-meta">
+              <span class="news-category">Tak & klima</span>
+              <time datetime="2026-09-22">Oppdatert 22. september 2026</time>
+            </div>
+            <h2 class="news-title">
               Taket: Det er undertaket som gjelder
             </h2>
+            <p class="news-deck">
+              Takstein tar belastningen. Undertak, lufting og detaljer holder
+              konstruksjonen tørr i vestlandsk klima.
+            </p>
           </header>
-          <div class="prose max-w-none relative z-10">
+
+          <figure class="news-media">
+            <img src="/bilder/IMG_1042.webp" alt="Takarbeid på bolig i Bergen" />
+            <figcaption>Tak og klima</figcaption>
+          </figure>
+
+          <div class="news-body prose max-w-none">
             <p>
               Mange tror at når taksteinen er lagt, er huset tett. Sannheten er
               at i sterkt vindpress vil regn drive inn under steinen. Det er
@@ -744,13 +983,14 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
             <h3>Lufting hindrer råte</h3>
             <p>
              Et tak må “puste”. Riktig oppbygging med lufting gjør at fukt tørker ut i stedet for å bli stående i konstruksjonen. Det bidrar også til å redusere problemer som ising ved takfot og belastning på renner og detaljer.
+            </p>
             <h3>Der lekkasjene oftest oppstår</h3>
             <p>
              Overganger og detaljer: pipe, gjennomføringer, grader, kanter og takrenner. Det er her vi legger mest presisjon i et takbytte – fordi det er her feil blir synlige som fukt inne.
             </p>
           
           </div>
-          <div class="mt-12 pt-8 border-t border-gray-100 flex justify-end">
+          <div class="news-read-more">
             <a
               href="/tjeneste-tak.html"
               class="text-brand-primary font-bold hover:underline"
@@ -762,20 +1002,28 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
         <!-- ARTIKKEL 4: ØKONOMI -->
         <article
           id="art-okonomi"
-          class="article-card bg-white p-8 md:p-16 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+          class="news-article"
         >
-          <header class="mb-10 border-b border-gray-100 pb-10 relative z-10">
-            <span
-              class="text-green-600 font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-              >Økonomi</span
-            >
-            <h2
-              class="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-6"
-            >
+          <header class="news-header">
+            <div class="news-meta">
+              <span class="news-category">Økonomi</span>
+              <time datetime="2026-09-22">Oppdatert 22. september 2026</time>
+            </div>
+            <h2 class="news-title">
               Slik øker du boligverdien mest
             </h2>
+            <p class="news-deck">
+              Teknisk trygghet og dokumentasjon kan være viktigere enn en rask
+              kosmetisk oppgradering.
+            </p>
           </header>
-          <div class="prose max-w-none relative z-10">
+
+          <figure class="news-media">
+            <img src="/bilder/DJI_0038.webp" alt="Boligprosjekt i Bergen" />
+            <figcaption>Rehabilitering og boligverdi</figcaption>
+          </figure>
+
+          <div class="news-body prose max-w-none">
             <p>
               Skal du selge om noen år? Prioriter det tekniske. Takstmenn ser etter lav tilstandsgrad på risikopunkter som bad, tak og fuktområder.
             </p>
@@ -784,51 +1032,53 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
             </p>
             <h3>Hvorfor dokumentasjon er blitt “verdipapirer”</h3>
             <p>Fordi den reduserer usikkerhet: hva er gjort, hvordan er det bygget, og hvem står ansvarlig. Det kan være avgjørende i dialog med kjøper, takst og forsikring.</p>
-            
           </div>
-          
         </article>
         
         
         <!-- ARTIKKEL 5: metodikk -->
         <article
-          id="art-okonomi"
-          class="article-card bg-white p-8 md:p-16 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+          id="art-metodikk"
+          class="news-article"
         >
-          <header class="mb-10 border-b border-gray-100 pb-10 relative z-10">
-            <span
-              class="text-green-600 font-display font-bold uppercase tracking-widest text-xs mb-4 block"
-              >Metodikk</span
-            >
-            <h2
-              class="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-6"
-            >
+          <header class="news-header">
+            <div class="news-meta">
+              <span class="news-category">Metodikk</span>
+              <time datetime="2026-09-22">Oppdatert 22. september 2026</time>
+            </div>
+            <h2 class="news-title">
               Rekkefølgen som ofte fungerer best i rehab
             </h2>
+            <p class="news-deck">
+              En robust rekkefølge gjør det enklere å koordinere fag og unngå
+              at ferdig arbeid må åpnes igjen.
+            </p>
           </header>
-          <div class="prose max-w-none relative z-10">
-            <p>
-              Mål og omfang (planløsning, standard, prioriteringer)
-            </p>
-            <p>
-            Riving/avdekking der det er nødvendig
-            </p>
-           
-            <p>Tekniske fag (rør/elektro/ventilasjon ved behov)</p>
-            <p>
-            Tett bygg (membran/undertak/vindsperre + detaljer)
-            </p>
-           
-            <p>Oppbygging og overflater</p>
-            <p>Sluttkontroll + dokumentasjon</p>
+
+          <figure class="news-media">
+            <img
+              src="/bilder/bygger_nytt_bad-rehab.webp"
+              alt="Teknisk oppbygging under rehabilitering"
+            />
+            <figcaption>Metodikk og rekkefølge</figcaption>
+          </figure>
+
+          <div class="news-body prose max-w-none">
+            <ol class="news-checklist">
+              <li>Mål og avklar omfang, planløsning og prioriteringer</li>
+              <li>Riv og avdekk der det er nødvendig</li>
+              <li>Utfør tekniske fag som rør, elektro og ventilasjon</li>
+              <li>Bygg tett med membran, undertak eller vindsperre</li>
+              <li>Bygg opp og ferdigstill overflater</li>
+              <li>Gjennomfør sluttkontroll og lever dokumentasjon</li>
+            </ol>
           </div>
-          
         </article>
       </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="py-24 bg-brand-primary text-white text-center">
+    <section class="py-24 bg-[#050705] text-white text-center">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-4xl md:text-5xl font-display font-bold mb-8">
           Ønsker du en faglig vurdering?
@@ -838,7 +1088,7 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
         </p>
         <a
           href="/#kontakt"
-          class="bg-white text-brand-primary px-10 py-5 rounded-full font-bold text-lg hover:bg-green-50 transition-all shadow-xl inline-block"
+          class="btn-solid inline-flex px-10 py-5 text-lg"
           >Bestill befaring</a
         >
       </div>
@@ -1008,6 +1258,30 @@ Hvilken dokumentasjon skal leveres ved overlevering?</p>
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.querySelector("#mobile-menu-button");
+        const menu = document.querySelector("#mobile-menu");
+        const menuIcon = document.querySelector("#menu-icon");
+        const closeIcon = document.querySelector("#close-icon");
+
+        button?.addEventListener("click", () => {
+          const isHidden = menu.classList.toggle("hidden");
+          button.setAttribute("aria-expanded", String(!isHidden));
+          menuIcon.classList.toggle("hidden", !isHidden);
+          closeIcon.classList.toggle("hidden", isHidden);
+        });
+
+        menu?.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+            button.setAttribute("aria-expanded", "false");
+            menuIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          });
+        });
+      });
+    </script>
     <script src="/index.js" defer></script>
   </body>
 </html>
