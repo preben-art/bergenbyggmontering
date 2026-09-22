@@ -136,9 +136,28 @@ function gisleSentences(section, words) {
       return { sentence, score };
     })
     .sort((a, b) => b.score - a.score);
-  const picked = ranked.filter((item) => item.score > 0).slice(0, 2);
+  const picked = ranked.filter((item) => item.score > 0).slice(0, 1);
   const chosen = (picked.length ? picked : ranked.slice(0, 1)).map((item) => item.sentence);
-  return chosen.join(" ");
+  return gisleClean(chosen[0] || "");
+}
+
+function gisleClean(sentence) {
+  const clean = String(sentence || "")
+    .replace(/[✓•●]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!clean) return "";
+  return /[.!?]$/.test(clean) ? clean : `${clean}.`;
+}
+
+function gisleLead(kind) {
+  if (kind === "book") {
+    return "Skriv navn, telefon og e-post i skjemaet under, og en kort linje om jobben. Jeg sender det i samme kontaktskjema som resten av siden.";
+  }
+  if (kind === "price") {
+    return "Et tall uten å se jobben blir gjetning. Legg igjen navn og telefon under, så avtaler vi befaring.";
+  }
+  return "Vil du ha befaring, fyller du inn navn og telefon i skjemaet under.";
 }
 
 function gisleReply(text, memory) {
@@ -150,14 +169,14 @@ function gisleReply(text, memory) {
 
   if (/hvem er du|hva heter du|er du gisle/.test(q)) {
     return {
-      text: "Jeg er Gisle Bjotveit. Jeg leder våtrom og rør hos oss. Spør om det som står på siden, så svarer jeg ut fra det.",
+      text: "Jeg er Gisle Bjotveit. Jeg leder våtrom og rør hos oss. Si hva jobben gjelder, så sier jeg hva vi kan gjøre. Skjemaet under er veien til befaring.",
       book: false,
     };
   }
 
   if (/^(hei|hallo|heisann|god dag)\b/.test(q) && gisleWords(raw).length < 3) {
     return {
-      text: "Hei. Si hva det gjelder, så tar jeg det fra siden du står på.",
+      text: "Hei. Jeg er Gisle. Hva gjelder det: bad, rør, tak eller hele boligen?",
       book: false,
     };
   }
@@ -169,7 +188,7 @@ function gisleReply(text, memory) {
     const street = org ? `${org.address.streetAddress}, ${org.address.postalCode} ${org.address.addressLocality}` : "Torget 1, 5014 Bergen";
     const number = org ? org.organizationNumber : "934686283";
     return {
-      text: `Vi holder til på ${street}. Org.nr ${number}. Telefon ${phone}, e-post ${email}.`,
+      text: `Vi holder til på ${street}. Org.nr ${number}. Telefon ${phone}, e-post ${email}. Vil du at vi ringer, bruker du skjemaet under.`,
       book: false,
     };
   }
@@ -205,16 +224,12 @@ function gisleReply(text, memory) {
   }
 
   if (!parts.length) {
-    const first = sections.find((section) => section.bits[0]);
-    parts.push(
-      (first && first.bits[0]) ||
-        "Vi rehabiliterer boliger i Bergen. Spør om bad, rør, tak, fasade, tømrer eller tilbygg, så tar jeg det fra teksten på siden."
-    );
+    parts.push("Vi rehabiliterer boliger i Bergen: bad, rør, tak, fasade, tømrer og tilbygg. Si hvilket fag det gjelder, så tar jeg det derfra.");
   }
 
-  if (booking) {
-    parts.push("Legg inn navn og telefon nederst, så sender jeg det i samme kontaktskjema.");
-  }
+  const askedPrice = /pris|kost|tilbud|budsjett/.test(q);
+  const kind = booking ? "book" : askedPrice ? "price" : "next";
+  parts.push(gisleLead(kind));
 
   return { text: parts.join(" "), book: booking };
 }
@@ -232,7 +247,7 @@ function gisleWelcome(page) {
     fag: "Du er inne på faginnsikt.",
     hjem: "Du er på forsiden.",
   };
-  return `Hei, jeg er Gisle. ${here[page.id] || here.hjem} Spør om det som står her, så svarer jeg ut fra siden.`;
+  return `Velkommen. Jeg er Gisle Bjotveit i Bergen Byggmontering. ${here[page.id] || here.hjem} Spør om det du ser her, så svarer jeg faglig. Befaring booker du i skjemaet under.`;
 }
 
 function gisleValidEmail(value) {
@@ -467,20 +482,12 @@ function mountGisle(trackEvent) {
   form.style.cssText = "display:grid;gap:8px;padding:10px 12px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #eceee9;background:#fff;flex:none;";
 
   const contact = document.createElement("div");
-  contact.hidden = true;
-  contact.style.cssText = "display:none;grid-template-columns:1fr 1fr;gap:8px;";
+  contact.style.cssText = "display:grid;grid-template-columns:1fr 1fr;gap:8px;";
   const nameInput = field("Navn", "text", "Ola Nordmann");
   const phoneInput = field("Telefon", "tel", "900 00 000");
   const emailInput = field("E-post", "email", "navn@epost.no");
   emailInput.wrap.style.gridColumn = "1 / -1";
   contact.append(nameInput.wrap, phoneInput.wrap, emailInput.wrap);
-
-  const showContact = (open) => {
-    contact.hidden = !open;
-    contact.style.display = open ? "grid" : "none";
-    consent.hidden = !open;
-    if (open) nameInput.input.focus();
-  };
 
   const starters = document.createElement("div");
   starters.style.cssText = "display:flex;gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;";
@@ -507,7 +514,7 @@ function mountGisle(trackEvent) {
   composer.style.cssText = "display:flex;gap:8px;align-items:flex-end;";
   const messageInput = document.createElement("textarea");
   messageInput.rows = 1;
-  messageInput.placeholder = "Skriv en melding";
+  messageInput.placeholder = "Hva gjelder jobben?";
   messageInput.style.cssText =
     "flex:1;min-height:42px;max-height:96px;box-sizing:border-box;border:1px solid #e2e4de;border-radius:14px;padding:10px 12px;resize:none;font:inherit;font-size:15px;background:#f7f8f5;";
 
@@ -518,7 +525,6 @@ function mountGisle(trackEvent) {
     "flex:none;background:#111;color:#fff;border:0;border-radius:999px;min-height:44px;padding:0 16px;font-weight:700;cursor:pointer;";
 
   const consent = document.createElement("p");
-  consent.hidden = true;
   consent.style.cssText = "margin:0;font-size:11px;color:#555;line-height:1.4;";
   consent.append("Send bruker samme kontaktskjema. Du godtar ");
   const privacyLink = document.createElement("a");
@@ -575,7 +581,6 @@ function mountGisle(trackEvent) {
           "gisle"
         );
         trackEvent("conversion", "form_submit_success", "gisle_chat");
-        showContact(false);
         nameInput.input.value = "";
         phoneInput.input.value = "";
         emailInput.input.value = "";
@@ -595,14 +600,14 @@ function mountGisle(trackEvent) {
     }
 
     const reply = gisleReply(text || "hva gjør dere", memory);
-    if (reply.book) showContact(true);
     const started = details.name || details.phone || details.email;
-    if (reply.book && started) {
+    if (started && !ready) {
       const missing = [];
       if (!details.name) missing.push("navn");
       if (!details.phone) missing.push("telefon");
       if (!gisleValidEmail(details.email)) missing.push("e-post");
-      addBubble(messages, `${reply.text} Mangler ${missing.join(", ")}.`, "gisle");
+      if (!details.message) missing.push("en kort melding om jobben");
+      addBubble(messages, `${reply.text} For å sende mangler ${missing.join(", ")}.`, "gisle");
       return;
     }
     addBubble(messages, reply.text, "gisle");
