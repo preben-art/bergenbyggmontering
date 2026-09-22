@@ -5,9 +5,15 @@
 - Domain: https://bergenbyggmontering.no
 - Language: nb-NO
 - Primary location: Bergen, Vestland (NO)
-- Service area: Bergen, Sotra, Askøy, Os, Nordhordland, Austevoll
+- Service area: Bergen (Sentrum, Bergenhus, Årstad, Åsane, Arna, Fana, Ytrebygda, Fyllingsdalen, Laksevåg, Loddefjord, Sandviken, Nordnes, Møhlenpris, Nygård, Landås, Minde, Kronstad, Danmarksplass, Damsgård, Nesttun, Fjøsanger, Paradis, Hop, Rådal, Sandsli, Kokstad, Lagunen, Bønes, Olsvik, Drotningsvik, Eidsvåg, Tertnes, Morvik), Sotra, Askøy, Os, Nordhordland og Austevoll
+- Public fact file: https://bergenbyggmontering.no/knowledgehub.json
 - Audience: Boligeiere (B2C) + borettslag/sameier/forvaltere (B2B) + relevante fagfolk
 - What we do: Rehabilitering og totalrenovering av eksisterende boligmasse (ikke nybygg-felt / rene næringsbygg)
+
+## Audiences
+- Boligeiere og familier: totalrenovering, nytt bad, tak, fasade, tømrer, rør og tilbygg.
+- Borettslag, sameier, styrer og forvaltere: planlagt vedlikehold og rehabilitering i bebodd boligbygg. Se https://bergenbyggmontering.no/tjeneste-brl.html
+- Ikke standard: rene kontorbygg, typiske næringsprosjekter uten boligformål, og store nybyggfelt.
 
 ## Purpose
 Help users plan and evaluate rehabilitation work with practical, risk-aware guidance.

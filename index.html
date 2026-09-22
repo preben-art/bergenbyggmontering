@@ -42,30 +42,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
 
+    <link rel="describedby" href="https://bergenbyggmontering.no/knowledgehub.json" type="application/json" />
     <link rel="alternate" href="https://bergenbyggmontering.no/" hreflang="nb-NO" />
     <link rel="alternate" href="https://bergenbyggmontering.no/" hreflang="nb" />
     <link rel="alternate" href="https://bergenbyggmontering.no/" hreflang="x-default" />
 
-    <meta name="ai:site_name" content="Bergen Byggmontering AS" />
-    <meta name="ai:site_url" content="https://bergenbyggmontering.no/" />
-    <meta name="ai:language" content="nb-NO" />
-    <meta name="ai:primary_location" content="Bergen, Vestland, NO" />
-    <meta name="ai:service_area" content="Bergen; Sotra; Askøy; Os; Nordhordland; Austevoll" />
-    <meta
-      name="ai:services"
-      content="Totalrenovering; Tømrer og innvendig rehabilitering; Bad og våtrom; Rørlegger; Yttertak; Fasade, vinduer og etterisolering; Tilbygg og mindre nybygg; Borettslag og sameier"
-    />
-    <meta name="ai:fit_criteria" content="Relevans avgjøres av bolig/boligbygg, riktig fagområde og avklart omfang før oppstart." />
-    <meta name="ai:not_fit_criteria" content="Ikke standard: typiske kontorbygg/næringsprosjekter uten boligformål. Avvik kun ved særskilt avtale." />
-    <meta name="ai:contact_phone" content="+47 917 27 100" />
-    <meta name="ai:contact_email" content="post@bergenbyggmontering.no" />
-    <meta name="ai:orgnr" content="934686283" />
-    <meta name="ai:source_of_truth" content="Nettsiden + strukturert data (JSON-LD) + kontaktopplysninger på domenet." />
-    <meta name="ai:primary_topics" content="Boligrehabilitering; Totalrenovering; Våtrom; VVS; Takrehabilitering; Fasade og etterisolering; Tilbygg" />
-    <meta name="ai:knowledge_scope" content="Bolig og boligbygg (inkl. borettslag/sameier). Ikke standard for rene kontor-/næringsprosjekter uten boligformål." />
-    <meta name="ai:content_types" content="Tjenestesider; Prosessbeskrivelse; FAQ; Kontaktinformasjon" />
-
-    <meta name="vctra:owner" content="VCTRA" />
+<meta name="vctra:owner" content="VCTRA" />
     <meta name="vctra:owner_url" content="https://vctra.no/" />
     <meta name="vctra:license_scope" content="Client use only" />
 
@@ -78,10 +60,10 @@
       content="Boligrettet rehabilitering i Bergen og nærområder: totalrenovering, bad/våtrom, rør, yttertak, fasade/vinduer/etterisolering, tilbygg og arbeid for borettslag/sameier."
     />
     <meta property="og:url" content="https://bergenbyggmontering.no/" />
-    <meta property="og:image" content="https://bergenbyggmontering.no/assets/og/cover-1200x630.webp" />
+    <meta property="og:image" content="https://bergenbyggmontering.no/bilder/IMG_3770.webp" />
     <meta property="og:image:alt" content="Bergen Byggmontering AS – boligrehabilitering i Bergen og nærområder" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="2621" />
+    <meta property="og:image:height" content="1966" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Bergen Byggmontering AS – Totalrenovering, bad, rør, tak og fasade" />
@@ -89,7 +71,7 @@
       name="twitter:description"
       content="Boligrettet rehabilitering i Bergen og nærområder: totalrenovering, bad/våtrom, rør, yttertak, fasade/vinduer/etterisolering, tilbygg og arbeid for borettslag/sameier."
     />
-    <meta name="twitter:image" content="https://bergenbyggmontering.no/assets/og/cover-1200x630.webp" />
+    <meta name="twitter:image" content="https://bergenbyggmontering.no/bilder/IMG_3770.webp" />
 
     <!-- Standard Favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -197,7 +179,7 @@ header.no-transition {
         },
       };
     </script>
-    <link rel="stylesheet" href="/index.css?v=header-scope1" />
+    <link rel="stylesheet" href="/index.css?v=geo-places1" />
 
 <script type="application/ld+json">
 {
@@ -225,9 +207,9 @@ header.no-transition {
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Nedre Åstveit 12, Torget 1. 5014 Bergen.",
-        "postalCode": "5106",
-        "addressLocality": "Øvre Ervik",
+        "streetAddress": "Torget 1",
+        "postalCode": "5014",
+        "addressLocality": "Bergen",
         "addressRegion": "Vestland",
         "addressCountry": "NO"
       },
@@ -243,9 +225,10 @@ header.no-transition {
           "availableLanguage": ["nb-NO", "nb"]
         }
       ],
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Vestland" }
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
+      "audience": [
+        { "@type": "Audience", "name": "Privatpersoner (bolig)" },
+        { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
       ],
       "knowsAbout": [
         "Totalrenovering av bolig",
@@ -262,9 +245,55 @@ header.no-transition {
     {
       "@id": "https://bergenbyggmontering.no/#geo",
       "@type": "GeoCoordinates",
-      "name": "Bergen Byggmontering AS – primær lokasjon",
-      "latitude": 60.446088375174305,
-      "longitude": 5.307919877093386
+      "name": "Torget 1, 5014 Bergen",
+      "latitude": 60.3946010,
+      "longitude": 5.3258700
+    },
+    {
+      "@id": "https://bergenbyggmontering.no/#service-area",
+      "@type": "ItemList",
+      "name": "Dokumentert dekningsområde",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Bergen" },
+        { "@type": "ListItem", "position": 2, "name": "Bergen Sentrum" },
+        { "@type": "ListItem", "position": 3, "name": "Bergenhus" },
+        { "@type": "ListItem", "position": 4, "name": "Årstad" },
+        { "@type": "ListItem", "position": 5, "name": "Åsane" },
+        { "@type": "ListItem", "position": 6, "name": "Arna" },
+        { "@type": "ListItem", "position": 7, "name": "Fana" },
+        { "@type": "ListItem", "position": 8, "name": "Ytrebygda" },
+        { "@type": "ListItem", "position": 9, "name": "Fyllingsdalen" },
+        { "@type": "ListItem", "position": 10, "name": "Laksevåg" },
+        { "@type": "ListItem", "position": 11, "name": "Loddefjord" },
+        { "@type": "ListItem", "position": 12, "name": "Sandviken" },
+        { "@type": "ListItem", "position": 13, "name": "Nordnes" },
+        { "@type": "ListItem", "position": 14, "name": "Møhlenpris" },
+        { "@type": "ListItem", "position": 15, "name": "Nygård" },
+        { "@type": "ListItem", "position": 16, "name": "Landås" },
+        { "@type": "ListItem", "position": 17, "name": "Minde" },
+        { "@type": "ListItem", "position": 18, "name": "Kronstad" },
+        { "@type": "ListItem", "position": 19, "name": "Danmarksplass" },
+        { "@type": "ListItem", "position": 20, "name": "Damsgård" },
+        { "@type": "ListItem", "position": 21, "name": "Nesttun" },
+        { "@type": "ListItem", "position": 22, "name": "Fjøsanger" },
+        { "@type": "ListItem", "position": 23, "name": "Paradis" },
+        { "@type": "ListItem", "position": 24, "name": "Hop" },
+        { "@type": "ListItem", "position": 25, "name": "Rådal" },
+        { "@type": "ListItem", "position": 26, "name": "Sandsli" },
+        { "@type": "ListItem", "position": 27, "name": "Kokstad" },
+        { "@type": "ListItem", "position": 28, "name": "Lagunen" },
+        { "@type": "ListItem", "position": 29, "name": "Bønes" },
+        { "@type": "ListItem", "position": 30, "name": "Olsvik" },
+        { "@type": "ListItem", "position": 31, "name": "Drotningsvik" },
+        { "@type": "ListItem", "position": 32, "name": "Eidsvåg" },
+        { "@type": "ListItem", "position": 33, "name": "Tertnes" },
+        { "@type": "ListItem", "position": 34, "name": "Morvik" },
+        { "@type": "ListItem", "position": 35, "name": "Sotra" },
+        { "@type": "ListItem", "position": 36, "name": "Askøy" },
+        { "@type": "ListItem", "position": 37, "name": "Os" },
+        { "@type": "ListItem", "position": 38, "name": "Nordhordland" },
+        { "@type": "ListItem", "position": 39, "name": "Austevoll" }
+      ]
     },
     {
       "@id": "https://bergenbyggmontering.no/#website",
@@ -287,15 +316,15 @@ header.no-transition {
       "creator": { "@id": "https://vctra.no/#org" },
       "breadcrumb": { "@id": "https://bergenbyggmontering.no/#breadcrumb" },
       "mainEntity": [
-        { "@id": "https://bergenbyggmontering.no/tjenster-totalrenovering" },
-        { "@id": "https://bergenbyggmontering.no/tjenster-tomrer" },
-        { "@id": "https://bergenbyggmontering.no/tjenste-bad" },
-        { "@id": "https://bergenbyggmontering.no/tjenste-ror" },
-        { "@id": "https://bergenbyggmontering.no/tjeneste-tak" },
-        { "@id": "https://bergenbyggmontering.no/tjenste-fasade" },
-        { "@id": "https://bergenbyggmontering.no/tjenste-tilbygg" },
-        { "@id": "https://bergenbyggmontering.no/tjenste-brl" },
-        { "@id": "https://bergenbyggmontering.no/hub" }
+        { "@id": "https://bergenbyggmontering.no/#fag-totalrenovering" },
+        { "@id": "https://bergenbyggmontering.no/#fag-tomrer" },
+        { "@id": "https://bergenbyggmontering.no/#fag-bad" },
+        { "@id": "https://bergenbyggmontering.no/#fag-ror" },
+        { "@id": "https://bergenbyggmontering.no/#fag-tak" },
+        { "@id": "https://bergenbyggmontering.no/#fag-fasade" },
+        { "@id": "https://bergenbyggmontering.no/#fag-tilbygg" },
+        { "@id": "https://bergenbyggmontering.no/#fag-brl" },
+        { "@id": "https://bergenbyggmontering.no/#hub" }
       ],
       "hasPart": [
         { "@id": "https://bergenbyggmontering.no/#section-hero" },
@@ -434,10 +463,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -452,10 +478,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -470,10 +493,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-bad.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -488,10 +508,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-ror.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -506,10 +523,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-tak.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -524,10 +538,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-fasade.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -542,10 +553,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-tilbygg.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Privatpersoner (bolig)" },
         { "@type": "Audience", "name": "Borettslag og sameier (boligbygg)" }
@@ -560,10 +568,7 @@ header.no-transition {
       "provider": { "@id": "https://bergenbyggmontering.no/#org" },
       "url": "https://bergenbyggmontering.no/tjeneste-brl.html",
       "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "https://bergenbyggmontering.no/#kontakt" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Bergen" },
-        { "@type": "AdministrativeArea", "name": "Bergen og omegn" }
-      ],
+      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
       "audience": [
         { "@type": "Audience", "name": "Borettslag (boligbygg)" },
         { "@type": "Audience", "name": "Sameier (boligbygg)" }
@@ -3076,16 +3081,18 @@ header.no-transition {
         </div>
 
         <!-- Geo-Location SEO Section -->
-        <div class="border-t border-white/5 pt-12 pb-8">
+        <div class="geo-places border-t border-white/5 pt-12 pb-8">
           <h4
-            class="text-gray-600 text-center font-bold uppercase text-[10px] tracking-widest mb-4"
+            class="text-gray-300 text-center font-bold uppercase text-[10px] tracking-widest mb-4"
           >
             Vi dekker hele Bergen og omegn
           </h4>
           <div
-            class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-700 justify-center uppercase tracking-wide font-mono"
+            class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-300 justify-center uppercase tracking-wide font-mono"
           >
             <span>Bergen Sentrum</span>
+            <span>Bergenhus</span>
+            <span>Årstad</span>
             <span>Åsane</span>
             <span>Arna</span>
             <span>Fana</span>
@@ -3095,14 +3102,24 @@ header.no-transition {
             <span>Loddefjord</span>
             <span>Sandviken</span>
             <span>Nordnes</span>
+            <span>Møhlenpris</span>
+            <span>Nygård</span>
             <span>Landås</span>
             <span>Minde</span>
             <span>Kronstad</span>
+            <span>Danmarksplass</span>
+            <span>Damsgård</span>
             <span>Nesttun</span>
+            <span>Fjøsanger</span>
+            <span>Paradis</span>
+            <span>Hop</span>
             <span>Rådal</span>
             <span>Sandsli</span>
             <span>Kokstad</span>
+            <span>Lagunen</span>
             <span>Bønes</span>
+            <span>Olsvik</span>
+            <span>Drotningsvik</span>
             <span>Eidsvåg</span>
             <span>Tertnes</span>
             <span>Morvik</span>
@@ -3110,6 +3127,7 @@ header.no-transition {
             <span>Askøy</span>
             <span>Os</span>
             <span>Nordhordland</span>
+            <span>Austevoll</span>
           </div>
         </div>
 

@@ -1,0 +1,335 @@
+{
+  "lastUpdated": "2026-09-22",
+  "language": "nb-NO",
+  "organization": {
+    "id": "https://bergenbyggmontering.no/#org",
+    "name": "Bergen Byggmontering AS",
+    "legalName": "Bergen Byggmontering AS",
+    "url": "https://bergenbyggmontering.no/",
+    "organizationNumber": "934686283",
+    "email": "post@bergenbyggmontering.no",
+    "telephone": "+47 917 27 100",
+    "address": {
+      "streetAddress": "Torget 1",
+      "postalCode": "5014",
+      "addressLocality": "Bergen",
+      "addressRegion": "Vestland",
+      "addressCountry": "NO"
+    },
+    "knowsAbout": [
+      "Totalrenovering av bolig",
+      "Innvendig rehabilitering",
+      "Tømrerarbeid i rehabilitering",
+      "Bad og våtrom",
+      "Rørleggerarbeid",
+      "Rehabilitering av yttertak",
+      "Fasade, vinduer og etterisolering",
+      "Tilbygg",
+      "Prosjekter for borettslag og sameier"
+    ]
+  },
+  "audiences": [
+    {
+      "id": "boligeiere",
+      "name": "Privatpersoner (bolig)",
+      "who": "Boligeiere og familier som skal rehabilitere eller pusse opp bolig eller leilighet.",
+      "situations": [
+        "Totalrenovering av hus eller leilighet",
+        "Nytt bad eller oppussing av bad",
+        "Tak, fasade, tømrerarbeid, rør eller tilbygg"
+      ],
+      "services": [
+        "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
+        "https://bergenbyggmontering.no/tjeneste-bad.html",
+        "https://bergenbyggmontering.no/tjeneste-tak.html",
+        "https://bergenbyggmontering.no/tjeneste-fasade.html",
+        "https://bergenbyggmontering.no/tjeneste-tomrer.html",
+        "https://bergenbyggmontering.no/tjeneste-ror.html",
+        "https://bergenbyggmontering.no/tjeneste-tilbygg.html"
+      ]
+    },
+    {
+      "id": "borettslag-sameier",
+      "name": "Borettslag og sameier (boligbygg)",
+      "who": "Styrer og forvaltere som planlegger vedlikehold eller rehabilitering i bebodd boligbygg.",
+      "situations": [
+        "Bad i flere enheter",
+        "Rør og stammer",
+        "Tak, fasade og vinduer",
+        "Behov for plan, beboerinformasjon og koordinert fremdrift"
+      ],
+      "services": [
+        "https://bergenbyggmontering.no/tjeneste-brl.html",
+        "https://bergenbyggmontering.no/tjeneste-bad.html",
+        "https://bergenbyggmontering.no/tjeneste-ror.html",
+        "https://bergenbyggmontering.no/tjeneste-tak.html",
+        "https://bergenbyggmontering.no/tjeneste-fasade.html"
+      ]
+    }
+  ],
+  "notFor": [
+    "Rene kontorbygg og typiske næringsprosjekter uten boligformål",
+    "Store nybyggfelt"
+  ],
+  "services": [
+    {
+      "name": "Totalrenovering",
+      "url": "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Nytt bad og oppussing av bad",
+      "url": "https://bergenbyggmontering.no/tjeneste-bad.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Taktekking",
+      "url": "https://bergenbyggmontering.no/tjeneste-tak.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Fasade og etterisolering",
+      "url": "https://bergenbyggmontering.no/tjeneste-fasade.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Tømrer og innvendig rehabilitering",
+      "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html",
+      "audience": [
+        "boligeiere"
+      ]
+    },
+    {
+      "name": "Rørlegger",
+      "url": "https://bergenbyggmontering.no/tjeneste-ror.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Tilbygg",
+      "url": "https://bergenbyggmontering.no/tjeneste-tilbygg.html",
+      "audience": [
+        "boligeiere"
+      ]
+    },
+    {
+      "name": "Borettslag og sameier",
+      "url": "https://bergenbyggmontering.no/tjeneste-brl.html",
+      "audience": [
+        "borettslag-sameier"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Bergen",
+      "kind": "municipality",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Bergen Sentrum",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Bergenhus",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Årstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Åsane",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Arna",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Fana",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Ytrebygda",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Fyllingsdalen",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Laksevåg",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Loddefjord",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sandviken",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Nordnes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Møhlenpris",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Nygård",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Landås",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Minde",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Kronstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Danmarksplass",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Damsgård",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Nesttun",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Fjøsanger",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Paradis",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Hop",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Rådal",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sandsli",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Kokstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Lagunen",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Bønes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Olsvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Drotningsvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Eidsvåg",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Tertnes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Morvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sotra",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Askøy",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Os",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Nordhordland",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Austevoll",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    }
+  ],
+  "source": "Steder og målgrupper som allerede er navngitt på bergenbyggmontering.no. Ingen nye kommuner er lagt til."
+}

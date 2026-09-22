@@ -1485,3 +1485,9 @@ body.subpage {
     font-size: clamp(2rem, 9vw, 3rem);
   }
 }
+
+footer .geo-places,
+footer .geo-places h4,
+footer .geo-places span {
+  color: #f3f5ef !important;
+}

@@ -5,7 +5,10 @@
 - URL: https://bergenbyggmontering.no/
 - Organization number: 934686283
 - Location: Bergen, Vestland, Norway
-- Service area: Bergen, Sotra, Askøy, Os, Nordhordland, Austevoll
+- Service area: Bergen (Sentrum, Bergenhus, Årstad, Åsane, Arna, Fana, Ytrebygda, Fyllingsdalen, Laksevåg, Loddefjord, Sandviken, Nordnes, Møhlenpris, Nygård, Landås, Minde, Kronstad, Danmarksplass, Damsgård, Nesttun, Fjøsanger, Paradis, Hop, Rådal, Sandsli, Kokstad, Lagunen, Bønes, Olsvik, Drotningsvik, Eidsvåg, Tertnes, Morvik), Sotra, Askøy, Os, Nordhordland og Austevoll
+- Audiences: boligeiere; borettslag og sameier
+- Not for: rene kontorbygg og typiske næringsprosjekter uten boligformål; store nybyggfelt
+- Public facts: https://bergenbyggmontering.no/knowledgehub.json
 - Phone: +47 917 27 100
 - Email: post@bergenbyggmontering.no
 
