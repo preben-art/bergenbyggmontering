@@ -269,12 +269,39 @@ h3 { font-size: var(--fs-h3); }
   transition: all 0.5s ease-in-out;
 }
 
-/* Prisvinnende UI: luft, hierarki, foto uten filter */
-.section-white {
-  background: #f6f4ee !important;
+/* Lys/svart som originalen, dyp gradient bare i mørkt */
+html {
+  background:
+    radial-gradient(ellipse 70% 45% at 8% 0%, rgba(140, 192, 64, 0.1), transparent 55%),
+    #050505;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 70% 45% at 8% 0%, rgba(140, 192, 64, 0.1), transparent 55%),
+    linear-gradient(180deg, #050505 0%, #0c100c 42%, #050505 100%);
+}
+
+.section-dark,
+.dark-section,
+#hero,
+#prosess,
+#faginnsikt,
+#profil,
+footer {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(140, 192, 64, 0.09), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(20, 50, 28, 0.45), transparent 55%);
+}
+
+.section-white,
+.section-white.bg-slate-50,
+#rekruttering,
+#faq,
+#kontakt {
+  background: #ffffff !important;
+  color: #0f172a;
   border: none !important;
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
 }
 
 .section-white :is(.text-gray-500, .text-gray-600, .text-gray-400) {
@@ -282,13 +309,13 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .section-white :is(h2, h3) {
-  color: #12140f;
+  color: #0f172a;
   letter-spacing: -0.035em;
 }
 
 .section-white p,
 .section-white li {
-  color: #2a2e26;
+  color: #33403a;
   font-size: 1.05rem;
   line-height: 1.7;
 }
