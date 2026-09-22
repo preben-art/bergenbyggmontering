@@ -869,3 +869,141 @@ nav button {
   letter-spacing: 0.16em;
   font-size: 0.7rem !important;
 }
+
+/* CTA-bokser: lys tekst, godkjente knapper */
+.cta-panel,
+.section-white [class*="bg-black"] {
+  background: #0c1810 !important;
+  border: 1px solid rgba(140, 192, 64, 0.34) !important;
+  border-radius: 1.1rem !important;
+  padding: 1.4rem 1.5rem !important;
+  box-shadow: 0 16px 36px rgba(6, 16, 10, 0.16) !important;
+}
+
+.cta-panel h3,
+.cta-panel h3[class],
+.section-white [class*="bg-black"] h3,
+.section-white [class*="bg-black"] h3[class] {
+  color: #f4f8ee !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.28rem !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+
+.cta-panel p,
+.cta-panel p[class],
+.section-white [class*="bg-black"] p,
+.section-white [class*="bg-black"] p[class] {
+  color: #d8e4cc !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  max-width: 34rem !important;
+  text-align: left;
+}
+
+.cta-panel .relative.z-10,
+.section-white [class*="bg-black"] .relative.z-10 {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.cta-panel .btn-primary,
+.cta-panel .btn-solid,
+.section-white [class*="bg-black"] .btn-primary,
+.section-white [class*="bg-black"] .btn-solid {
+  text-transform: none !important;
+  letter-spacing: -0.015em !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  padding: 0.7rem 1.15rem !important;
+  min-height: 2.75rem;
+  border-radius: 0.7rem !important;
+  box-shadow: none !important;
+  animation: none !important;
+  filter: none !important;
+  white-space: nowrap;
+}
+
+.cta-panel .btn-primary,
+.section-white [class*="bg-black"] .btn-primary {
+  background: transparent !important;
+  border: 1.5px solid #e8f0dc !important;
+  color: #f4f8ee !important;
+}
+
+.cta-panel .btn-primary:hover,
+.section-white [class*="bg-black"] .btn-primary:hover {
+  background: #f4f8ee !important;
+  color: #10160e !important;
+  border-color: #f4f8ee !important;
+}
+
+.cta-panel .btn-solid,
+.section-white [class*="bg-black"] .btn-solid {
+  background: #8cc040 !important;
+  background-image: none !important;
+  border: 1.5px solid #8cc040 !important;
+  color: #10160e !important;
+}
+
+.cta-panel .btn-solid:hover,
+.section-white [class*="bg-black"] .btn-solid:hover {
+  background: #b8dc78 !important;
+  border-color: #b8dc78 !important;
+  color: #10160e !important;
+}
+
+/* Accordion: én rad, ikke tom boks */
+.magnetic-btn {
+  border: 1px solid rgba(16, 22, 14, 0.12) !important;
+  border-radius: 0.9rem !important;
+  background: #f7faf3;
+  overflow: hidden;
+}
+
+.magnetic-btn > .absolute.inset-0 {
+  display: none !important;
+}
+
+.magnetic-btn > button {
+  min-height: 3.15rem;
+  padding: 0.8rem 1.1rem !important;
+  gap: 1rem;
+}
+
+.magnetic-btn > button > span {
+  font-family: var(--font-display) !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.014em !important;
+  text-transform: none !important;
+  color: #10160e !important;
+  padding-right: 0 !important;
+}
+
+.dropdown-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.dropdown-inner .bg-white,
+.dropdown-inner [class*="rounded-xl"] {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.dropdown-inner h4,
+.dropdown-inner h4[class] {
+  color: #10160e !important;
+  font-size: 0.8rem !important;
+}
+
+.dropdown-inner p,
+.dropdown-inner li,
+.dropdown-inner li span {
+  color: #1c2418 !important;
+}
