@@ -402,6 +402,16 @@ span.text-\[\#66FF00\] {
   color: #8cc040 !important;
 }
 
+[class*="border-[#719248]"] {
+  border-color: #8cc040 !important;
+  color: #8cc040 !important;
+}
+
+[class*="hover:bg-[#719248]"]:hover,
+.group:hover [class*="group-hover:bg-[#719248]"] {
+  background-color: #8cc040 !important;
+}
+
 .dropdown-inner h4 {
   font-family: "Space Grotesk", Inter, sans-serif;
   font-size: 0.95rem;
