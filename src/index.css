@@ -752,3 +752,167 @@ span.text-\[\#66FF00\],
     width: 100%;
   }
 }
+
+/* Nopek-inspired cues: sharper geometry, technical rhythm, clearer hierarchy. */
+:root {
+  --ui-line: rgba(15, 20, 15, 0.14);
+  --ui-radius: 0.28rem;
+}
+
+header {
+  border-bottom: 1px solid rgba(140, 192, 64, 0.22) !important;
+  backdrop-filter: blur(14px) saturate(1.15);
+}
+
+nav a:not(.btn-primary):not(.btn-solid),
+nav button {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 0.67rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+}
+
+#hero h1,
+#hero .industrial-display {
+  letter-spacing: -0.055em !important;
+  line-height: 0.92 !important;
+}
+
+.bento-grid {
+  gap: 0.7rem;
+}
+
+.bento-item {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--ui-radius);
+}
+
+.bento-overlay {
+  background: linear-gradient(to top, rgba(3, 5, 3, 0.96) 0%, rgba(3, 5, 3, 0.24) 62%, transparent 100%);
+}
+
+.bento-overlay h3 {
+  font-size: clamp(1.25rem, 2vw, 2rem) !important;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.bento-overlay p {
+  color: #e3e8de !important;
+  font-size: 0.9rem !important;
+  line-height: 1.48;
+}
+
+.section-white > .max-w-\[100rem\] {
+  position: relative;
+}
+
+.section-white > .max-w-\[100rem\]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.5rem;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--ui-line) 15%, var(--ui-line) 85%, transparent);
+}
+
+.section-white h2 {
+  letter-spacing: -0.055em !important;
+}
+
+.section-white > .max-w-\[100rem\] > .grid > div:first-child > div:first-child > span {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.1em !important;
+  color: #47751c !important;
+}
+
+.photo-frame,
+.section-white .aspect-\[4\/5\] {
+  border-radius: var(--ui-radius);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 22px 42px rgba(10, 16, 9, 0.14);
+}
+
+.magnetic-btn .rounded-full,
+.btn-primary,
+.btn-solid,
+.section-white [class*="bg-black"],
+.aeo-list details,
+.form-card,
+#kontakt input,
+#kontakt textarea,
+#kontakt button {
+  border-radius: var(--ui-radius) !important;
+}
+
+.magnetic-btn > button {
+  border-radius: 0 !important;
+}
+
+.dropdown-inner > div {
+  border-left: 2px solid var(--brand-primary);
+  margin-left: 0.05rem;
+  padding-left: clamp(1rem, 2vw, 1.75rem) !important;
+}
+
+.dropdown-inner .grid {
+  gap: clamp(1.5rem, 3vw, 3rem) !important;
+}
+
+.section-white [class*="bg-black"] {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(140, 192, 64, 0.28) !important;
+}
+
+.section-white [class*="bg-black"]::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--brand-primary);
+}
+
+.section-white [class*="bg-black"] .relative.z-10 {
+  align-items: center;
+}
+
+.btn-solid:hover,
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.aeo-list details {
+  border: 1px solid var(--ui-line) !important;
+  background: #fff !important;
+  padding-inline: 1.15rem;
+  margin-bottom: 0.7rem;
+}
+
+.aeo-list details > summary {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+#kontakt input,
+#kontakt textarea {
+  border-color: rgba(15, 20, 15, 0.18) !important;
+}
+
+#kontakt input:focus,
+#kontakt textarea:focus {
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 0 0 3px rgba(140, 192, 64, 0.14);
+}
+
+@media (max-width: 767px) {
+  .section-white > .max-w-\[100rem\]::before {
+    display: none;
+  }
+
+  .bento-grid {
+    padding-inline: 0.75rem;
+  }
+}
