@@ -144,6 +144,7 @@ function gisleSentences(section, words) {
 function gisleClean(sentence) {
   const clean = String(sentence || "")
     .replace(/[✓•●]/g, " ")
+    .replace(/\s+Bjotveit/g, "")
     .replace(/\s+/g, " ")
     .trim();
   if (!clean) return "";
@@ -169,7 +170,7 @@ function gisleReply(text, memory) {
 
   if (/hvem er du|hva heter du|er du gisle/.test(q)) {
     return {
-      text: "Jeg er Gisle Bjotveit. Jeg leder våtrom og rør hos oss. Si hva jobben gjelder, så sier jeg hva vi kan gjøre. Skjemaet under er veien til befaring.",
+      text: "Jeg er Gisle. Jeg leder våtrom og rør hos oss. Si hva jobben gjelder, så sier jeg hva vi kan gjøre. Skjemaet under er veien til befaring.",
       book: false,
     };
   }
@@ -247,7 +248,7 @@ function gisleWelcome(page) {
     fag: "Du er inne på faginnsikt.",
     hjem: "Du er på forsiden.",
   };
-  return `Velkommen. Jeg er Gisle Bjotveit i Bergen Byggmontering. ${here[page.id] || here.hjem} Spør om det du ser her, så svarer jeg faglig. Befaring booker du i skjemaet under.`;
+  return `Velkommen. Jeg er Gisle i Bergen Byggmontering. ${here[page.id] || here.hjem} Spør om det du ser her, så svarer jeg faglig. Befaring booker du i skjemaet under.`;
 }
 
 function gisleValidEmail(value) {
@@ -428,7 +429,7 @@ function mountGisle(trackEvent) {
 
   const launcherPhoto = document.createElement("img");
   launcherPhoto.src = "/bilder/sjefen.webp";
-  launcherPhoto.alt = "Gisle Bjotveit";
+  launcherPhoto.alt = "Gisle";
   launcherPhoto.style.cssText =
     "width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;background:#fff;";
   const launcherText = document.createElement("span");
