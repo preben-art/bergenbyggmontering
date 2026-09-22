@@ -19,7 +19,7 @@ https://www.altibedrift.no
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#06100a" />
+    <meta name="theme-color" content="#050505" />
     <meta name="color-scheme" content="light dark" />
     <meta name="google-site-verification" content="r17N5rY2Ix5b240TH064InXUEx1wnM-nVn5A807YsuU" />
 
@@ -171,7 +171,7 @@ https://www.altibedrift.no
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -183,23 +183,22 @@ https://www.altibedrift.no
       }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/index.css?v=simple" />
+    <link rel="stylesheet" href="/index.css?v=orig" />
     <script>
-            tailwind.config = {
+      tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ["Inter", "sans-serif"],
-              display: ["Space Grotesk", "Inter", "sans-serif"],
+              display: ["JetBrains Mono", "monospace"],
               mono: ["JetBrains Mono", "monospace"],
             },
             colors: {
-              brand: {
-                dark: "#06100a",
-                primary: "#8cc040",
-                accent: "#b8dc78",
-                gold: "#5a8c2a",
-                neon: "#6b9a2e",
+          brand: {
+            dark: "#050505",
+            primary: "#719248",
+            accent: "#7BA522",
+            neon: "#7BA522",
               },
             },
           },
@@ -671,7 +670,7 @@ https://www.altibedrift.no
     </div>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-[#06100a] border-b border-white/10 overflow-y-auto max-h-screen">
+  <div id="mobile-menu" class="hidden md:hidden bg-[#050505] border-b border-white/10 overflow-y-auto max-h-screen">
     <div class="px-6 py-8 space-y-6">
       <a href="/index.html#oversikt" class="block text-sm font-bold uppercase tracking-widest text-white border-b border-white/5 pb-4">Fagområder</a>
       <a href="/faginnsikt.html" class="block text-sm font-bold uppercase tracking-widest text-white border-b border-white/5 pb-4">Faginnsikt</a>
@@ -687,7 +686,7 @@ https://www.altibedrift.no
    
     <div class="absolute inset-0 z-0">
             <img src="/bilder/IMG_3770.webp" alt="fasade konstruksjon" class="w-full h-full object-cover " />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#06100a] via-[#06100a]/80 to-[#06100a]/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-[#050505]/60"></div>
         </div>
         
         <div class="bg-grid-pattern absolute inset-0 pointer-events-none z-[1]"></div>
@@ -1263,10 +1262,10 @@ Tegninger, nabovarsel og godkjenning (via arkitekt/søkerfirma ved behov).
   
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      header.classList.add('bg-[#06100a]/95', 'backdrop-blur-md', 'border-white/5');
+      header.classList.add('bg-[#050505]/95', 'backdrop-blur-md', 'border-white/5');
       header.classList.remove('bg-transparent', 'border-transparent');
     } else {
-      header.classList.remove('bg-[#06100a]/95', 'backdrop-blur-md', 'border-white/5');
+      header.classList.remove('bg-[#050505]/95', 'backdrop-blur-md', 'border-white/5');
       header.classList.add('bg-transparent', 'border-transparent');
     }
   });
@@ -1286,9 +1285,9 @@ Tegninger, nabovarsel og godkjenning (via arkitekt/søkerfirma ved behov).
     
     // Tving svart bakgrunn hvis menyen er åpen
     if (!isHidden) {
-      header.classList.add('bg-[#06100a]');
+      header.classList.add('bg-[#050505]');
     } else if (window.scrollY <= 50) {
-      header.classList.remove('bg-[#06100a]');
+      header.classList.remove('bg-[#050505]');
     }
   });
 </script>

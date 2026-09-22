@@ -35,7 +35,7 @@
     <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
     <meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
-    <meta name="theme-color" content="#06100a" />
+    <meta name="theme-color" content="#0B1220" />
     <meta name="color-scheme" content="light dark" />
     <meta name="application-name" content="Bergen Byggmontering AS" />
     <meta name="apple-mobile-web-app-title" content="Bergen Byggmontering" />
@@ -109,7 +109,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -146,9 +146,10 @@
              ========================= -->
     <!-- FONTS & TAILWIND -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/index.css?v=orig" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -162,7 +163,6 @@
 
   .dropdown-inner {
     min-height: 0;
-    overflow: hidden;
   }
   
   header {
@@ -176,28 +176,26 @@ header.no-transition {
 </style>
 
     <script>
-            tailwind.config = {
+      tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ["Inter", "sans-serif"],
-              display: ["Space Grotesk", "Inter", "sans-serif"],
+              display: ["JetBrains Mono", "monospace"],
               mono: ["JetBrains Mono", "monospace"],
             },
             colors: {
               brand: {
-                dark: "#06100a",
-                primary: "#8cc040",
-                accent: "#b8dc78",
-                gold: "#5a8c2a",
-                neon: "#6b9a2e",
+                dark: "#050505",
+                primary: "#719B4C",
+                accent: "#6F8D2D",
+                neon: "#5a7850",
               },
             },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="/index.css?v=simple" />
 
 <script type="application/ld+json">
 {
@@ -652,7 +650,7 @@ header.no-transition {
     <main id="main-content" tabindex="-1">
 
     <!-- HEADER -->
-   <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-[#06100a]/90 border-b border-white/5">
+   <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-[#050505]/90 border-b border-white/5">
   <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
     <div class="flex justify-between items-center h-24">
       <div class="flex-shrink-0 flex items-center">
@@ -767,31 +765,31 @@ header.no-transition {
           class="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-primary rounded-full animate-pulse"
         ></span>
         <span
-          class="text-xs md:text-sm font-display font-semibold uppercase tracking-[0.22em] text-white/90"
+          class="text-[9px] md:text-xs font-display font-bold uppercase tracking-widest text-gray-300"
         >
           Totalrenovering • Bad • Tak • Fasade
         </span>
       </div>
       
       <!-- Hovedoverskrift -->
-      <h1 class="font-display font-bold text-white leading-[1.02] tracking-tight industrial-display">
-        <span class="block mb-3 md:mb-4">
-          Totalentreprenør i Bergen
+      <h1 class="font-display font-bold text-white leading-[1.1] md:leading-[1.05] tracking-tight">
+        <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-2 md:mb-3">
+          Totalentreprenør i Bergen–
         </span>
-        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-gold to-brand-accent">
-          Bad, rør, tak og fasade
+        <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">
+          Bad,rør,tak og fasade
         </span>
       </h1>
   
       <!--  -->
-      <p class="hero-lead mt-8 md:mt-12 mb-5 md:mb-8 max-w-xl">
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mt-6 md:mt-12 mb-6 md:mb-10 max-w-2xl leading-relaxed font-light">
         Bergen Byggmontering AS rehabiliterer og totalrenoverer boliger i
         Bergen og omegn. En aktør samlet ansvar: tømrer/bygg, bad, rør,
         tak og fasade.
       </p>
 
       <!--  -->
-      <p class="hero-note mb-8 md:mb-12 max-w-lg">
+      <p class="text-sm md:text-base text-white/90 mb-6 md:mb-10 max-w-xl leading-relaxed">
         Vi jobber for private, samt borettslag (BRL) og sameier. Vi tar ikke
         på oss rene kontorbygg og typiske næringsprosjekter.
       </p>
@@ -824,7 +822,7 @@ header.no-transition {
               class="text-brand-primary font-display font-bold uppercase tracking-widest text-xs mb-2 block"
               >Våre fag</span
             >
-            <h2 class="font-display font-bold industrial-title">
+            <h2 class="font-display font-bold text-3xl md:text-4xl">
               Fagområdene vi tar ansvar for.
             </h2>
              <div class="relative">
@@ -1000,7 +998,7 @@ header.no-transition {
     </section>
 
         <!-- FAGSEKSJON 1: TOTALRENOVERING -->
-    <section id="fag-totalrenovering" class="section-white">
+    <section id="fag-totalrenovering" class="section-white border-b border-gray-100">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1012,7 +1010,7 @@ header.no-transition {
                 Totalrenovering av bolig
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/IMG_3770.webp" class="absolute inset-0 w-full h-full object-cover" alt="Totalrenovering" />
             </div>
           </div>
@@ -1029,9 +1027,9 @@ header.no-transition {
                 Vi tar rollen som hovedentreprenør (Én aktør, samlet ansvar). Det betyr at du forholder deg til oss, mens vi samkjører tømrer, rørlegger, flislegger, maler og elektriker (via fast partner). Dette gir forutsigbarhet og fjerner "gråsonene" mellom fagene som ofte skaper feil og forsinkelser.
               </p>
 
-              <section class="mt-8">
+              <section class="bg-white flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border-t border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1039,13 +1037,14 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
     </div>
   </div>
 </button>
+                    <div class="absolute inset-0 bg-[#719248]/10 scale-y-0 origin-top transition-transform duration-500 scale-y-100 z-10 rounded-xl border border-transparent"></div>
                     
                     <div class="dropdown-content">
                       <div class="dropdown-inner">
@@ -1103,8 +1102,8 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8 w-full">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+              <div class="bg-black/95 p-8 rounded-2xl border border-blue-500/30 relative overflow-hidden group mt-8 w-full shadow-2xl">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
                     <h3 class="font-bold text-2xl !text-white mb-2">Klar for en totalforvandling?</h3>
@@ -1112,7 +1111,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-totalrenovering.html" class="btn-primary ">Les mer om Totalrenovering</a>
-                    <a href="#kontakt" class="btn-solid">Be om befaring</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Be om befaring</a>
                   </div>
                 </div>
               </div>
@@ -1124,7 +1123,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 2: TØMRER -->
-    <section id="fag-tomrer" class="section-white">
+    <section id="fag-tomrer" class="section-white border-b border-gray-100 bg-slate-50">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1136,7 +1135,7 @@ header.no-transition {
                 Tømrer og innvendig rehabilitering
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/bygger_nytt_bad-rehab.webp" class="absolute inset-0 w-full h-full object-cover" alt="Tømrer" />
             </div>
           </div>
@@ -1148,9 +1147,9 @@ header.no-transition {
                 Tømrer- og byggarbeid i rehab handler om å rive kontrollert, rette opp, forsterke og bygge opp igjen riktig slik at overflater, innredning og tekniske fag får et godt grunnlag, noe vi i Bergen Byggmontering har høy kompetanse på.
               </p>
 
-              <section class="mt-8">
+              <section class="flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border rounded-lg border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1158,7 +1157,7 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
@@ -1222,7 +1221,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1231,7 +1230,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-tomrer.html" class="btn-primary">Les mer om Tømrer</a>
-                    <a href="#kontakt" class="btn-solid">Be om befaring</a>
+                    <a href="#kontakt" class="btn-solid p-6 font-display whitespace-nowrap">Be om befaring</a>
                   </div>
                 </div>
               </div>
@@ -1242,7 +1241,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 3: BAD -->
-    <section id="fag-bad" class="section-white">
+    <section id="fag-bad" class="section-white border-b border-gray-100">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1254,7 +1253,7 @@ header.no-transition {
                 Bad og våtrom – nytt bad som henger sammen
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/473766295_1161206616013469_8198062879953587315_n.webp" class="absolute inset-0 w-full h-full object-cover" alt="Bad" />
             </div>
           </div>
@@ -1268,9 +1267,9 @@ header.no-transition {
                 I 2026 etablerte vi en egen bad og VVS-avdeling, noe som har gjort oss til en komplett leverandør innen totalrenovering av bad i Bergen. Så total totalrenovering av bad betyr at hele våtrommet bygges riktig opp igjen, fra underlag og fall til membran, flis og montering. Vi følger Våtromsnormen og TEK17.
               </p>
 
-              <section class="mt-8">
+              <section class="bg-white flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border-t border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1278,13 +1277,14 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
     </div>
   </div>
 </button>
+                    <div class="absolute inset-0 bg-[#719248]/10 scale-y-0 origin-top transition-transform duration-500 scale-y-100 z-10 rounded-xl border border-transparent"></div>
                     
                     <div class="dropdown-content">
                       <div class="dropdown-inner">
@@ -1343,7 +1343,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1352,7 +1352,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-bad.html" class="btn-primary">Les mer om Bad</a>
-                    <a href="#kontakt" class="btn-solid">Kontakt oss</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Kontakt oss</a>
                   </div>
                 </div>
               </div>
@@ -1363,7 +1363,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 4: RØRLEGGER -->
-    <section id="fag-ror" class="section-white">
+    <section id="fag-ror" class="section-white border-b border-gray-100 bg-slate-50">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1375,7 +1375,7 @@ header.no-transition {
                 Rørlegger – service og rehabilitering
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/skap_med_rør.webp" class="absolute inset-0 w-full h-full object-cover" alt="Rørlegger" />
             </div>
           </div>
@@ -1387,9 +1387,9 @@ header.no-transition {
                 Rørleggerarbeid hos oss omfatter både service og rehabilitering: utbedring, utskifting og nye rør. Vi har egne rørleggere som jobber tett sammen med tømrerne for en sømløs prosess.
               </p>
 
-              <section class="mt-8">
+              <section class="flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border rounded-lg border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1397,7 +1397,7 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
@@ -1455,7 +1455,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1464,7 +1464,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-ror.html" class="btn-primary">Les mer om Rørlegger</a>
-                    <a href="#kontakt" class="btn-solid">Kontakt oss</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Kontakt oss</a>
                   </div>
                 </div>
               </div>
@@ -1475,7 +1475,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 5: TAK -->
-    <section id="fag-tak" class="section-white">
+    <section id="fag-tak" class="section-white border-b border-gray-100">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1487,7 +1487,7 @@ header.no-transition {
                 Yttertak – rehabilitering i vestlandsk klima
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src=/bilder/IMG_1042.webp class="absolute inset-0 w-full h-full object-cover" alt="Tak" />
             </div>
           </div>
@@ -1501,9 +1501,9 @@ header.no-transition {
                 Takrehabilitering betyr å utbedre og bygge opp taket riktig. Mange tror taksteinen gjør jobben, men det er undertaket som holder huset tett.
               </p>
 
-              <section class="mt-8">
+              <section class="bg-white flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border-t border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1511,13 +1511,14 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
     </div>
   </div>
 </button>
+                    <div class="absolute inset-0 bg-[#719248]/10 scale-y-0 origin-top transition-transform duration-500 scale-y-100 z-10 rounded-xl border border-transparent"></div>
                     
                     <div class="dropdown-content">
                       <div class="dropdown-inner">
@@ -1576,7 +1577,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1584,8 +1585,8 @@ header.no-transition {
                     <p class="text-gray-600">Vi sjekker undertak, lekter og detaljer<br> for deg.</p>
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="tjeneste-tak.html" class="btn-primary">Les mer om Tak</a>
-                    <a href="#kontakt" class="btn-solid">Be om gratis taksjekk</a>
+                    <a href="tjeneste-tak.html" class="btn-primary p-6">Les mer om Tak</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Be om gratis taksjekk</a>
                   </div>
                 </div>
               </div>
@@ -1596,7 +1597,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 6: FASADE -->
-    <section id="fag-fasade" class="section-white">
+    <section id="fag-fasade" class="section-white border-b border-gray-100 bg-slate-50">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1608,7 +1609,7 @@ header.no-transition {
                 Fasade, vinduer og etterisolering
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/IMG_4678.webp" class="absolute inset-0 w-full h-full object-cover" alt="Fasade" />
             </div>
           </div>
@@ -1622,9 +1623,9 @@ header.no-transition {
                 Utvendig oppgradering handler om tetthet, lufting og varme. Riktig oppbygging med vindsperre og utlekting er avgjørende for at kledningen skal holde i Bergen.
               </p>
 
-              <section class="mt-8">
+              <section class="flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border rounded-lg border-gray-200 relative cursor-pointer interactive-container">
                     
                      <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
@@ -1633,7 +1634,7 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
@@ -1692,7 +1693,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1701,7 +1702,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-fasade.html" class="btn-primary">Les mer om Fasade</a>
-                    <a href="#kontakt" class="btn-solid">Kontakt oss</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Kontakt oss</a>
                   </div>
                 </div>
               </div>
@@ -1712,7 +1713,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 7: TILBYGG -->
-    <section id="fag-tilbygg" class="section-white">
+    <section id="fag-tilbygg" class="section-white border-b border-gray-100">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1724,7 +1725,7 @@ header.no-transition {
                 Tilbygg og mindre nybygg
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/kran2.webp" class="absolute inset-0 w-full h-full object-cover" alt="Tilbygg" />
             </div>
           </div>
@@ -1738,9 +1739,9 @@ header.no-transition {
                 Tilbygg, påbygg og mindre nybyggprosjekter krever at nytt og gammelt kobles sammen riktig. Vi tar slike prosjekter når type arbeid og kapasitet passer, og sikrer en helhetlig løsning.
               </p>
 
-              <section class="mt-8">
+              <section class="bg-white flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border-t border-gray-200 relative cursor-pointer interactive-container">
                     <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
   
   <span class="font-mono text-sm tracking-widest text-black uppercase transition-all duration-300 group-hover:pl-4 pr-12">
@@ -1748,13 +1749,14 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
     </div>
   </div>
 </button>
+                    <div class="absolute inset-0 bg-[#719248]/10 scale-y-0 origin-top transition-transform duration-500 scale-y-100 z-10 rounded-xl border border-transparent"></div>
                     
                     <div class="dropdown-content">
                       <div class="dropdown-inner">
@@ -1806,7 +1808,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1815,7 +1817,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-tilbygg.html" class="btn-primary">Les mer om Tilbygg</a>
-                    <a href="#kontakt" class="btn-solid">Kontakt oss</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Kontakt oss</a>
                   </div>
                 </div>
               </div>
@@ -1826,7 +1828,7 @@ header.no-transition {
     </section>
 
     <!-- FAGSEKSJON 8: BRL -->
-    <section id="fag-brl" class="section-white">
+    <section id="fag-brl" class="section-white border-b border-gray-100 bg-slate-50">
       <div class="max-w-[100rem] mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-12 gap-12 xl:gap-24">
           <div class="lg:col-span-5 flex flex-col gap-8">
@@ -1838,7 +1840,7 @@ header.no-transition {
                 Borettslag og sameier
               </h2>
             </div>
-            <div class="photo-3d aspect-[4/5] relative">
+            <div class="border-2 border-[#66FF00] overflow-hidden shadow-2xl aspect-[4/5] relative">
               <img src="/bilder/IMG_1745.webp" class="absolute inset-0 w-full h-full object-cover" alt="Borettslag" />
             </div>
           </div>
@@ -1852,9 +1854,9 @@ header.no-transition {
                 Boligrettet rehabilitering og oppgradering i BRL/sameier – både i boenheter og på bygningsdeler. Vi forstår at det å jobbe i folks hjem krever ekstra ryddighet og informasjon.
               </p>
 
-              <section class="mt-8">
+              <section class="flex flex-col justify-center items-center py-12">
                 <div class="w-full">
-                  <div class="magnetic-btn group interactive-container">
+                  <div class="magnetic-btn group border rounded-lg border-gray-200 relative cursor-pointer interactive-container">
                     
                         
                       <button class="w-full py-6 flex items-center justify-between relative z-20 text-left rounded-xl border border-transparent px-4 md:px-6" onclick="toggleDropdown(this)">
@@ -1864,7 +1866,7 @@ header.no-transition {
   </span>
 
   <div class="flex-shrink-0 flex items-center justify-center">
-    <div class="w-10 h-10 rounded-full border border-[#8cc040] text-[#8cc040] flex items-center justify-center group-hover:bg-[#8cc040] group-hover:text-black transition-colors duration-300">
+    <div class="w-10 h-10 rounded-full border border-[#719248] text-[#719248] flex items-center justify-center group-hover:bg-[#719248] group-hover:text-black transition-colors duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transition-transform duration-300 icon-plus">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
@@ -1928,7 +1930,7 @@ header.no-transition {
                 </div>
               </section>
 
-              <div class="cta-panel relative overflow-hidden mt-8">
+              <div class="bg-black/95 p-8 rounded-2xl border border-brand-primary/30 relative overflow-hidden group mt-8">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
@@ -1937,7 +1939,7 @@ header.no-transition {
                   </div>
                   <div class="flex flex-col sm:flex-row gap-4">
                     <a href="tjeneste-brl.html" class="btn-primary">Les mer for BRL</a>
-                    <a href="#kontakt" class="btn-solid">Kontakt oss</a>
+                    <a href="#kontakt" class="btn-solid font-display p-6 whitespace-nowrap">Kontakt oss</a>
                   </div>
                 </div>
               </div>
@@ -2223,7 +2225,7 @@ header.no-transition {
               <span
                 class="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2"
               >
-                <span class="w-2 h-2 bg-[#8cc040] rounded-full"></span> Fremgang
+                <span class="w-2 h-2 bg-[#66FF00] rounded-full"></span> Fremgang
               </span>
               <h3
                 class="text-2xl font-display font-bold leading-tight group-hover:underline decoration-brand-primary underline-offset-4"
@@ -2253,7 +2255,7 @@ header.no-transition {
               <span
                 class="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2"
               >
-                <span class="w-2 h-2 bg-[#8cc040] rounded-full"></span> Råd
+                <span class="w-2 h-2 bg-[#66FF00] rounded-full"></span> Råd
               </span>
               <h3
                 class="text-2xl font-display font-bold leading-tight group-hover:underline decoration-brand-primary underline-offset-4"
@@ -2286,7 +2288,7 @@ header.no-transition {
               <span
                 class="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2"
               >
-                <span class="w-2 h-2 bg-[#8cc040] rounded-full"></span> Økonomi
+                <span class="w-2 h-2 bg-[#66FF00] rounded-full"></span> Økonomi
               </span>
               <h3
                 class="text-2xl font-display font-bold leading-tight group-hover:underline decoration-brand-primary underline-offset-4"
@@ -2305,7 +2307,7 @@ header.no-transition {
     </section>
 
     <!-- OMTALER -->
-    <section id="omtaler" class="py-32 bg-[#06100a] relative overflow-hidden">
+    <section id="omtaler" class="py-32 bg-[#050505] relative overflow-hidden">
       <!-- Google Background Element -->
       <div
         class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-20"
@@ -2407,7 +2409,7 @@ header.no-transition {
             href="https://www.google.com/search?sa=X&sca_esv=18fb8b8532389487&hl=no-NO&sxsrf=ANbL-n6v17Fmn-H6_OgXCmb_fMyeu39Pmg:1770997827694&q=Bergen%20Byggmontering%20AS%20Anmeldelser&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDAyNDayNDG1MDI2NTUzsTAwN9rAyPiKUdkptSg9NU_BqTI9PTc_ryS1KDMvXcExWMExLzc1JyU1pzi1aBErMaoAF0ss22cAAAA&rldimm=10213294582355648072&tbm=lcl&ved=0CAgQ5foLahcKEwigzemD6daSAxUAAAAAHQAAAAAQBQ&biw=1536&bih=738&dpr=1.25#lkt=LocalPoiReviews&arid=Ci9DQUlRQUNvZENodHljRjlvT25WSlNIZzJlblpJUjBOUWJHRkRWWEIwWHpWTmNrRRAB"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-white border-b border-brand-primary pb-1 hover:text-[#8cc040] transition-colors"
+            class="inline-flex items-center gap-2 text-white border-b border-brand-primary pb-1 hover:text-[#66FF00] transition-colors"
           >
             Se alle anmeldelser på Google Maps
             <svg
@@ -2854,7 +2856,7 @@ header.no-transition {
         </div>
 
         <div
-          class="form-card p-8 md:p-10 relative"
+          class="bg-white p-10 border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative"
         >
           <!-- Tech Decor Elements -->
           <div
@@ -3133,7 +3135,7 @@ header.no-transition {
   <button
     id="phone-toggle-btn"
     onclick="togglePhone()"
-    class="bg-[#8cc040] text-black h-14 w-14 rounded-full shadow-[0_0_20px_rgba(140,192,64,0.5)] flex items-center justify-center transition-all duration-500 ease-in-out group overflow-hidden"
+    class="bg-[#719248] text-black h-14 w-14 rounded-full shadow-[0_0_20px_rgba(113,146,72,0.25)] flex items-center justify-center transition-all duration-500 ease-in-out group overflow-hidden"
   >
     <div class="flex items-center px-4">
       <svg 
@@ -3319,12 +3321,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sjekk scrollposisjon
     if (window.scrollY > (heroHeight - 80)) { 
       // NÅR VI HAR SCROLLET FORBI HERO:
-      navbar.classList.add('bg-[#06100a]', 'shadow-lg', 'py-4');
+      navbar.classList.add('bg-[#050505]', 'shadow-lg', 'py-4');
       navbar.classList.remove('bg-transparent', 'py-6');
     } else {
       // NÅR VI ER PÅ HERO (GJENNOMSIKTIG):
       navbar.classList.add('bg-transparent', 'py-6');
-      navbar.classList.remove('bg-[#06100a]', 'shadow-lg', 'py-4');
+      navbar.classList.remove('bg-[#050505]', 'shadow-lg', 'py-4');
     }
   }
 
