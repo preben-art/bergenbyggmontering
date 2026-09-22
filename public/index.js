@@ -155,10 +155,44 @@ function gisleLead(kind) {
   if (kind === "book") {
     return "Skriv navn, telefon og e-post i skjemaet under, og en kort linje om jobben. Jeg sender det i samme kontaktskjema som resten av siden.";
   }
+  if (kind === "brl") {
+    return "Sitter du i styret, legger du igjen navn og telefon under, så avtaler vi befaring og prioriterer tiltakene.";
+  }
   if (kind === "price") {
     return "Et tall uten å se jobben blir gjetning. Legg igjen navn og telefon under, så avtaler vi befaring.";
   }
   return "Vil du ha befaring, fyller du inn navn og telefon i skjemaet under.";
+}
+
+let gisleBrl = null;
+
+function gisleBrlBits() {
+  const fallback = {
+    direct:
+      "Vi hjelper borettslag og sameier i Bergen med boligrettet rehabilitering og vedlikehold: bad, rør og stammer, tak, fasade og vinduer. Omfanget avklares før oppstart, med fremdriftsplan og informasjon til beboerne.",
+    start:
+      "Styret kommer i gang ved å samle rapporter, skadehistorikk, tegninger og antall enheter. Så tar vi befaring og prioriterer. Deretter lager vi beslutningsgrunnlag til generalforsamling: omfang, risiko, prisramme og plan for beboerinfo. Under arbeidet er det kontrollpunkter for HMS, adkomst, støy og vannstenging, og vi avslutter med sluttkontroll og dokumentasjon.",
+    when:
+      "Dette er ofte riktig ved gjentatte lekkasjer, gamle rør og stammer, slitt tak, fasade eller vinduer, eller når flere enheter skal oppgradere bad og det lønner seg å koordinere.",
+    price:
+      "Pris og tidsplan avhenger av tilstand, tilgang og funn underveis. Styret bør få omfang, risiko og prisramme, med fastpris der det er mulig, før saken går til generalforsamling.",
+    beboer:
+      "I bebodde bygg planlegger vi HMS, adkomst, støy, vannstenging og informasjon til beboerne. Rot, støy og manglende info er det vi tar dialogen på.",
+    not:
+      "Dette er for boligselskaper og boligbygg. Rene næringsbygg og kontorer uten boligformål tar vi ikke.",
+  };
+  return gisleBrl || fallback;
+}
+
+function gisleBrlSpeak(q) {
+  const bits = gisleBrlBits();
+  if (/naering|kontor/.test(q)) return `${bits.not} ${gisleLead("brl")}`;
+  if (/pris|kost|budsjett|fastpris/.test(q)) return `${bits.price} ${gisleLead("brl")}`;
+  if (/beboer|stoy|støy|hms|vannsteng|info/.test(q)) return `${bits.beboer} ${gisleLead("brl")}`;
+  if (/styre|generalforsamling|komme i gang|prosess|vedtak|priorit/.test(q)) return `${bits.start} ${gisleLead("brl")}`;
+  if (/stamme|ror|rør|lekk|vannskade/.test(q)) return `${bits.when} ${gisleLead("brl")}`;
+  if (/tak|fasade|vindu|bad|vatrom|våtrom/.test(q)) return `${bits.direct} ${gisleLead("brl")}`;
+  return `${bits.direct} ${bits.start} ${gisleLead("brl")}`;
 }
 
 function gisleReply(text, memory) {
@@ -167,6 +201,14 @@ function gisleReply(text, memory) {
   const place = gislePlaces().find((name) => gisleMentions(raw, name)) || "";
   if (place) memory.place = place;
   const booking = /befaring|book|bestill|ring meg|ta kontakt/.test(q);
+  const aboutBrl =
+    /borettslag|sameie|sameier|\bbrl\b|boligselskap|generalforsamling|styre|beboer|stamme/.test(q) ||
+    memory.topic === "Borettslag og sameier";
+
+  if (aboutBrl && !/hvem er du|hva heter du/.test(q)) {
+    memory.topic = "Borettslag og sameier";
+    return { text: gisleBrlSpeak(q), book: booking };
+  }
 
   if (/hvem er du|hva heter du|er du gisle/.test(q)) {
     return {
@@ -388,6 +430,32 @@ function mountGisle(trackEvent) {
     .then((response) => (response.ok ? response.json() : null))
     .then((data) => {
       if (data) gisleHub = data;
+    })
+    .catch(() => {});
+
+  fetch("/tjeneste-brl.html")
+    .then((response) => (response.ok ? response.text() : ""))
+    .then((html) => {
+      if (!html || typeof DOMParser === "undefined") return;
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const pick = (id) => {
+        const node = doc.getElementById(id);
+        return node ? node.textContent.replace(/\s+/g, " ").trim() : "";
+      };
+      const direct = pick("direct-answer-layer");
+      const start = pick("howto-layer");
+      const when = pick("decision-layer");
+      const notScope = pick("not-scope-layer");
+      if (direct) {
+        gisleBrl = {
+          direct: gisleClean(direct.replace(/^Direkte svar:\s*/i, "")),
+          start: gisleClean(start.replace(/^Hvordan styret kommer i gang:\s*/i, "Styret kommer i gang slik: ")),
+          when: gisleClean(when.replace(/^Når dette ofte er riktig:\s*/i, "Dette er ofte riktig ved ").replace(/^Når man bør avklare først:\s*/i, "")),
+          price: gisleBrlBits().price,
+          beboer: gisleBrlBits().beboer,
+          not: gisleClean(notScope.replace(/^Ikke standard:\s*/i, "Vi tar ikke ")),
+        };
+      }
     })
     .catch(() => {});
 
