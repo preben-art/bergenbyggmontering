@@ -463,34 +463,178 @@ function mountGisle(trackEvent) {
     const style = document.createElement("style");
     style.id = "gisle-style";
     style.textContent = `
+      #gisle-root {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 60;
+        font-family: inherit;
+      }
+      #gisle-root.gisle-above-phone { bottom: 96px; }
+      #gisle-launcher {
+        min-height: 52px;
+        touch-action: manipulation;
+      }
       #gisle-panel {
         width: min(400px, calc(100vw - 32px));
         height: min(520px, calc(100dvh - 128px));
+        max-height: min(520px, calc(100dvh - 128px));
       }
+      #gisle-close {
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        display: grid;
+        place-items: center;
+        background: transparent;
+        border: 0;
+        color: #fff;
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+        border-radius: 12px;
+        touch-action: manipulation;
+        flex: none;
+      }
+      #gisle-close:focus-visible,
+      #gisle-send:focus-visible,
+      #gisle-launcher:focus-visible,
+      #gisle-starters button:focus-visible {
+        outline: 2px solid #8cc040;
+        outline-offset: 2px;
+      }
+      #gisle-messages {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 14px 12px 8px;
+        background: #f3f4f1;
+      }
+      #gisle-dock {
+        display: grid;
+        gap: 8px;
+        padding: 10px 12px 12px;
+        border-top: 1px solid #eceee9;
+        background: #fff;
+        flex: none;
+      }
+      #gisle-starters {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 2px;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+      }
+      #gisle-starters::-webkit-scrollbar { display: none; }
+      #gisle-starters button {
+        flex: none;
+        min-height: 36px;
+        border: 1px solid #d5d8d0;
+        background: #fff;
+        color: #1c1f18;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 13px;
+        font-weight: 650;
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+      #gisle-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      #gisle-contact .gisle-span { grid-column: 1 / -1; }
+      #gisle-contact label { display: grid; gap: 4px; font-size: 11px; font-weight: 700; }
+      #gisle-contact input,
+      #gisle-message {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #e2e4de;
+        border-radius: 12px;
+        min-height: 44px;
+        padding: 10px 12px;
+        font: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        background: #f7f8f5;
+        touch-action: manipulation;
+      }
+      #gisle-composer { display: flex; gap: 8px; align-items: flex-end; }
+      #gisle-message { flex: 1; max-height: 96px; resize: none; }
+      #gisle-send {
+        flex: none;
+        background: #111;
+        color: #fff;
+        border: 0;
+        border-radius: 999px;
+        min-height: 44px;
+        min-width: 72px;
+        padding: 0 16px;
+        font-weight: 700;
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+      #gisle-consent { margin: 0; font-size: 11px; color: #555; line-height: 1.35; }
+      #gisle-consent a { color: #111; }
       @media (max-width: 720px) {
-        #gisle-panel {
-          width: calc(100vw - 20px);
-          height: min(480px, calc(100dvh - 112px));
-          border-radius: 18px;
-        }
+        #gisle-root { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); }
+        #gisle-root.gisle-above-phone { bottom: calc(84px + env(safe-area-inset-bottom)); }
       }
-      @media (max-height: 640px) {
-        #gisle-panel {
-          height: calc(100dvh - 96px);
-        }
+      #gisle-panel.gisle-sheet {
+        width: auto;
+        max-height: none;
+        border-radius: 18px 18px 0 0;
+        box-shadow: 0 -8px 40px rgba(16,20,12,.18);
       }
+      #gisle-panel.gisle-sheet #gisle-header {
+        padding-top: calc(8px + env(safe-area-inset-top));
+      }
+      #gisle-panel.gisle-sheet #gisle-dock {
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      }
+      #gisle-panel.gisle-keyboard #gisle-header {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      #gisle-panel.gisle-keyboard #gisle-header img {
+        width: 36px;
+        height: 36px;
+      }
+      #gisle-panel.gisle-keyboard #gisle-starters { display: none; }
+      #gisle-panel.gisle-keyboard #gisle-contact { grid-template-columns: 1fr 1fr 1.15fr; gap: 6px; }
+      #gisle-panel.gisle-keyboard #gisle-contact .gisle-span { grid-column: auto; }
+      #gisle-panel.gisle-keyboard #gisle-contact label span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+      #gisle-panel.gisle-keyboard #gisle-message {
+        min-height: 44px;
+        max-height: 44px;
+      }
+      #gisle-panel.gisle-keyboard #gisle-dock {
+        gap: 6px;
+        padding: 8px 10px 8px;
+      }
+      #gisle-panel.gisle-keyboard #gisle-consent { font-size: 10px; }
     `;
     document.head.appendChild(style);
   }
 
   const root = document.createElement("div");
   root.id = "gisle-root";
-  root.style.cssText = abovePhone
-    ? "position:fixed;right:24px;bottom:96px;z-index:60;font-family:inherit;"
-    : "position:fixed;right:24px;bottom:24px;z-index:60;font-family:inherit;";
+  if (abovePhone) root.classList.add("gisle-above-phone");
 
   const launcher = document.createElement("button");
   launcher.type = "button";
+  launcher.id = "gisle-launcher";
   launcher.setAttribute("aria-label", "Snakk med Gisle");
   launcher.style.cssText =
     "display:flex;align-items:center;gap:10px;border:0;background:#719248;color:#111;border-radius:999px;padding:6px 14px 6px 6px;box-shadow:0 10px 30px rgba(0,0,0,.18);cursor:pointer;font-weight:700;";
@@ -517,8 +661,9 @@ function mountGisle(trackEvent) {
     "display:none;flex-direction:column;background:#fff;color:#161616;border-radius:20px;overflow:hidden;box-shadow:0 18px 50px rgba(16,20,12,.18);border:1px solid rgba(17,17,17,.08);";
 
   const header = document.createElement("div");
+  header.id = "gisle-header";
   header.style.cssText =
-    "display:flex;align-items:center;gap:10px;padding:12px 14px;background:#111;color:#fff;flex:none;";
+    "display:flex;align-items:center;gap:10px;padding:8px 8px 8px 14px;background:#111;color:#fff;flex:none;";
   const headerPhoto = launcherPhoto.cloneNode();
   headerPhoto.style.width = "48px";
   headerPhoto.style.height = "48px";
@@ -538,28 +683,27 @@ function mountGisle(trackEvent) {
   headerText.append(headerName, headerRole, headerCredit);
   const closeBtn = document.createElement("button");
   closeBtn.type = "button";
+  closeBtn.id = "gisle-close";
   closeBtn.textContent = "✕";
-  closeBtn.setAttribute("aria-label", "Lukk");
-  closeBtn.style.cssText =
-    "margin-left:auto;background:transparent;border:0;color:#fff;font-size:18px;cursor:pointer;";
+  closeBtn.setAttribute("aria-label", "Lukk chat");
   header.append(headerPhoto, headerText, closeBtn);
 
   const messages = document.createElement("div");
-  messages.style.cssText = "flex:1;min-height:0;overflow:auto;padding:14px 12px 8px;background:#f3f4f1;";
+  messages.id = "gisle-messages";
 
   const form = document.createElement("form");
-  form.style.cssText = "display:grid;gap:8px;padding:10px 12px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #eceee9;background:#fff;flex:none;";
+  form.id = "gisle-dock";
 
   const contact = document.createElement("div");
-  contact.style.cssText = "display:grid;grid-template-columns:1fr 1fr;gap:8px;";
-  const nameInput = field("Navn", "text", "Ola Nordmann");
-  const phoneInput = field("Telefon", "tel", "900 00 000");
-  const emailInput = field("E-post", "email", "navn@epost.no");
-  emailInput.wrap.style.gridColumn = "1 / -1";
+  contact.id = "gisle-contact";
+  const nameInput = field("Navn", "text", "Navn");
+  const phoneInput = field("Telefon", "tel", "Telefon");
+  const emailInput = field("E-post", "email", "E-post");
+  emailInput.wrap.classList.add("gisle-span");
   contact.append(nameInput.wrap, phoneInput.wrap, emailInput.wrap);
 
   const starters = document.createElement("div");
-  starters.style.cssText = "display:flex;gap:8px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;";
+  starters.id = "gisle-starters";
   [
     ["Nytt bad", "Vi skal ha nytt bad. Hva gjør dere?"],
     ["Tak som lekker", "Taket lekker. Hva ser dere etter?"],
@@ -570,8 +714,6 @@ function mountGisle(trackEvent) {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.textContent = label;
-    chip.style.cssText =
-      "flex:none;border:1px solid #d5d8d0;background:#fff;color:#1c1f18;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:650;cursor:pointer;";
     chip.addEventListener("click", () => {
       messageInput.value = text;
       form.requestSubmit();
@@ -580,26 +722,25 @@ function mountGisle(trackEvent) {
   });
 
   const composer = document.createElement("div");
-  composer.style.cssText = "display:flex;gap:8px;align-items:flex-end;";
+  composer.id = "gisle-composer";
   const messageInput = document.createElement("textarea");
+  messageInput.id = "gisle-message";
   messageInput.rows = 1;
   messageInput.placeholder = "Hva gjelder jobben?";
-  messageInput.style.cssText =
-    "flex:1;min-height:42px;max-height:96px;box-sizing:border-box;border:1px solid #e2e4de;border-radius:14px;padding:10px 12px;resize:none;font:inherit;font-size:15px;background:#f7f8f5;";
+  messageInput.setAttribute("enterkeyhint", "send");
+  messageInput.setAttribute("aria-label", "Melding");
 
   const sendBtn = document.createElement("button");
   sendBtn.type = "submit";
+  sendBtn.id = "gisle-send";
   sendBtn.textContent = "Send";
-  sendBtn.style.cssText =
-    "flex:none;background:#111;color:#fff;border:0;border-radius:999px;min-height:44px;padding:0 16px;font-weight:700;cursor:pointer;";
 
   const consent = document.createElement("p");
-  consent.style.cssText = "margin:0;font-size:11px;color:#555;line-height:1.4;";
+  consent.id = "gisle-consent";
   consent.append("Send bruker samme kontaktskjema. Du godtar ");
   const privacyLink = document.createElement("a");
   privacyLink.href = "/personvern.html";
   privacyLink.textContent = "personvernerklæringen";
-  privacyLink.style.color = "#111";
   consent.append(privacyLink, ".");
 
   composer.append(messageInput, sendBtn);
@@ -610,19 +751,96 @@ function mountGisle(trackEvent) {
 
   addBubble(messages, gisleWelcome(page), "gisle");
 
+  const phoneLayout = () =>
+    window.matchMedia("(max-width: 720px)").matches ||
+    window.matchMedia("(pointer: coarse) and (max-height: 500px) and (max-width: 1024px)").matches;
+
+  const placePanel = () => {
+    const open = root.classList.contains("gisle-open");
+    if (!open || !phoneLayout()) {
+      panel.classList.remove("gisle-sheet", "gisle-keyboard");
+      ["position", "top", "left", "right", "width", "height", "maxHeight", "bottom", "borderRadius"].forEach((prop) => {
+        panel.style[prop] = "";
+      });
+      return;
+    }
+    const vv = window.visualViewport;
+    const offsetTop = vv ? vv.offsetTop : 0;
+    const offsetLeft = vv ? vv.offsetLeft : 0;
+    const width = vv ? vv.width : window.innerWidth;
+    const height = vv ? vv.height : window.innerHeight;
+    const keyboard = window.innerHeight - offsetTop - height > 80 || height < 500;
+    panel.classList.add("gisle-sheet");
+    panel.classList.toggle("gisle-keyboard", keyboard);
+    panel.style.position = "fixed";
+    panel.style.left = `${offsetLeft}px`;
+    panel.style.top = `${offsetTop}px`;
+    panel.style.width = `${width}px`;
+    panel.style.height = `${height}px`;
+    panel.style.right = "auto";
+    panel.style.bottom = "auto";
+    panel.style.maxHeight = "none";
+    panel.style.borderRadius = keyboard ? "12px 12px 0 0" : "18px 18px 0 0";
+  };
+
+  let lockedScroll = 0;
+  const lockPage = (on) => {
+    if (on && phoneLayout()) {
+      lockedScroll = window.scrollY || 0;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${lockedScroll}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      return;
+    }
+    const y = lockedScroll;
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.width = "";
+    if (y) window.scrollTo(0, y);
+  };
+
   const setOpen = (open) => {
     panel.hidden = !open;
     panel.style.display = open ? "flex" : "none";
     launcher.style.display = open ? "none" : "flex";
     root.classList.toggle("gisle-open", open);
-    document.body.style.overflow = "";
+    lockPage(open);
+    placePanel();
     if (open) {
       trackEvent("engagement", "open_chat", "gisle");
-      messageInput.focus();
+      if (!phoneLayout()) messageInput.focus();
     }
   };
   launcher.addEventListener("click", () => setOpen(true));
   closeBtn.addEventListener("click", () => setOpen(false));
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", placePanel);
+    window.visualViewport.addEventListener("scroll", placePanel);
+  }
+  window.addEventListener("resize", placePanel);
+  window.addEventListener("orientationchange", () => setTimeout(placePanel, 150));
+  panel.addEventListener("focusin", () => {
+    if (!phoneLayout()) return;
+    requestAnimationFrame(placePanel);
+  });
+  messageInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      form.requestSubmit();
+    }
+  });
+  messageInput.addEventListener("input", () => {
+    if (panel.classList.contains("gisle-keyboard")) {
+      messageInput.style.height = "44px";
+      return;
+    }
+    messageInput.style.height = "auto";
+    messageInput.style.height = `${Math.min(messageInput.scrollHeight, 96)}px`;
+  });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -635,6 +853,8 @@ function mountGisle(trackEvent) {
     };
     if (text) addBubble(messages, text, "user");
     messageInput.value = "";
+    messageInput.style.height = "44px";
+    if (phoneLayout()) messageInput.blur();
 
     const ready = details.name && details.phone && gisleValidEmail(details.email) && details.message;
     if (ready) {
@@ -685,15 +905,15 @@ function mountGisle(trackEvent) {
 
 function field(labelText, type, placeholder) {
   const wrap = document.createElement("label");
-  wrap.style.cssText = "display:grid;gap:4px;font-size:11px;font-weight:700;";
-  wrap.textContent = labelText;
+  const label = document.createElement("span");
+  label.textContent = labelText;
   const input = document.createElement("input");
   input.type = type;
   input.placeholder = placeholder;
+  input.setAttribute("aria-label", labelText);
   input.autocomplete = type === "tel" ? "tel" : type === "email" ? "email" : "name";
-  input.style.cssText =
-    "width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:10px;padding:8px 10px;font:inherit;font-weight:500;";
-  wrap.appendChild(input);
+  input.enterKeyHint = type === "email" ? "next" : "next";
+  wrap.append(label, input);
   return { wrap, input };
 }
 
