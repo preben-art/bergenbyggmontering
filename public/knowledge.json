@@ -1,0 +1,408 @@
+{
+  "lastUpdated": "2026-10-28",
+  "language": "nb-NO",
+  "organization": {
+    "id": "https://bergenbyggmontering.no/#org",
+    "name": "Bergen Byggmontering AS",
+    "legalName": "Bergen Byggmontering AS",
+    "url": "https://bergenbyggmontering.no/",
+    "organizationNumber": "934686283",
+    "email": "post@bergenbyggmontering.no",
+    "telephone": "+47 917 27 100",
+    "address": {
+      "streetAddress": "Torget 1",
+      "postalCode": "5014",
+      "addressLocality": "Bergen",
+      "addressRegion": "Vestland",
+      "addressCountry": "NO"
+    },
+    "knowsAbout": [
+      "Totalrenovering av bolig",
+      "Innvendig rehabilitering",
+      "TÃ¸mrerarbeid i rehabilitering",
+      "Bad og vÃ¥trom",
+      "RÃ¸rleggerarbeid",
+      "Rehabilitering av yttertak",
+      "Fasade, vinduer og etterisolering",
+      "Tilbygg",
+      "Prosjekter for borettslag og sameier"
+    ],
+    "sameAs": [
+      "https://www.google.com/maps?cid=10213294582355648072",
+      "https://www.facebook.com/bergenbyggmontering/"
+    ],
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Torget%201%2C%205014%20Bergen"
+  },
+  "audiences": [
+    {
+      "id": "boligeiere",
+      "name": "Privatpersoner (bolig)",
+      "who": "Boligeiere og familier som skal rehabilitere eller pusse opp bolig eller leilighet.",
+      "situations": [
+        "Totalrenovering av hus eller leilighet",
+        "Nytt bad eller oppussing av bad",
+        "Tak, fasade, tÃ¸mrerarbeid, rÃ¸r eller tilbygg"
+      ],
+      "services": [
+        "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
+        "https://bergenbyggmontering.no/tjeneste-bad.html",
+        "https://bergenbyggmontering.no/tjeneste-tak.html",
+        "https://bergenbyggmontering.no/tjeneste-fasade.html",
+        "https://bergenbyggmontering.no/tjeneste-tomrer.html",
+        "https://bergenbyggmontering.no/tjeneste-ror.html",
+        "https://bergenbyggmontering.no/tjeneste-tilbygg.html"
+      ]
+    },
+    {
+      "id": "borettslag-sameier",
+      "name": "Borettslag og sameier (boligbygg)",
+      "who": "Styrer og forvaltere som planlegger vedlikehold eller rehabilitering i bebodd boligbygg.",
+      "situations": [
+        "Bad i flere enheter",
+        "RÃ¸r og stammer",
+        "Tak, fasade og vinduer",
+        "Behov for plan, beboerinformasjon og koordinert fremdrift"
+      ],
+      "services": [
+        "https://bergenbyggmontering.no/tjeneste-brl.html",
+        "https://bergenbyggmontering.no/tjeneste-bad.html",
+        "https://bergenbyggmontering.no/tjeneste-ror.html",
+        "https://bergenbyggmontering.no/tjeneste-tak.html",
+        "https://bergenbyggmontering.no/tjeneste-fasade.html"
+      ]
+    }
+  ],
+  "notFor": [
+    "Rene kontorbygg og typiske nÃ¦ringsprosjekter uten boligformÃ¥l",
+    "Store nybyggfelt"
+  ],
+  "services": [
+    {
+      "name": "Totalrenovering",
+      "url": "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Nytt bad og oppussing av bad",
+      "url": "https://bergenbyggmontering.no/tjeneste-bad.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Taktekking",
+      "url": "https://bergenbyggmontering.no/tjeneste-tak.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Fasade og etterisolering",
+      "url": "https://bergenbyggmontering.no/tjeneste-fasade.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "TÃ¸mrer og innvendig rehabilitering",
+      "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html",
+      "audience": [
+        "boligeiere"
+      ]
+    },
+    {
+      "name": "RÃ¸rlegger",
+      "url": "https://bergenbyggmontering.no/tjeneste-ror.html",
+      "audience": [
+        "boligeiere",
+        "borettslag-sameier"
+      ]
+    },
+    {
+      "name": "Tilbygg",
+      "url": "https://bergenbyggmontering.no/tjeneste-tilbygg.html",
+      "audience": [
+        "boligeiere"
+      ]
+    },
+    {
+      "name": "Borettslag og sameier",
+      "url": "https://bergenbyggmontering.no/tjeneste-brl.html",
+      "audience": [
+        "borettslag-sameier"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "Bergen",
+      "kind": "municipality",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Bergen Sentrum",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Bergenhus",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Ã…rstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Ã…sane",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Arna",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Fana",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Ytrebygda",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Fyllingsdalen",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "LaksevÃ¥g",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Loddefjord",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sandviken",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Nordnes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "MÃ¸hlenpris",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "NygÃ¥rd",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "LandÃ¥s",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Minde",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Kronstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Danmarksplass",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "DamsgÃ¥rd",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Nesttun",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "FjÃ¸sanger",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Paradis",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Hop",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "RÃ¥dal",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sandsli",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Kokstad",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Lagunen",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "BÃ¸nes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Olsvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Drotningsvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "EidsvÃ¥g",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Tertnes",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Morvik",
+      "kind": "bergen-place",
+      "containedIn": "Bergen"
+    },
+    {
+      "name": "Sotra",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "AskÃ¸y",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Os",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Nordhordland",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    },
+    {
+      "name": "Austevoll",
+      "kind": "surrounding-area",
+      "containedIn": "Vestland"
+    }
+  ],
+  "source": "Steder og mÃ¥lgrupper som allerede er navngitt pÃ¥ bergenbyggmontering.no. Ingen nye kommuner er lagt til.",
+  "pages": [
+    {
+      "url": "https://bergenbyggmontering.no/faginnsikt.html",
+      "title": "Faginnsikt & råd i Bergen | Guider og sjekklister | Bergen Byggmontering AS",
+      "description": "Guider, sjekklister og ekspertråd om oppussing, bad, tak, fasade, rør og rehabilitering – tilpasset Bergen og vestlandsk klima. Praktisk beslutningsstøtte før du starter."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/",
+      "title": "Bergen Byggmontering AS | Totalrenovering, bad, rør, tak og fasade i Bergen",
+      "description": "Bergen Byggmontering AS leverer boligrettet rehabilitering og totalrenovering i Bergen og nærområder. Fagområder: totalrenovering, tømrer/innvendig rehabilitering, bad/våtrom, rør, yttertak, fasade/vinduer/etterisolering, tilbygg og prosjekter for borettslag/sameier."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/jobb.html",
+      "title": "Jobb hos Bergen Byggmontering | Fagfolk innen bygg og rehabilitering",
+      "description": "Bergen Byggmontering ønsker kontakt med dyktige fagfolk innen tømrer, VVS, våtrom, tak, fasade og rehabilitering. Ta direkte kontakt på telefon eller e-post."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/personvern.html",
+      "title": "Personvernerklæring | Bergen Byggmontering AS",
+      "description": ""
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-bad.html",
+      "title": "Nytt bad i Bergen | Oppussing og totalrenovering av bad",
+      "description": "Skal du pusse opp eller bygge nytt bad i Bergen? Bergen Byggmontering leverer komplett oppussing og totalrenovering av bad med rør, sluk, fall, membran, overflater og dokumentasjon."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-brl.html",
+      "title": "Borettslag og sameier i Bergen | Rehabilitering og vedlikehold | Bergen Byggmontering AS",
+      "description": "Rehabilitering og vedlikehold for borettslag og sameier i Bergen: rør/stammer, tak, fasade/vinduer og bad i flere enheter. Tydelig plan, beboerinformasjon og forutsigbar fremdrift."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-fasade.html",
+      "title": "Fasade og etterisolering i Bergen | Kledning og vinduer | Bergen Byggmontering AS",
+      "description": "Bytte kledning, etterisolering og vinduer i Bergen. Rehabilitering med ny vindsperre, riktig lufting bak kledning og tette overganger – tilpasset vestlandsk klima. Be om befaring."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-ror.html",
+      "title": "Rørlegger i Bergen | VVS service og rehabilitering | Bergen Byggmontering AS",
+      "description": "Rørlegger for service og rehabilitering i Bergen: lekkasje, bytte av varmtvannstank, sanitærutstyr og rør-i-rør. Omfang og stengepunkter avklares før oppstart."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-tak.html",
+      "title": "Taktekking i Bergen | Nytt tak og rehabilitering | Bergen Byggmontering AS",
+      "description": "Rehabilitering av tak i vestlandsklima: undertak, lekter, renner og takstein. Et tett tak er boligens viktigste vern. Bestill taksjekk i Bergen."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-tilbygg.html",
+      "title": "Tilbygg i Bergen | Påbygg og utvidelse av bolig | Bergen Byggmontering AS",
+      "description": "Tilbygg og påbygg i Bergen: Vi bygger ut boligen slik at nytt og gammelt henger sammen. Fokus på tett overgang, riktig takkobling og helhetlig uttrykk. Be om befaring."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html",
+      "title": "Tømrer i Bergen – innvendig rehabilitering og ombygging | Bergen Byggmontering AS",
+      "description": "Tømrer i Bergen: innvendig rehabilitering og ombygging. Vi retter skjeve gulv, flytter vegger og bygger opp rom på nytt – fra riving til listverk, med solid underlag for kjøkken og gulv. Bestill befaring."
+    },
+    {
+      "url": "https://bergenbyggmontering.no/tjeneste-totalrenovering.html",
+      "title": "Totalrenovering i Bergen | Rehabilitering & oppussing | Bergen Byggmontering AS",
+      "description": "Spesialister på totalrenovering i Bergen. Én aktør tar totalansvar for rehabilitering av hus og leilighet – plan, koordinering av fag, riving, tømrer, rør/bad og ferdig finish. Bestill befaring."
+    }
+  ],
+  "schemaVersion": "1.1",
+  "resources": {
+    "sitemap": "https://bergenbyggmontering.no/sitemap.xml",
+    "fullText": "https://bergenbyggmontering.no/llms-full.txt",
+    "llms": "https://bergenbyggmontering.no/llms.txt"
+  }
+}

@@ -431,79 +431,84 @@
       }
     </style>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "https://vctra.no/#org",
-            "name": "VCTRA",
-            "url": "https://vctra.no/"
-          },
-          {
-            "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
-            "@id": "https://bergenbyggmontering.no/#org",
-            "name": "Bergen Byggmontering AS",
-            "url": "https://bergenbyggmontering.no/",
-            "telephone": "+47 917 27 100",
-            "email": "post@bergenbyggmontering.no"
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://bergenbyggmontering.no/#website",
-            "url": "https://bergenbyggmontering.no/",
-            "name": "Bergen Byggmontering AS",
-            "publisher": {
-              "@id": "https://bergenbyggmontering.no/#org"
-            },
-            "creator": {
-              "@id": "https://vctra.no/#org"
-            },
-            "inLanguage": "nb-NO"
-          },
-          {
-            "@type": "AboutPage",
-            "@id": "https://bergenbyggmontering.no/jobb.html#webpage",
-            "url": "https://bergenbyggmontering.no/jobb.html",
-            "name": "Jobb hos Bergen Byggmontering",
-            "description": "Karriereside for fagfolk innen tømrer, VVS, våtrom, tak, fasade og rehabilitering.",
-            "isPartOf": {
-              "@id": "https://bergenbyggmontering.no/#website"
-            },
-            "about": {
-              "@id": "https://bergenbyggmontering.no/#org"
-            },
-            "mainEntity": {
-              "@id": "https://bergenbyggmontering.no/#org"
-            },
-            "creator": {
-              "@id": "https://vctra.no/#org"
-            },
-            "audience": [
-              {
-                "@type": "Audience",
-                "audienceType": "Tømrere og fagfolk innen rehabilitering"
-              },
-              {
-                "@type": "Audience",
-                "audienceType": "Rørleggere, VVS-fagfolk, flisleggere og våtromsfagfolk"
-              },
-              {
-                "@type": "Audience",
-                "audienceType": "Fagfolk innen tak, fasade og vindu"
-              }
-            ],
-            "inLanguage": "nb-NO"
-          }
-        ]
-      }
-    </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vctra.no/#org",
+      "name": "VCTRA",
+      "url": "https://vctra.no/"
+    },
+    {
+      "@type": "GeneralContractor",
+      "@id": "https://bergenbyggmontering.no/#org",
+      "name": "Bergen Byggmontering AS",
+      "url": "https://bergenbyggmontering.no/",
+      "telephone": "+47 917 27 100",
+      "email": "post@bergenbyggmontering.no",
+      "sameAs": [
+        "https://www.google.com/maps?cid=10213294582355648072",
+        "https://www.facebook.com/bergenbyggmontering/"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Torget%201%2C%205014%20Bergen"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bergenbyggmontering.no/#website",
+      "url": "https://bergenbyggmontering.no/",
+      "name": "Bergen Byggmontering AS",
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "inLanguage": "nb-NO"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://bergenbyggmontering.no/jobb.html#webpage",
+      "url": "https://bergenbyggmontering.no/jobb.html",
+      "name": "Jobb hos Bergen Byggmontering",
+      "description": "Karriereside for fagfolk innen tømrer, VVS, våtrom, tak, fasade og rehabilitering.",
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/#website"
+      },
+      "about": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "mainEntity": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Tømrere og fagfolk innen rehabilitering"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Rørleggere, VVS-fagfolk, flisleggere og våtromsfagfolk"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Fagfolk innen tak, fasade og vindu"
+        }
+      ],
+      "inLanguage": "nb-NO"
+    }
+  ]
+}</script>
   <meta name="google-site-verification" content="r17N5rY2Ix5b240TH064InXUEx1wnM-nVn5A807YsuU" />
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 <link rel="describedby" href="/knowledgehub.json" type="application/json" />
 <link rel="alternate" type="text/plain" href="/ai.txt" title="AI-kontekst" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-kontekst" />
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Fullstendig offentlig nettstedstekst">
+<script defer src="/pwa-register.js"></script>
 </head>
 
   <body class="overflow-x-hidden bg-[#050705] text-white antialiased subpage">

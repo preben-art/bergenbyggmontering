@@ -203,8 +203,7 @@
       }
     </style>
 
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -215,9 +214,8 @@
       "legalName": "VCTRA",
       "description": "Rammeverk og publiseringssystem levert av VCTRA. Kunden har bruksrett."
     },
-
     {
-      "@type": "Organization",
+      "@type": "GeneralContractor",
       "@id": "https://bergenbyggmontering.no/#org",
       "name": "Bergen Byggmontering AS",
       "url": "https://bergenbyggmontering.no/",
@@ -238,21 +236,33 @@
           "contactType": "customer service",
           "telephone": "+47 917 27 100",
           "email": "post@bergenbyggmontering.no",
-          "availableLanguage": ["nb"],
+          "availableLanguage": [
+            "nb"
+          ],
           "areaServed": "NO"
         }
       ],
-      "creator": { "@id": "https://vctra.no/#org" }
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "sameAs": [
+        "https://www.google.com/maps?cid=10213294582355648072",
+        "https://www.facebook.com/bergenbyggmontering/"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Torget%201%2C%205014%20Bergen"
     },
-
     {
       "@type": "WebSite",
       "@id": "https://bergenbyggmontering.no/#website",
       "url": "https://bergenbyggmontering.no/",
       "name": "Bergen Byggmontering AS",
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "inLanguage": "nb-NO",
-      "creator": { "@id": "https://vctra.no/#org" },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
       "potentialAction": [
         {
           "@type": "SearchAction",
@@ -265,17 +275,22 @@
         }
       ]
     },
-
     {
       "@type": "CollectionPage",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#webpage",
       "url": "https://bergenbyggmontering.no/tjeneste-brl.html",
       "name": "Borettslag og sameier i Bergen | Rehabilitering | Bergen Byggmontering AS",
       "description": "Rehabilitering for borettslag og sameier i Bergen og nærområder. Bad, rør, tak og fasade. Ryddig koordinering med beboere og forutsigbar fremdrift.",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/#website" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/#website"
+      },
       "inLanguage": "nb-NO",
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "creator": { "@id": "https://vctra.no/#org" },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
       "datePublished": "[[DATE_PUBLISHED_ISO]]",
       "dateModified": "[[DATE_MODIFIED_ISO]]",
       "primaryImageOfPage": {
@@ -285,13 +300,23 @@
         "width": 1200,
         "height": 630
       },
-      "breadcrumb": { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#breadcrumbs" },
+      "breadcrumb": {
+        "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#breadcrumbs"
+      },
       "about": [
-        { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#topic" },
-        { "@id": "https://bergenbyggmontering.no/#service-area" },
-        { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience" }
+        {
+          "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#topic"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/#service-area"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience"
+        }
       ],
-      "mainEntity": { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#service" },
+      "mainEntity": {
+        "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#service"
+      },
       "license": "Licensed for client use only. Owned by VCTRA. https://vctra.no/#org",
       "potentialAction": [
         {
@@ -307,7 +332,6 @@
         }
       ]
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#breadcrumbs",
@@ -326,14 +350,12 @@
         }
       ]
     },
-
     {
       "@type": "Thing",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#topic",
       "name": "Borettslag og sameier – rehabilitering og vedlikehold",
       "description": "Boligrettet rehabilitering og vedlikehold i borettslag/sameier: bad, rør/stammer, tak og fasade/vinduer – med plan, kontrollpunkter og beboerinformasjon."
     },
-
     {
       "@type": "Audience",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience",
@@ -344,70 +366,235 @@
         "Eiendomsforvalter"
       ]
     },
-
     {
       "@type": "ItemList",
       "@id": "https://bergenbyggmontering.no/#service-area",
       "name": "Serviceområder",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Bergen" },
-{ "@type": "ListItem", "position": 2, "name": "Bergen Sentrum" },
-{ "@type": "ListItem", "position": 3, "name": "Bergenhus" },
-{ "@type": "ListItem", "position": 4, "name": "Årstad" },
-{ "@type": "ListItem", "position": 5, "name": "Åsane" },
-{ "@type": "ListItem", "position": 6, "name": "Arna" },
-{ "@type": "ListItem", "position": 7, "name": "Fana" },
-{ "@type": "ListItem", "position": 8, "name": "Ytrebygda" },
-{ "@type": "ListItem", "position": 9, "name": "Fyllingsdalen" },
-{ "@type": "ListItem", "position": 10, "name": "Laksevåg" },
-{ "@type": "ListItem", "position": 11, "name": "Loddefjord" },
-{ "@type": "ListItem", "position": 12, "name": "Sandviken" },
-{ "@type": "ListItem", "position": 13, "name": "Nordnes" },
-{ "@type": "ListItem", "position": 14, "name": "Møhlenpris" },
-{ "@type": "ListItem", "position": 15, "name": "Nygård" },
-{ "@type": "ListItem", "position": 16, "name": "Landås" },
-{ "@type": "ListItem", "position": 17, "name": "Minde" },
-{ "@type": "ListItem", "position": 18, "name": "Kronstad" },
-{ "@type": "ListItem", "position": 19, "name": "Danmarksplass" },
-{ "@type": "ListItem", "position": 20, "name": "Damsgård" },
-{ "@type": "ListItem", "position": 21, "name": "Nesttun" },
-{ "@type": "ListItem", "position": 22, "name": "Fjøsanger" },
-{ "@type": "ListItem", "position": 23, "name": "Paradis" },
-{ "@type": "ListItem", "position": 24, "name": "Hop" },
-{ "@type": "ListItem", "position": 25, "name": "Rådal" },
-{ "@type": "ListItem", "position": 26, "name": "Sandsli" },
-{ "@type": "ListItem", "position": 27, "name": "Kokstad" },
-{ "@type": "ListItem", "position": 28, "name": "Lagunen" },
-{ "@type": "ListItem", "position": 29, "name": "Bønes" },
-{ "@type": "ListItem", "position": 30, "name": "Olsvik" },
-{ "@type": "ListItem", "position": 31, "name": "Drotningsvik" },
-{ "@type": "ListItem", "position": 32, "name": "Eidsvåg" },
-{ "@type": "ListItem", "position": 33, "name": "Tertnes" },
-{ "@type": "ListItem", "position": 34, "name": "Morvik" },
-{ "@type": "ListItem", "position": 35, "name": "Sotra" },
-{ "@type": "ListItem", "position": 36, "name": "Askøy" },
-{ "@type": "ListItem", "position": 37, "name": "Os" },
-{ "@type": "ListItem", "position": 38, "name": "Nordhordland" },
-{ "@type": "ListItem", "position": 39, "name": "Austevoll" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Bergen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bergen Sentrum"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bergenhus"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Årstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Åsane"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Arna"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Fana"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Ytrebygda"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Fyllingsdalen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Laksevåg"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Loddefjord"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Sandviken"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Nordnes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Møhlenpris"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Nygård"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Landås"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Minde"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Kronstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Danmarksplass"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Damsgård"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Nesttun"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Fjøsanger"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Paradis"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Hop"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Rådal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Sandsli"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Kokstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Lagunen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Bønes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Olsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Drotningsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Eidsvåg"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Tertnes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Morvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Sotra"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Askøy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Os"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Nordhordland"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Austevoll"
+        }
       ]
     },
-
     {
       "@type": "Service",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#service",
       "name": "Rehabilitering for borettslag og sameier",
       "serviceType": "Rehabilitering og vedlikehold i boligbygg",
-      "provider": { "@id": "https://bergenbyggmontering.no/#org" },
-      "areaServed": { "@id": "https://bergenbyggmontering.no/#service-area" },
-      "audience": { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience" },
+      "provider": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "areaServed": {
+        "@id": "https://bergenbyggmontering.no/#service-area"
+      },
+      "audience": {
+        "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#audience"
+      },
       "isRelatedTo": [
-        { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#offer-catalog" },
-        { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#howto" },
-        { "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#faq" }
+        {
+          "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#offer-catalog"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#howto"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#faq"
+        }
       ],
       "description": "Boligrettet rehabilitering og vedlikehold i borettslag/sameier (bad, rør/stammer, tak, fasade/vinduer) med avklart omfang, fremdrift og plan for beboerinformasjon. Prosjekter gjennomføres med kontrollpunkter for HMS, adkomst, støy og drift i bebodde bygg."
     },
-
     {
       "@type": "OfferCatalog",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#offer-catalog",
@@ -465,7 +652,6 @@
         }
       ]
     },
-
     {
       "@type": "HowTo",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#howto",
@@ -499,7 +685,6 @@
         }
       ]
     },
-
     {
       "@type": "FAQPage",
       "@id": "https://bergenbyggmontering.no/tjeneste-brl.html#faq",
@@ -548,13 +733,14 @@
       ]
     }
   ]
-}
-</script>
+}</script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 <link rel="describedby" href="/knowledgehub.json" type="application/json" />
 <link rel="alternate" type="text/plain" href="/ai.txt" title="AI-kontekst" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-kontekst" />
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Fullstendig offentlig nettstedstekst">
+<script defer src="/pwa-register.js"></script>
 </head>
   <body class="antialiased overflow-x-hidden bg-slate-50 subpage">
     <a href="#main-content" class="skip-link">Gå til hovedinnhold</a>

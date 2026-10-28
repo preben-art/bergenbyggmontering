@@ -415,8 +415,7 @@ https://vctra.no/#org
       }
     </style>
 
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -427,7 +426,7 @@ https://vctra.no/#org
       "legalName": "VCTRA"
     },
     {
-      "@type": "Organization",
+      "@type": "GeneralContractor",
       "@id": "https://bergenbyggmontering.no/#org",
       "name": "Bergen Byggmontering AS",
       "url": "https://bergenbyggmontering.no/",
@@ -447,19 +446,32 @@ https://vctra.no/#org
           "telephone": "+47 917 27 100",
           "email": "post@bergenbyggmontering.no",
           "areaServed": "NO",
-          "availableLanguage": ["nb"]
+          "availableLanguage": [
+            "nb"
+          ]
         }
       ],
-      "creator": { "@id": "https://vctra.no/#org" }
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "sameAs": [
+        "https://www.google.com/maps?cid=10213294582355648072",
+        "https://www.facebook.com/bergenbyggmontering/"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Torget%201%2C%205014%20Bergen"
     },
     {
       "@type": "WebSite",
       "@id": "https://bergenbyggmontering.no/#website",
       "url": "https://bergenbyggmontering.no/",
       "name": "Bergen Byggmontering AS",
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "inLanguage": "nb-NO",
-      "creator": { "@id": "https://vctra.no/#org" },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://bergenbyggmontering.no/faginnsikt.html?q={search_term_string}",
@@ -490,7 +502,9 @@ https://vctra.no/#org
       "url": "https://bergenbyggmontering.no/faginnsikt.html",
       "name": "Faginnsikt & råd",
       "description": "Kunnskapsbase med guider, sjekklister og beslutningsstøtte om oppussing og rehabilitering i Bergen og omegn.",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/#website" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/#website"
+      },
       "inLanguage": "nb-NO",
       "dateModified": "2026-09-22",
       "primaryImageOfPage": {
@@ -499,120 +513,257 @@ https://vctra.no/#org
         "width": 2621,
         "height": 1966
       },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "creator": { "@id": "https://vctra.no/#org" },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
       "license": "Licensed for client use only. Owned by VCTRA. https://vctra.no/#org",
-      "breadcrumb": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#breadcrumbs" },
+      "breadcrumb": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#breadcrumbs"
+      },
       "about": [
-        { "@type": "Thing", "name": "Oppussing" },
-        { "@type": "Thing", "name": "Rehabilitering" },
-        { "@type": "Thing", "name": "Bad og våtrom" },
-        { "@type": "Thing", "name": "Tak og klima" },
-        { "@type": "Thing", "name": "Fasade og etterisolering" },
-        { "@type": "Thing", "name": "Rør og vannskader" },
-        { "@type": "Thing", "name": "Planlegging og rekkefølge" },
-        { "@type": "Thing", "name": "Økonomi og boligverdi" }
+        {
+          "@type": "Thing",
+          "name": "Oppussing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Rehabilitering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Bad og våtrom"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tak og klima"
+        },
+        {
+          "@type": "Thing",
+          "name": "Fasade og etterisolering"
+        },
+        {
+          "@type": "Thing",
+          "name": "Rør og vannskader"
+        },
+        {
+          "@type": "Thing",
+          "name": "Planlegging og rekkefølge"
+        },
+        {
+          "@type": "Thing",
+          "name": "Økonomi og boligverdi"
+        }
       ],
       "hasPart": [
-        { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging" },
-        { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad" },
-        { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak" },
-        { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi" },
-        { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk" }
+        {
+          "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk"
+        }
       ]
     },
-
     {
       "@type": "BlogPosting",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging",
-      "mainEntityOfPage": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging" },
+      "mainEntityOfPage": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging"
+      },
       "headline": "5 tips som redder oppussingen fra kaos",
       "description": "Praktiske grep for å planlegge rekkefølge, unngå dobbeltarbeid og få kontroll på leveranser og fag.",
       "inLanguage": "nb-NO",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub"
+      },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "author": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "dateModified": "2026-09-22",
       "image": "https://bergenbyggmontering.no/bilder/IMG_3770.webp",
-      "keywords": ["planlegging", "rekkefølge", "koordinering", "rehabilitering"]
+      "keywords": [
+        "planlegging",
+        "rekkefølge",
+        "koordinering",
+        "rehabilitering"
+      ]
     },
     {
       "@type": "BlogPosting",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad",
-      "mainEntityOfPage": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad" },
+      "mainEntityOfPage": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad"
+      },
       "headline": "Hva skjuler seg bak flisene?",
       "description": "Hva som faktisk gjør et bad tett: membran, sluk, fall og detaljer – og hvorfor feil ofte starter i overgangene.",
       "inLanguage": "nb-NO",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub"
+      },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "author": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "dateModified": "2026-09-22",
       "image": "https://bergenbyggmontering.no/bilder/473766295_1161206616013469_8198062879953587315_n.webp",
-      "keywords": ["bad", "våtrom", "membran", "sluk", "fall", "rør-i-rør"]
+      "keywords": [
+        "bad",
+        "våtrom",
+        "membran",
+        "sluk",
+        "fall",
+        "rør-i-rør"
+      ]
     },
     {
       "@type": "BlogPosting",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak",
-      "mainEntityOfPage": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak" },
+      "mainEntityOfPage": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak"
+      },
       "headline": "Taket: Det er undertaket som gjelder",
       "description": "Hvorfor undertak og lufting avgjør tetthet i vestlandsk klima – og hvor lekkasjer oftest oppstår.",
       "inLanguage": "nb-NO",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub"
+      },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "author": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "dateModified": "2026-09-22",
       "image": "https://bergenbyggmontering.no/bilder/IMG_1042.webp",
-      "keywords": ["tak", "undertak", "lufting", "klima", "lekasje"]
+      "keywords": [
+        "tak",
+        "undertak",
+        "lufting",
+        "klima",
+        "lekasje"
+      ]
     },
     {
       "@type": "BlogPosting",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi",
-      "mainEntityOfPage": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi" },
+      "mainEntityOfPage": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi"
+      },
       "headline": "Slik øker du boligverdien mest",
       "description": "Hva som typisk gir mest trygghet og verdi: tekniske risikopunkter, dokumentasjon og riktig prioritering.",
       "inLanguage": "nb-NO",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub"
+      },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "author": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "dateModified": "2026-09-22",
       "image": "https://bergenbyggmontering.no/bilder/DJI_0038.webp",
-      "keywords": ["boligverdi", "økonomi", "dokumentasjon", "tilstandsgrad"]
+      "keywords": [
+        "boligverdi",
+        "økonomi",
+        "dokumentasjon",
+        "tilstandsgrad"
+      ]
     },
     {
       "@type": "BlogPosting",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk",
-      "mainEntityOfPage": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk" },
+      "mainEntityOfPage": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk"
+      },
       "headline": "Rekkefølgen som ofte fungerer best i rehab",
       "description": "En robust rekkefølge for rehabilitering: mål/omfang, avdekking, tekniske fag, tett bygg, overflater og dokumentasjon.",
       "inLanguage": "nb-NO",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub" },
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
-      "author": { "@id": "https://bergenbyggmontering.no/#org" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/faginnsikt.html#hub"
+      },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
+      "author": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "dateModified": "2026-09-22",
       "image": "https://bergenbyggmontering.no/bilder/bygger_nytt_bad-rehab.webp",
-      "keywords": ["metodikk", "rekkefølge", "rehabilitering", "prosjektstyring"]
+      "keywords": [
+        "metodikk",
+        "rekkefølge",
+        "rehabilitering",
+        "prosjektstyring"
+      ]
     },
-
     {
       "@type": "ItemList",
       "@id": "https://bergenbyggmontering.no/faginnsikt.html#article-list",
       "name": "Artikler i kunnskapsbasen",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging" } },
-        { "@type": "ListItem", "position": 2, "item": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad" } },
-        { "@type": "ListItem", "position": 3, "item": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak" } },
-        { "@type": "ListItem", "position": 4, "item": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi" } },
-        { "@type": "ListItem", "position": 5, "item": { "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk" } }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-planlegging"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-bad"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-tak"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-okonomi"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://bergenbyggmontering.no/faginnsikt.html#post-metodikk"
+          }
+        }
       ]
     }
   ]
-}
-</script>
+}</script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 <link rel="describedby" href="/knowledgehub.json" type="application/json" />
 <link rel="alternate" type="text/plain" href="/ai.txt" title="AI-kontekst" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-kontekst" />
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Fullstendig offentlig nettstedstekst">
+<script defer src="/pwa-register.js"></script>
 </head>
   <body
     class="antialiased selection:bg-brand-primary selection:text-black overflow-x-hidden bg-slate-50 subpage"

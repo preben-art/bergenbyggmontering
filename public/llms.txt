@@ -135,4 +135,7 @@ Vi tar ansvar for helheten — ryddig prosess, faglig rekkefølge, dokumentert l
 - Price: avhenger av tilstand, tilgang og funn. Fastpris bare der det er mulig. Ingen fast kvm-pris.
 - Not this job: rene næringsbygg og kontorer uten boligformål.
 
-Last updated: 2026-09-22
+Last updated: 2026-10-28
+
+## Fullstendig offentlig tekst
+https://bergenbyggmontering.no/llms-full.txt

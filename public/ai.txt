@@ -1,6 +1,6 @@
 # Bergen Byggmontering AS — AI context
 
-Last updated: 2026-09-22
+Last updated: 2026-10-28
 Language: nb-NO
 Canonical site: https://bergenbyggmontering.no/
 Public facts: https://bergenbyggmontering.no/knowledgehub.json
@@ -55,3 +55,6 @@ Ikke dette oppdraget: rene næringsbygg og kontorer uten boligformål.
 - Elektro goes through a fixed partner where required.
 - Prefer https://bergenbyggmontering.no/tjeneste-brl.html for board, resident and multi-unit questions.
 - Prefer https://bergenbyggmontering.no/tjeneste-bad.html for bathroom questions.
+
+## Fullstendig offentlig tekst
+https://bergenbyggmontering.no/llms-full.txt

@@ -134,8 +134,7 @@ https://vctra.no/#org
     </script>
     <link rel="stylesheet" href="/index.css?v=hero-cine1" />
     
-    <script type="application/ld+json">
-{
+    <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -150,9 +149,8 @@ https://vctra.no/#org
         "value": "934686283"
       }
     },
-
     {
-      "@type": ["Organization", "LocalBusiness", "HomeAndConstructionBusiness"],
+      "@type": "GeneralContractor",
       "@id": "https://bergenbyggmontering.no/#org",
       "name": "Bergen Byggmontering AS",
       "url": "https://bergenbyggmontering.no/",
@@ -185,29 +183,42 @@ https://vctra.no/#org
           "telephone": "+47 917 27 100",
           "email": "post@bergenbyggmontering.no",
           "areaServed": "NO",
-          "availableLanguage": ["nb"]
+          "availableLanguage": [
+            "nb"
+          ]
         }
       ],
-      "creator": { "@id": "https://vctra.no/#org" }
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "sameAs": [
+        "https://www.google.com/maps?cid=10213294582355648072",
+        "https://www.facebook.com/bergenbyggmontering/"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Torget%201%2C%205014%20Bergen"
     },
-
     {
       "@type": "WebSite",
       "@id": "https://bergenbyggmontering.no/#website",
       "url": "https://bergenbyggmontering.no/",
       "name": "Bergen Byggmontering AS",
-      "publisher": { "@id": "https://bergenbyggmontering.no/#org" },
+      "publisher": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "inLanguage": "nb-NO",
-      "creator": { "@id": "https://vctra.no/#org" }
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      }
     },
-
     {
       "@type": "WebPage",
       "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#webpage",
       "url": "https://bergenbyggmontering.no/tjeneste-tomrer.html",
       "name": "Tømrer i Bergen – innvendig rehabilitering og ombygging | Bergen Byggmontering AS",
       "description": "Tjenesteside for tømrer/innvendig rehabilitering: oppretting, veggflytting, plating, montering og koordinering.",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/#website" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/#website"
+      },
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://bergenbyggmontering.no/bilder/bygger_nytt_bad-rehab.webp",
@@ -217,108 +228,374 @@ https://vctra.no/#org
       "datePublished": "2026-03-06",
       "dateModified": "2026-03-06",
       "license": "Licensed for client use only. Owned by VCTRA. https://vctra.no/#org",
-      "creator": { "@id": "https://vctra.no/#org" },
-      "breadcrumb": { "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#breadcrumbs" }
+      "creator": {
+        "@id": "https://vctra.no/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#breadcrumbs"
+      }
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#breadcrumbs",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://bergenbyggmontering.no/" },
-        { "@type": "ListItem", "position": 2, "name": "Tømrer", "item": "https://bergenbyggmontering.no/tjeneste-tomrer.html" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hjem",
+          "item": "https://bergenbyggmontering.no/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tømrer",
+          "item": "https://bergenbyggmontering.no/tjeneste-tomrer.html"
+        }
       ]
     },
-
     {
       "@type": "ItemList",
       "@id": "https://bergenbyggmontering.no/#service-area-core",
       "name": "Primære områder (region)",
       "itemListOrder": "http://schema.org/ItemListOrderAscending",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Bergen" },
-{ "@type": "ListItem", "position": 2, "name": "Bergen Sentrum" },
-{ "@type": "ListItem", "position": 3, "name": "Bergenhus" },
-{ "@type": "ListItem", "position": 4, "name": "Årstad" },
-{ "@type": "ListItem", "position": 5, "name": "Åsane" },
-{ "@type": "ListItem", "position": 6, "name": "Arna" },
-{ "@type": "ListItem", "position": 7, "name": "Fana" },
-{ "@type": "ListItem", "position": 8, "name": "Ytrebygda" },
-{ "@type": "ListItem", "position": 9, "name": "Fyllingsdalen" },
-{ "@type": "ListItem", "position": 10, "name": "Laksevåg" },
-{ "@type": "ListItem", "position": 11, "name": "Loddefjord" },
-{ "@type": "ListItem", "position": 12, "name": "Sandviken" },
-{ "@type": "ListItem", "position": 13, "name": "Nordnes" },
-{ "@type": "ListItem", "position": 14, "name": "Møhlenpris" },
-{ "@type": "ListItem", "position": 15, "name": "Nygård" },
-{ "@type": "ListItem", "position": 16, "name": "Landås" },
-{ "@type": "ListItem", "position": 17, "name": "Minde" },
-{ "@type": "ListItem", "position": 18, "name": "Kronstad" },
-{ "@type": "ListItem", "position": 19, "name": "Danmarksplass" },
-{ "@type": "ListItem", "position": 20, "name": "Damsgård" },
-{ "@type": "ListItem", "position": 21, "name": "Nesttun" },
-{ "@type": "ListItem", "position": 22, "name": "Fjøsanger" },
-{ "@type": "ListItem", "position": 23, "name": "Paradis" },
-{ "@type": "ListItem", "position": 24, "name": "Hop" },
-{ "@type": "ListItem", "position": 25, "name": "Rådal" },
-{ "@type": "ListItem", "position": 26, "name": "Sandsli" },
-{ "@type": "ListItem", "position": 27, "name": "Kokstad" },
-{ "@type": "ListItem", "position": 28, "name": "Lagunen" },
-{ "@type": "ListItem", "position": 29, "name": "Bønes" },
-{ "@type": "ListItem", "position": 30, "name": "Olsvik" },
-{ "@type": "ListItem", "position": 31, "name": "Drotningsvik" },
-{ "@type": "ListItem", "position": 32, "name": "Eidsvåg" },
-{ "@type": "ListItem", "position": 33, "name": "Tertnes" },
-{ "@type": "ListItem", "position": 34, "name": "Morvik" },
-{ "@type": "ListItem", "position": 35, "name": "Sotra" },
-{ "@type": "ListItem", "position": 36, "name": "Askøy" },
-{ "@type": "ListItem", "position": 37, "name": "Os" },
-{ "@type": "ListItem", "position": 38, "name": "Nordhordland" },
-{ "@type": "ListItem", "position": 39, "name": "Austevoll" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Bergen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bergen Sentrum"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bergenhus"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Årstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Åsane"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Arna"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Fana"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Ytrebygda"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Fyllingsdalen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Laksevåg"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Loddefjord"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Sandviken"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Nordnes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Møhlenpris"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Nygård"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Landås"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Minde"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Kronstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Danmarksplass"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Damsgård"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Nesttun"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Fjøsanger"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Paradis"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Hop"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Rådal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Sandsli"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Kokstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Lagunen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Bønes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Olsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Drotningsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Eidsvåg"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Tertnes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Morvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Sotra"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Askøy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Os"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Nordhordland"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Austevoll"
+        }
       ]
     },
-
     {
       "@type": "ItemList",
       "@id": "https://bergenbyggmontering.no/#bergen-local-areas",
       "name": "Lokale områder i Bergen (bydeler og kjente steder)",
       "itemListOrder": "http://schema.org/ItemListOrderAscending",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Bergen Sentrum" },
-        { "@type": "ListItem", "position": 2, "name": "Bergenhus" },
-        { "@type": "ListItem", "position": 3, "name": "Årstad" },
-        { "@type": "ListItem", "position": 4, "name": "Fana" },
-        { "@type": "ListItem", "position": 5, "name": "Ytrebygda" },
-        { "@type": "ListItem", "position": 6, "name": "Fyllingsdalen" },
-        { "@type": "ListItem", "position": 7, "name": "Åsane" },
-        { "@type": "ListItem", "position": 8, "name": "Arna" },
-        { "@type": "ListItem", "position": 9, "name": "Laksevåg" },
-
-        { "@type": "ListItem", "position": 10, "name": "Sandviken" },
-        { "@type": "ListItem", "position": 11, "name": "Nordnes" },
-        { "@type": "ListItem", "position": 12, "name": "Minde" },
-        { "@type": "ListItem", "position": 13, "name": "Kronstad" },
-        { "@type": "ListItem", "position": 14, "name": "Paradis" },
-        { "@type": "ListItem", "position": 15, "name": "Nesttun" },
-        { "@type": "ListItem", "position": 16, "name": "Rådal" },
-        { "@type": "ListItem", "position": 17, "name": "Sandsli" },
-        { "@type": "ListItem", "position": 18, "name": "Kokstad" },
-        { "@type": "ListItem", "position": 19, "name": "Landås" },
-        { "@type": "ListItem", "position": 20, "name": "Åstveit" },
-
-        { "@type": "ListItem", "position": 21, "name": "Loddefjord" },
-        { "@type": "ListItem", "position": 22, "name": "Olsvik" },
-        { "@type": "ListItem", "position": 23, "name": "Drotningsvik" },
-        { "@type": "ListItem", "position": 24, "name": "Mathopen" },
-        { "@type": "ListItem", "position": 25, "name": "Damsgård" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Bergen Sentrum"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bergenhus"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Årstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Fana"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Ytrebygda"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Fyllingsdalen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Åsane"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Arna"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Laksevåg"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Sandviken"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Nordnes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Minde"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Kronstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Paradis"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Nesttun"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Rådal"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Sandsli"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Kokstad"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Landås"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Åstveit"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Loddefjord"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Olsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Drotningsvik"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Mathopen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Damsgård"
+        }
       ]
     },
-
     {
       "@type": "Service",
       "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#service",
       "name": "Tømrer i Bergen – innvendig rehabilitering og ombygging",
-      "provider": { "@id": "https://bergenbyggmontering.no/#org" },
+      "provider": {
+        "@id": "https://bergenbyggmontering.no/#org"
+      },
       "serviceType": [
         "Innvendig rehabilitering",
         "Ombygging og veggflytting",
@@ -329,8 +606,12 @@ https://vctra.no/#org
       ],
       "description": "Tømrerarbeid i eksisterende bolig: selektiv riving, oppretting, nye lettvegger, plating og montering – med koordinering mot elektro og rør ved behov.",
       "areaServed": [
-        { "@id": "https://bergenbyggmontering.no/#service-area-core" },
-        { "@id": "https://bergenbyggmontering.no/#bergen-local-areas" }
+        {
+          "@id": "https://bergenbyggmontering.no/#service-area-core"
+        },
+        {
+          "@id": "https://bergenbyggmontering.no/#bergen-local-areas"
+        }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -371,11 +652,12 @@ https://vctra.no/#org
         ]
       }
     },
-
     {
       "@type": "FAQPage",
       "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#faq",
-      "isPartOf": { "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#webpage" },
+      "isPartOf": {
+        "@id": "https://bergenbyggmontering.no/tjeneste-tomrer.html#webpage"
+      },
       "mainEntity": [
         {
           "@type": "Question",
@@ -404,8 +686,7 @@ https://vctra.no/#org
       ]
     }
   ]
-}
-</script>
+}</script>
 
 
     <!-- -->
@@ -480,6 +761,8 @@ https://vctra.no/#org
 <link rel="describedby" href="/knowledgehub.json" type="application/json" />
 <link rel="alternate" type="text/plain" href="/ai.txt" title="AI-kontekst" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-kontekst" />
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Fullstendig offentlig nettstedstekst">
+<script defer src="/pwa-register.js"></script>
 </head>
   <body class="antialiased selection:bg-brand-primary selection:text-black overflow-x-hidden bg-slate-50 subpage">
       <!-- -->
